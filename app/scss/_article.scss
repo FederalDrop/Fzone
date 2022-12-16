@@ -21,6 +21,8 @@
 	margin: 0 27px 50px 27px;
 	border: 1px solid #000000;
 	border-radius: 164px;
+	display: block;
+	color: #000000;
 }
 .articles-item-body {
 	display: flex;
@@ -32,11 +34,14 @@
 	width: auto;
 	height: 261px;
 	filter: drop-shadow(4.67923px 9.35847px 9.35847px rgba(0, 0, 0, 0.25));
+	overflow: hidden;
+	border-radius: 100%;
 	& img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		border-radius: 100%;
+		transition: all 0.3s ease;
 	}
 }
 .item-body__title {

@@ -179,21 +179,56 @@ ul {
 
 
 @media only screen and (min-width: 1000px){
-	.main__btn:hover, .inside__btn:hover, .btns__body-btn:hover, .documents__item-button:hover, .price-item__head:hover {
-		color: #fff;
-		background: #3d3d3d;
+	.main__btn:hover, .inside__btn:hover, .btns__body-btn:hover, .documents__item-button:hover, .price-item__head:hover, .reviews-item__feedback-button:hover {
+		box-shadow: 4px 4px 20px rgba(128, 28, 78, 0.5);
+		transition: all 0.3s ease;
+	}
+	.main__btn:active, .inside__btn:active, .btns__body-btn:active, .documents__item-button:active, .price-item__head:active, .reviews-item__feedback-button:active {
+		box-shadow: inset 4px 4px 20px rgba(128, 28, 78, 0.5);
 		transition: all 0.3s ease;
 	}
 	.header__nav ul li a:hover, .footer__service ul li a:hover, .footer__nav ul li a:hover, .contacts__info-geo a:hover, .contacts__info-number a:hover, .contacts__info-email a:hover {
 		border-bottom: 1px solid #000;
 		transition: all 0.3s ease;
 	}
-	.help-item:hover .help-item__img img {
+	.help-item:hover .help-item__img img, .articles-item:hover .item-body__img img {
 		transform: scale(1.1);
 		transition: all 0.3s ease;
 	}
-	.callback__form input[type=submit]:hover {
-		background: #e6c6c1;
+	.popular__slider-item:hover .popular-item__img img, .cosmo__item:hover .cosmo__item-img img {
+		transform: scale(0.9);
+		transition: all 0.3s ease;
+	}
+	.popular__slider-item:hover .popular-item__text, .help-item:hover .help-item__text, .cosmo__item:hover .cosmo__item-img-abs p, .cosmo__item:hover .cosmo__item-text, .articles-item:hover .item-body__title, .articles-item:hover .item-body__text {
+		text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+		transition: all 0.3s ease;
+	}
+	.callback__form input[type=submit]:hover, .review__form-item input[type=submit]:hover {
+		box-shadow: 4px 4px 10px rgba(128, 28, 78, 0.5);
+		transition: all 0.3s ease;
+	}
+	.callback__form input[type=submit]:active, .review__form-item input[type=submit]:active {
+		box-shadow: inset 4px 4px 20px rgba(128, 28, 78, 0.5);
+		transition: all 0.3s ease;
+	}
+	.reviews-item__more-button:hover {
+		color: #867955;
+	}
+	.dots-item__circle:hover {
+		transform: scale(1.1);
+		transition: all 0.3s ease;
+		border: 1px solid #000;
+	}
+	.popup__form-item input[type=submit]:hover {
+		background-color: #cbd6ff;
+		transition: all 0.3s ease;
+	}
+	.review__form-item input:hover, .callback__form input:hover {
+		filter: drop-shadow(0px 0px 10px rgba(128, 28, 78, 0.5));
+		transition: all 0.3s ease;
+	}
+	.popup__form-item input:focus::placeholder, .review__form-item input:focus::placeholder, .callback__form input:focus::placeholder {
+		color: transparent;
 		transition: all 0.3s ease;
 	}
 }

@@ -36,6 +36,8 @@
 .cosmo__item {
 	width: calc(33% - 70px);
 	margin: 0 35px 70px 35px;
+	display: block;
+	color: #000000;
 }
 .cosmo__item-img {
 	height: 400px;
@@ -44,6 +46,7 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		transition: all 0.3s ease;
 	}
 }
 .cosmo__item:nth-child(1) img {
