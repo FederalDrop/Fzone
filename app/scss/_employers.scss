@@ -1,0 +1,34 @@
+.spec__items {
+	display: flex;
+	flex-wrap: wrap;
+	width: calc(100% + 70px);
+	margin: 120px 0 0 -35px;
+}
+.spec-item {
+	width: calc(33% - 70px);
+	margin: 0 35px 90px 35px;
+}
+.spec-item__img {
+	width: auto;
+	height: 319px;
+	& img {
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		transition: all 0.3s ease;
+	}
+}
+.spec-item__info {
+	margin: 35px 0 0 0;
+}
+.spec-item__name {
+	font-weight: 600;
+	font-size: 30px;
+	text-align: center;
+	margin: 0 0 15px 0;
+}
+.spec-item__desc {
+	font-weight: 400;
+	font-size: 30px;
+	text-align: center;
+}

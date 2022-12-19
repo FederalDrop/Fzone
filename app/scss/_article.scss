@@ -2,7 +2,7 @@
 	height: 850px;
 	background: url('../img/article_bg.jpg')no-repeat;
 	background-position: center;
-	background-size: contain;
+	background-size: 100% 100%;
 }
 .article__head-body {
 	display: flex;
@@ -31,7 +31,7 @@
 	padding: 35px 25px 70px 25px;
 }
 .item-body__img {
-	width: auto;
+	width: 271px;
 	height: 261px;
 	filter: drop-shadow(4.67923px 9.35847px 9.35847px rgba(0, 0, 0, 0.25));
 	overflow: hidden;

@@ -3,6 +3,7 @@
 }
 .crumbs__content {
 	display: flex;
+	flex-wrap: wrap;
 	font-size: 24px;
 	letter-spacing: 0.03em;
 }
@@ -75,8 +76,6 @@
 	border: 1px solid rgb(0, 0, 0);
 }
 .home__body {
-	max-width: 1366px;
-	margin: 0 auto;
 	position: relative;
 }
 .home__slider-item {
@@ -150,7 +149,7 @@
 }
 .med__slider {
 	position: relative;
-	width: 50%;
+	width: 49%;
 }
 .med__slider .slick-dots {
 	position: absolute;
@@ -216,6 +215,11 @@
 .med__dots-wrapper {
 	position: relative;
 }
+.med__text-abs {
+	position: absolute;
+	top: -82px;
+	right: -82px;
+}
 .med__dots-img {
 	width: auto;
 	height: 677px;
@@ -246,6 +250,9 @@
 	opacity: 1;
 	transition: all 0.3s ease;
 }
+.dots-item.down .dots-item__content p {
+	cursor: text;
+}
 .dots-item.down .dots-item__circle {
 	border: 1px solid #000;
 }
@@ -262,6 +269,7 @@
 	opacity: 0;
 	text-align: center;
 	transition: all 0.3s ease;
+	cursor: default;
 }
 .dots-item__one {
 	top: 40%;
