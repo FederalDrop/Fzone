@@ -162,7 +162,7 @@ ul {
 	border: none;
 	padding: 27px 0;
 	width: 400px;
-	box-shadow: inset 4px 4px 20px rgba(128, 28, 78, 0);
+	box-shadow: inset 4px 4px 20px rgba(128, 28, 78, 0), 4px 5px 25px rgba(128, 28, 78, 0);
 	transition: all 0.3s ease;
 }
 .main__title {
@@ -220,6 +220,7 @@ ul {
 		transform: scale(1.1);
 		transition: all 0.3s ease;
 		border: 1px solid #000;
+		animation: none;
 	}
 	.popup__form-item input[type=submit]:hover {
 		background-color: #cbd6ff;
@@ -231,6 +232,14 @@ ul {
 	}
 	.popup__form-item input:focus::placeholder, .review__form-item input:focus::placeholder, .callback__form input:focus::placeholder {
 		color: transparent;
+		transition: all 0.3s ease;
+	}
+	.link a:hover {
+		border-bottom: 1px solid #3d3d3d;
+		transition: all 0.3s ease;
+	}
+	.employer__slider-item:hover img {
+		transform: scale(1.1);
 		transition: all 0.3s ease;
 	}
 }

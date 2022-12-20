@@ -84,6 +84,7 @@
     cursor: pointer;
     height: 56px;
     transition: all 0.3s ease;
+    margin: 20px 0 0 0;
 }
 .review__form {
     background: #FFFFFF;
@@ -149,6 +150,37 @@
 .review__form-item {
     display: flex;
     justify-content: center;
+}
+.review-body {
+    max-width: 1050px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    padding: 40px 100px 80px 100px;
+}
+.review-body__name {
+    font-size: 24px;
+    font-weight: 600;
+}
+.review-body__stars {
+    display: flex;
+    margin: 15px 0;
+}
+.review-body__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0 15px 0;
+}
+.review-body__text {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+}
+.popup-review-body .air-close {
+    right: 0;
+}
+.popup_form_body .air-close {
+    right: 0;
 }
 .video_popup {
     width: 1100px;

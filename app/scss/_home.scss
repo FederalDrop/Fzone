@@ -1,3 +1,80 @@
+.links {
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.link {
+	margin: 0 0 20px 0;
+	& a {
+		color: #3d3d3d;
+		font-size: 24px;
+		border-bottom: 1px solid transparent;
+		transition: all 0.3s ease;
+	}
+}
+.social-abs {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	z-index: 10;
+}
+.social-abs__item, .social-abs__chat, .social-abs__cross {
+	background: #EBC5BF;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s ease;
+}
+.social-abs__item {
+	margin: 0 0 20px 0;
+}
+.social-abs__items {
+	transform: translateY(200%);
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+.social-abs__items.up {
+	transform: translateY(0);
+	opacity: 1;
+	transition: all 0.3s ease;
+}
+.social-abs__btn {
+	position: relative;
+	cursor: pointer;
+}
+.social-abs__btn.up .social-abs__cross {
+	top: 0;
+	opacity: 1;
+	transition: all 0.3s ease;
+}
+.social-abs__btn.up .social-abs__chat {
+	transform: translateY(200px);
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+.social-abs__cross {
+	position: absolute;
+	top: 200px;
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+.social-item__img, .social-abs__img {
+	display: block;
+	width: 57px;
+	height: 57px;
+	cursor: pointer;
+	& img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
 .crumbs {
 	padding: 60px 0;
 }
@@ -81,6 +158,9 @@
 .home__slider-item {
 	width: auto;
 	height: 850px;
+	position: relative;
+	display: flex;
+	justify-content: center;
 	& img {
 		width: 100%;
 		height: 100%;
@@ -98,11 +178,20 @@
 }
 .home__info {
 	position: absolute;
-	right: 85px;
+	width: 1200px;
 	bottom: 20%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
+}
+.home-info__title {
+	font-weight: 400;
+	font-size: 100px;
+	line-height: 100px;
+	text-align: right;
+	text-transform: uppercase;
+	margin: 0 0 40px 0;
+	width: 56%;
 }
 .help {
 	padding: 100px 0 120px 0;
@@ -236,6 +325,9 @@
 	flex-direction: column-reverse;
 	align-items: center;
 }
+.dots-item.down .dots-item__circle{
+  animation: none;
+}
 .dots-item__circle {
 	width: 15px;
 	height: 15px;
@@ -245,6 +337,21 @@
 	cursor: pointer;
 	transition: all 0.3s ease;
 	border: 1px solid transparent;
+	animation-name: test;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+@keyframes test {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 .dots-item.down .dots-item__content {
 	opacity: 1;
@@ -304,21 +411,16 @@
 	position: relative;
 	margin: 70px 0 0 0;
 }
-.test {
-	display: flex;
-}
-.reviews-item.down .reviews-item__content .reviews-item__text {
-	max-height: 100%;
-	transition: all 0.3s ease;
+.reviews__slider .slick-list {
+	padding: 25px 0!important;
 }
 .reviews-item__img-wrapper {
 	background: #FFFFFF;
 	padding: 40px 35px;
-	width: 40%;
 	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
 .reviews-item__img {
-	width: auto;
+	width: 370px;
 	height: 370px;
 	& img {
 		width: 100%;
@@ -327,9 +429,10 @@
 	}
 }
 .reviews-item__content {
-	width: 60%;
 	background: rgba(255, 255, 255, 0.15);
 	opacity: 0.9;
+	width: 660px;
+	height: 450px;
 	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 	backdrop-filter: blur(7.5px);
 	padding: 40px 75px 50px 75px;
@@ -376,7 +479,7 @@
 }
 .reviews-item__feedback-button {
 	background: rgba(255, 255, 255, 0.7);
-	box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+	box-shadow: inset 4px 4px 20px rgba(128, 28, 78, 0), 4px 4px 20px rgba(0, 0, 0, 0.25);
 	border-radius: 50px;
 	font-weight: 600;
 	font-size: 16px;
@@ -385,7 +488,7 @@
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	color: #000000;
-	border: 1px solid transparent;
+	border: none;
 	padding: 13px 36px;
 	transition: all 0.3s ease;
 }
@@ -442,7 +545,7 @@
 		background: #F1DDDA;
 		box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
 		border-radius: 50px;
-		border: 1px solid transparent;
+		border: none;
 		font-weight: 600;
 		font-size: 24px;
 		line-height: 29px;

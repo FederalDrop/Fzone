@@ -2,7 +2,8 @@ $(function () {
 	$('.home__slider').slick({
 		dots: true,
 		arrows: false,
-		autoplay: true,
+		autoplay: false,
+		autoplaySpeed: 7000,
 	});
 	$('.inside__slider').slick({
 		dots: true,
@@ -20,6 +21,8 @@ $(function () {
 	});
 	$('.reviews__slider').slick({
 		dots: true,
+		slidesToShow: 2,
+		variableWidth: true,
 	});
 	$('.about__slider').slick({
 		dots: true,
@@ -69,22 +72,6 @@ window.addEventListener('load', function () {
 		})
 	}
 	onScrollHeader() // вызываем основную функцию onScrollHeader
-
-	let reviewsText = document.querySelectorAll('.reviews-item__text');
-	reviewsText.forEach(element => {
-		element.nextElementSibling.addEventListener('click', event => {
-			element.classList.toggle('down');
-			let answer = element;
-			if (element.classList.contains('down')) {
-				answer.style.maxHeight = answer.scrollHeight + 'px';
-				answer.style.opacity = '1';
-			}
-			else {
-				answer.style.maxHeight = '92px';
-				answer.style.opacity = '1';
-			}
-		})
-	})
 
 	let dots = document.querySelectorAll('.dots-item');
 	dots.forEach(element => {
@@ -210,5 +197,48 @@ window.addEventListener('load', function () {
 		}
 	}
 	videoLoad()
+
+	//Подгрузка отзыва во всплывающее окно 
+	function loadReview() {
+		let review = document.querySelectorAll('.reviews-item');
+		for (let i = 0; i < review.length; i++) {
+			review[i].querySelector('.reviews-item__more-button').addEventListener('click', function () {
+				let name = review[i].querySelector('.reviews-item__name').innerHTML;
+				let stars = review[i].querySelector('.reviews-item__stars').innerHTML;
+				let title = review[i].querySelector('.reviews-item__title').innerHTML;
+				let text = review[i].querySelector('.reviews-item__text').innerHTML;
+
+				document.querySelector('.review-body__name').innerHTML = name;
+				document.querySelector('.review-body__stars').innerHTML = stars;
+				document.querySelector('.review-body__title').innerHTML = title;
+				document.querySelector('.review-body__text').innerHTML = text;
+			});
+		}
+	}
+	loadReview();
+
+	let chat = document.querySelector('.social-abs__btn');
+	chat.addEventListener('click', () => {
+		let items = document.querySelector('.social-abs__items');
+		chat.classList.toggle('up');
+		items.classList.toggle('up');
+	});
+
+	let menuHover = document.querySelector('.header__list>li');
+	menuHover.addEventListener('mouseover', function () {
+		document.querySelector('.header__list>.menu-item-has-children>ul').style.transform = 'translateY(0)';
+	})
+	menuHover.addEventListener('mouseleave', function () {
+		document.querySelector('.header__list>.menu-item-has-children>ul').style.transform = 'translateY(1000%)';
+		document.querySelector('.header__list>.menu-item-has-children>ul').style.transition = 'all 0.3s ease';
+	})
+
+	let menuDown = document.querySelectorAll('.header__list>.menu-item-has-children>ul>li');
+	console.log(menuDown)
+	menuDown.forEach(element => {
+		element.addEventListener('click', event => {
+			element.classList.toggle('down');
+		})
+	})
 
 }, false);

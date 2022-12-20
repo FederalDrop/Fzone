@@ -220,15 +220,20 @@
 }
 .employer__slider-item {
 	margin: 0 30px;
+	display: block;
+	color: #000;
 }
 .employer-item__img {
-	width: auto;
+	width: 327px;
 	height: 319px;
+	overflow: hidden;
+	border-radius: 50%;
 	& img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		border-radius: 50%;
+		transition: all 0.3s ease;
 	}
 }
 .employer-item__info {
