@@ -224,7 +224,7 @@ window.addEventListener('load', function () {
 		items.classList.toggle('up');
 	});
 
-	let menuHover = document.querySelector('.header__list>li');
+	let menuHover = document.querySelector('.header__list>.menu-item-has-children');
 	menuHover.addEventListener('mouseover', function () {
 		document.querySelector('.header__list>.menu-item-has-children>ul').style.transform = 'translateY(0)';
 	})
@@ -234,11 +234,33 @@ window.addEventListener('load', function () {
 	})
 
 	let menuDown = document.querySelectorAll('.header__list>.menu-item-has-children>ul>li');
-	console.log(menuDown)
 	menuDown.forEach(element => {
 		element.addEventListener('click', event => {
 			element.classList.toggle('down');
 		})
 	})
+
+	let contacts = document.querySelector('.contacts__title');
+	let callback = document.querySelector('.callback__title ');
+
+	contacts.addEventListener('click', function () {
+		let titleWrapper = document.querySelector('.titles-switch');
+		let info = document.querySelector('.contacts__content');
+		let callbackInfo = document.querySelector('.callback__content');
+		titleWrapper.classList.add('view-contacts');
+		titleWrapper.classList.remove('view-callback');
+		info.classList.add('view-contacts');
+		callbackInfo.classList.remove('view-callback');
+	});
+
+	callback.addEventListener('click', function () {
+		let titleWrapper = document.querySelector('.titles-switch');
+		let info = document.querySelector('.contacts__content');
+		let callbackInfo = document.querySelector('.callback__content');
+		titleWrapper.classList.remove('view-contacts');
+		titleWrapper.classList.add('view-callback');
+		info.classList.remove('view-contacts');
+		callbackInfo.classList.add('view-callback');
+	});
 
 }, false);
