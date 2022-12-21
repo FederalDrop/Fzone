@@ -1,22 +1,19 @@
 .service__head {
 	height: 850px;
-	background: url('../img/service_main-bg.png');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
 }
 .service__body {
 	display: flex;
 	height: 85%;
 	align-items: flex-end;
 	justify-content: flex-end;
+	position: relative;
 }
 .sercive__info {
 	width: 60%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-	
+	position: relative;
 }
 .service-info__title {
 	font-weight: 400;
@@ -87,6 +84,84 @@
 	border-radius: 161px 0 0 0;
 }
 .cosmo__item:nth-child(13) img {
+	border-radius: 161px 161px 0 0;
+}
+.cosmo__item:nth-child(14) img {
+	border-radius: 161px 161px 0 0;
+}
+.cosmo__item:nth-child(15) img {
+	border-radius: 0 161px 0 0;
+}
+.cosmo__item:nth-child(16) img {
+	border-radius: 161px 0 0 0;
+}
+.cosmo__item:nth-child(17) img {
+	border-radius: 0 161px 0 0;
+}
+.cosmo__item:nth-child(18) img {
+	border-radius: 161px 161px 0 0;
+}
+.cosmo__item:nth-child(19) img {
+	border-radius: 161px 0 0 0;
+}
+.cosmo__item:nth-child(20) img {
+	border-radius: 161px 161px 0 0;
+}
+.cosmo__item:nth-child(21) img {
+	border-radius: 161px 0 0 0;
+}
+.cosmo__item:nth-child(22) img {
+	border-radius: 161px 161px 0 0;
+}
+.cosmo__item:nth-child(23) img {
+	border-radius: 0 161px 0 0;
+}
+.cosmo__item:nth-child(24) img {
+	border-radius: 161px 161px 0 0;
+}
+.cosmo__item:nth-child(25) img {
+	border-radius: 161px 0 0 0;
+}
+.cosmo__item:nth-child(26) img {
+	border-radius: 161px 161px 0 0;
+}
+.cosmo__item:nth-child(27) img {
+	border-radius: 161px 161px 0 0;
+}
+.cosmo__item:nth-child(28) img {
+	border-radius: 0 161px 0 0;
+}
+.cosmo__item:nth-child(29) img {
+	border-radius: 161px 0 0 0;
+}
+.cosmo__item:nth-child(30) img {
+	border-radius: 0 161px 0 0;
+}
+.cosmo__item:nth-child(31) img {
+	border-radius: 161px 161px 0 0;
+}
+.cosmo__item:nth-child(32) img {
+	border-radius: 161px 0 0 0;
+}
+.cosmo__item:nth-child(33) img {
+	border-radius: 161px 161px 0 0;
+}
+.cosmo__item:nth-child(34) img {
+	border-radius: 161px 0 0 0;
+}
+.cosmo__item:nth-child(35) img {
+	border-radius: 161px 161px 0 0;
+}
+.cosmo__item:nth-child(36) img {
+	border-radius: 0 161px 0 0;
+}
+.cosmo__item:nth-child(37) img {
+	border-radius: 161px 161px 0 0;
+}
+.cosmo__item:nth-child(38) img {
+	border-radius: 161px 0 0 0;
+}
+.cosmo__item:nth-child(39) img {
 	border-radius: 161px 161px 0 0;
 }
 .cosmo__item-img-abs {

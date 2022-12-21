@@ -1,14 +1,12 @@
 .article__head {
 	height: 850px;
-	background: url('../img/article_bg.jpg')no-repeat;
-	background-position: center;
-	background-size: 100% 100%;
 }
 .article__head-body {
 	display: flex;
 	align-items: flex-end;
 	justify-content: flex-end;
 	height: 85%;
+	position: relative;
 }
 .articles__items {
 	display: flex;

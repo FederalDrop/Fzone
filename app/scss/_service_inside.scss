@@ -1,9 +1,18 @@
 .service__head-inside {
 	height: 850px;
-	background: url('../img/service_inside_bg.jpg');
-	background-position: center;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
+	position: relative;
+}
+.adaptive__head-bg {
+	height: 850px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	& img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 }
 .service__body-inside {
 	display: flex;
@@ -11,6 +20,7 @@
 	align-items: flex-end;
 	justify-content: flex-end;
 	height: 85%;
+	position: relative;
 }
 .sercive-body__btn:first-child {
 	margin: 0 0 35px 0;
@@ -355,6 +365,7 @@
 .faq-answer__wrappper {
 	max-height: 0;
 	opacity: 0;
+	overflow: hidden;
 	transition: all 0.3s ease;
 }
 .faq-item__arrow {

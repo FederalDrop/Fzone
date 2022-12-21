@@ -157,6 +157,14 @@
 				</div>
 			</div>
 			<section class="about__head">
+				<div class="adaptive__head-bg">
+					<picture>
+						<source srcset="img/about_bg.jpg" type="image/jpeg" media="(min-width:1000px)">
+						<source srcset="img/about_bg-medium.jpg" type="image/jpeg" media="(min-width: 500px)">
+						<source srcset="img/about_bg-small.jpg" type="image/jpeg" media="(max-width: 500px)">
+						<img src="img/about_bg.jpg" alt="photo">
+					</picture>
+				</div>
 				<div class="article__head-body container__big">
 					<button class="main__btn">Онлайн запис</button>
 				</div>
@@ -165,7 +173,9 @@
 				<div class="crumbs__content container">
 					<div class="crumb__page"><a href="home.html" class="crumb__page-link current">Головна</a></div>
 					<div class="crumb__line"> / </div>
-					<div class="crumb__page"><a href="#" class="crumb__page-link">про нас</a></div>
+					<div class="crumb__page">
+						<p class="crumb__page-link">про нас</p>
+					</div>
 				</div>
 			</section>
 			<section class="about">

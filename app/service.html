@@ -156,10 +156,19 @@
 				</div>
 			</div>
 			<section class="service__head">
+				<div class="adaptive__head-bg">
+					<picture>
+						<source srcset="img/service_main-bg.png" type="image/jpeg" media="(min-width:1000px)">
+						<source srcset="img/service_main-bg-medium.jpg" type="image/jpeg" media="(min-width: 500px)">
+						<source srcset="img/service_main-bg-small.jpg" type="image/jpeg" media="(max-width: 500px)">
+						<img src="img/service_main-bg.png" alt="photo">
+					</picture>
+				</div>
 				<div class="service__body container__big">
 					<div class="sercive__info">
 						<h3 class="service-info__title">ін'єкційна косметологія</h3>
-						<button class="sercive-info__btn main__btn">Онлайн запис</button>
+						<button class="sercive-info__btn main__btn air-open-btn" data-popup-current="callback_form">Онлайн
+							запис</button>
 					</div>
 				</div>
 			</section>

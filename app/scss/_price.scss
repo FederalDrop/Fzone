@@ -1,15 +1,14 @@
 .price__head {
 	height: 850px;
-	background: url('../img/price_bg.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
 }
-.service-info__title.price {
-	width: 55%;
-}
-.price {
-	padding: 0 0 100px 0;
+.price-info__title {
+	font-weight: 400;
+	width: 80%;
+	font-size: 90px;
+	line-height: 90px;
+	text-align: right;
+	text-transform: uppercase;
+	margin: 0 0 45px 0;
 }
 .price__wrapper {
 	max-width: 850px;

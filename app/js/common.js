@@ -81,10 +81,14 @@ window.addEventListener('load', function () {
 	})
 
 	let vipad = document.querySelectorAll('.faq-item__plug');
-	let down = document.querySelector('.faq-answer__wrappper');
 	vipad.forEach(element => {
 		element.addEventListener('click', event => {
-			let currentelement = document.querySelector('.faq_item_plug down');
+			let currentelement = document.querySelector('.faq-item__plug.down');
+			if (currentelement && currentelement !== element) {
+				currentelement.classList.remove('down');
+				currentelement.nextElementSibling.style.maxHeight = 0;
+				currentelement.nextElementSibling.style.overflow = 'hidden';
+			}
 			element.classList.toggle('down');
 			let answer = element.nextElementSibling;
 			if (element.classList.contains('down')) {
@@ -94,6 +98,7 @@ window.addEventListener('load', function () {
 			else {
 				answer.style.maxHeight = 0;
 				answer.style.opacity = '0';
+				answer.style.overflow = 'hidden';
 			}
 		})
 	})
