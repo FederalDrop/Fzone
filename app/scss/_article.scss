@@ -5,8 +5,11 @@
 	display: flex;
 	align-items: flex-end;
 	justify-content: flex-end;
-	height: 85%;
+	height: 100%;
 	position: relative;
+}
+.article__head-body .main__btn {
+	margin: 0 0 150px 0;
 }
 .articles__items {
 	display: flex;

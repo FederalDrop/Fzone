@@ -177,6 +177,16 @@ ul {
 }
 
 
+@media only screen and (max-width: 1210px){
+	.container__big {
+		padding: 0 20px;
+	}
+}
+@media only screen and (max-width: 1120px){
+	.container {
+		padding: 0 20px;
+	}
+}
 
 @media only screen and (min-width: 1000px){
 	.main__btn:hover, .inside__btn:hover, .btns__body-btn:hover, .reviews-item__feedback-button:hover {
