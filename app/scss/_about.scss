@@ -1,5 +1,5 @@
 .about__head {
-	height: 850px;
+	height: 100vh;
 }
 .about {
 	padding: 0 0 180px 0;
@@ -85,6 +85,9 @@
 .about__slider .slick-track {
 	flex-direction: column;
 }
+.about__slider .slick-list {
+	border-radius: 0 0 0 253px;
+}
 .about__slider .slick-dots {
 	position: absolute;
 	margin: 0;
@@ -111,7 +114,6 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		border-radius: 0 0 0 253px;
 	}
 }
 .benefits {

@@ -1,18 +1,6 @@
 .service__head-inside {
-	height: 850px;
+	height: 100vh;
 	position: relative;
-}
-.adaptive__head-bg {
-	height: 850px;
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	& img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
 }
 .service__body-inside {
 	display: flex;

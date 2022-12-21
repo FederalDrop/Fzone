@@ -2,8 +2,8 @@ $(function () {
 	$('.home__slider').slick({
 		dots: true,
 		arrows: false,
-		autoplay: false,
-		autoplaySpeed: 7000,
+		autoplay: true,
+		autoplaySpeed: 3000,
 	});
 	$('.inside__slider').slick({
 		dots: true,
@@ -22,6 +22,7 @@ $(function () {
 	$('.reviews__slider').slick({
 		dots: true,
 		slidesToShow: 2,
+		slidesToScroll: 2,
 		variableWidth: true,
 	});
 	$('.about__slider').slick({
@@ -224,9 +225,8 @@ window.addEventListener('load', function () {
 
 	let chat = document.querySelector('.social-abs__btn');
 	chat.addEventListener('click', () => {
-		let items = document.querySelector('.social-abs__items');
-		chat.classList.toggle('up');
-		items.classList.toggle('up');
+		let wrapper = document.querySelector('.social-abs')
+		wrapper.classList.toggle('up');
 	});
 
 	let menuHover = document.querySelector('.header__list>.menu-item-has-children');

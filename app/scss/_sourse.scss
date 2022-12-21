@@ -189,6 +189,11 @@ ul {
 }
 
 @media only screen and (min-width: 1000px){
+	.social-abs__item:hover, .social-abs__chat:hover, .social-abs__cross:hover {
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+		transition: all 0.3s ease;
+		transform: translateY(-1px);
+	}
 	.main__btn:hover, .inside__btn:hover, .btns__body-btn:hover, .reviews-item__feedback-button:hover {
 		box-shadow: inset 4px 4px 20px rgba(128, 28, 78, 0), 4px 5px 25px rgba(128, 28, 78, 0.8);
 		transition: all 0.3s ease;
