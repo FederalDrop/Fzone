@@ -1,317 +1,67 @@
-<!-- новое меню -->
-<nav class="header__nav">
-	<ul class="header__list">
-		<li class="current_page_item menu-item-has-children">
-			<a href="#">про нас</a>
-			<ul>
-				<li class="menu-item-has-children">ін'єкційна косметологія
-					<ul>
-						<li><a href="#">уколи RADIESSE</a></li>
-						<li><a href="#">мезотерапія</a></li>
-						<li><a href="#">біоревіталізація</a></li>
-						<li><a href="#">лікування гіпергідрозу</a></li>
-						<li><a href="#">лікування випадання</a></li>
-						<li><a href="#">волосся</a></li>
-					</ul>
-				</li>
-				<li class="menu-item-has-children">косметологія
-					<ul>
-						<li><a href="#">уколи RADIESSE</a></li>
-						<li><a href="#">мезотерапія</a></li>
-						<li><a href="#">біоревіталізація</a></li>
-						<li><a href="#">лікування гіпергідрозу</a></li>
-						<li><a href="#">лікування випадання</a></li>
-						<li><a href="#">волосся</a></li>
-						<li><a href="#">лікування випадання</a></li>
-						<li><a href="#">волосся</a></li>
-					</ul>
-				</li>
-				<li class="menu-item-has-children">лазерна медицина
-					<ul>
-						<li><a href="#">уколи RADIESSE</a></li>
-						<li><a href="#">мезотерапія</a></li>
-					</ul>
-				</li>
-				<li class="menu-item-has-children">сертифікати
-					<ul>
-						<li><a href="#">уколи RADIESSE</a></li>
-						<li><a href="#">мезотерапія</a></li>
-						<li><a href="#">біоревіталізація</a></li>
-						<li><a href="#">лікування гіпергідрозу</a></li>
-						<li><a href="#">лікування випадання</a></li>
-						<li><a href="#">волосся</a></li>
-						<li><a href="#">лікування випадання</a></li>
-						<li><a href="#">волосся</a></li>
-					</ul>
-				</li>
-				<li class="menu-item-has-children">дерматологія
-					<ul>
-						<li><a href="#">лікування гіпергідрозу</a></li>
-						<li><a href="#">лікування випадання</a></li>
-						<li><a href="#">волосся</a></li>
-					</ul>
-				</li>
-				<li class="menu-item-has-children">естетична гінекологія
-					<ul>
-						<li><a href="#">уколи RADIESSE</a></li>
-						<li><a href="#">мезотерапія</a></li>
-						<li><a href="#">біоревіталізація</a></li>
-						<li><a href="#">лікування гіпергідрозу</a></li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-		<li><a href="service.html">послуги</a></li>
-		<li><a href="#">ціни</a></li>
-		<li><a href="#">статті</a></li>
-		<li><a href="#">спеціалісти</a></li>
-	</ul>
-</nav>
-<!-- sections -->
-<!-- Первый блок на главной странице -->
 <section class="home__head">
 	<div class="home__body">
-		<div class="home__slider">
-			<div class="home__slider-item">
-				<img src="img/home_bg.jpg" alt="slider">
-				<div class="home__info">
+		<div class="home-sliders__wrapper">
+			<div class="home-slider__text">
+				<div class="slider-text__item">
 					<h3 class="home-info__title">Краса в нюансах</h3>
 					<button class="sercive-info__btn main__btn air-open-btn" data-popup-current="callback_form">Онлайн
 						запис</button>
 				</div>
-			</div>
-			<div class="home__slider-item">
-				<img src="img/about_bg.jpg" alt="slider">
-				<div class="home__info">
-					<h3 class="home-info__title">Краса в нюансах</h3>
+				<div class="slider-text__item">
+					<h3 class="home-info__title">Краса в деталях</h3>
+					<button class="sercive-info__btn main__btn air-open-btn" data-popup-current="callback_form">Онлайн
+						запис</button>
+				</div>
+				<div class="slider-text__item">
+					<h3 class="home-info__title">Краса в деталях</h3>
 					<button class="sercive-info__btn main__btn air-open-btn" data-popup-current="callback_form">Онлайн
 						запис</button>
 				</div>
 			</div>
-			<div class="home__slider-item">
-				<img src="img/article_bg.jpg" alt="slider">
-				<div class="home__info">
-					<h3 class="home-info__title">Краса в нюансах</h3>
-					<button class="sercive-info__btn main__btn air-open-btn" data-popup-current="callback_form">Онлайн
-						запис</button>
+			<div class="home__slider">
+				<div class="home__slider-item">
+					<picture>
+						<source srcset="img/home_bg.jpg" type="image/jpeg" media="(min-width:1000px)">
+						<source srcset="img/home_bg-medium.jpg" type="image/jpeg" media="(min-width: 500px)">
+						<source srcset="img/home_bg-small.jpg" type="image/jpeg" media="(max-width: 500px)">
+						<img src="img/home_bg.jpg" alt="slider">
+					</picture>
 				</div>
-			</div>
-			<div class="home__slider-item">
-				<img src="img/article_bg.jpg" alt="slider">
-				<div class="home__info">
-					<h3 class="home-info__title">Краса в нюансах</h3>
-					<button class="sercive-info__btn main__btn air-open-btn" data-popup-current="callback_form">Онлайн
-						запис</button>
+				<div class="home__slider-item">
+					<picture>
+						<source srcset="img/about_bg.jpg" type="image/jpeg" media="(min-width:1000px)">
+						<source srcset="img/about_bg-medium.jpg" type="image/jpeg" media="(min-width: 500px)">
+						<source srcset="img/about_bg-small.jpg" type="image/jpeg" media="(max-width: 500px)">
+						<img src="img/about_bg.jpg" alt="slider">
+					</picture>
+				</div>
+				<div class="home__slider-item">
+					<picture>
+						<source srcset="img/article_bg.jpg" type="image/jpeg" media="(min-width:1000px)">
+						<source srcset="img/article_bg-medium.jpg" type="image/jpeg" media="(min-width: 500px)">
+						<source srcset="img/article_bg-small.jpg" type="image/jpeg" media="(max-width: 500px)">
+						<img src="img/article_bg.jpg" alt="slider">
+					</picture>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-<!-- Контакты -->
-<section class="contacts">
-	<div class="contacts__body container">
-		<div class="titles-switch view-contacts">
-			<div class="title__wrapper-contacts">
-				<h3 class="contacts__title main__title">контакти</h3>
-				<div class="eployer__line main__line contacts__line"></div>
-			</div>
-			<div class="title__wrapper">
-				<div class="callback__line main__line"></div>
-				<h3 class="callback__title main__title">онлайн запис</h3>
-			</div>
-		</div>
-		<div class="contacts__content view-contacts">
-			<div class="contacts__info">
-				<div class="contacts__info-geo"><a target="_blank"
-						href="https://www.google.ru/maps/place/F+Zone+Beauty+Clinic/@50.5124042,30.5069464,17z/data=!4m12!1m6!3m5!1s0x40d4cf3017ca013f:0xb39257b0f4c830a4!2sF+Zone+Beauty+Clinic!8m2!3d50.5125612!4d30.5082231!3m4!1s0x40d4cf3017ca013f:0xb39257b0f4c830a4!8m2!3d50.5125612!4d30.5082231">Київ,
-						проспект Героїв Сталінграда, 24А</a></div>
-				<div class="contacts__info-worktime">
-					<p>10:00 - 20.00 без вихідних</p>
-					<p>Безкоштовне паркування</p>
-				</div>
-				<div class="contacts__info-number"><a href="tel:+380665759888">+38 066 575 98 88</a></div>
-				<div class="contacts__info-email"><a href="mailto:fzone.clinic@gmail.com">e-mail:
-						fzone.clinic@gmail.com.</a></div>
-			</div>
-			<div class="map" id="map"></div>
-		</div>
-		<div class="callback__content">
-			<div class="callback__form">
-				<form action="#">
-					<p class="callback__form-title">Залиште свої контакти і ми з Вами зв'яжемось для запису на консультацію.
-					</p>
-					<div class="callback__form-item">
-						<input type="text" placeholder="ім’я">
-					</div>
-					<div class="callback__form-item">
-						<input type="tel" placeholder="Телефон">
-					</div>
-					<div class="callback__form-item">
-						<input type="submit" value="надіслати">
-					</div>
-					<div class="callback__form-policits">
-						<a href="#" target="_blank">Натискаючи кнопку "Надіслати", я даю згоду на обробку персональних
-							даних.</a>
-					</div>
-				</form>
-			</div>
-			<div class="callback__img"><img src="img/callback_img.jpg" alt="photo"></div>
-		</div>
-	</div>
-</section>
-<!-- Отзывы -->
-<section class="reviews">
-	<div class="reviews__body container">
-		<div class="title__wrapper">
-			<div class="article__line main__line"></div>
-			<h3 class="article__title main__title">відгуки</h3>
-		</div>
-		<div class="reviews__slider">
-			<div class="reviews-item__social">
-				<div class="reviews-item__img-wrapper">
-					<div class="reviews-item__img"><img src="img/review_img.jpg" alt="photo"></div>
-				</div>
-			</div>
-			<div class="reviews-item">
-				<div class="reviews-item__content">
-					<p class="reviews-item__name">Светлана</p>
-					<div class="reviews-item__stars">
-						<div class="reviews-item__star-wrapper">
-							<svg class="reviews-item__star gold" width="25" height="23" viewBox="0 0 25 23" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M11.5489 0.927054C11.8483 0.00574327 13.1517 0.00573969 13.4511 0.92705L15.5309 7.32827C15.6648 7.74029 16.0488 8.01925 16.482 8.01925L23.2126 8.01925C24.1814 8.01925 24.5841 9.25887 23.8004 9.82827L18.3552 13.7844C18.0047 14.0391 17.8581 14.4905 17.9919 14.9025L20.0718 21.3037C20.3712 22.225 19.3167 22.9911 18.533 22.4217L13.0878 18.4656C12.7373 18.2109 12.2627 18.2109 11.9122 18.4656L6.46701 22.4217C5.6833 22.9911 4.62882 22.225 4.92817 21.3037L7.00805 14.9025C7.14193 14.4905 6.99527 14.0391 6.64478 13.7844L1.19958 9.82827C0.415862 9.25887 0.81864 8.01925 1.78736 8.01925L8.51801 8.01925C8.95123 8.01925 9.33519 7.74029 9.46906 7.32827L11.5489 0.927054Z"
-									fill="white" />
-							</svg>
-						</div>
-						<div class="reviews-item__star-wrapper">
-							<svg class="reviews-item__star gold" width="25" height="23" viewBox="0 0 25 23" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M11.5489 0.927054C11.8483 0.00574327 13.1517 0.00573969 13.4511 0.92705L15.5309 7.32827C15.6648 7.74029 16.0488 8.01925 16.482 8.01925L23.2126 8.01925C24.1814 8.01925 24.5841 9.25887 23.8004 9.82827L18.3552 13.7844C18.0047 14.0391 17.8581 14.4905 17.9919 14.9025L20.0718 21.3037C20.3712 22.225 19.3167 22.9911 18.533 22.4217L13.0878 18.4656C12.7373 18.2109 12.2627 18.2109 11.9122 18.4656L6.46701 22.4217C5.6833 22.9911 4.62882 22.225 4.92817 21.3037L7.00805 14.9025C7.14193 14.4905 6.99527 14.0391 6.64478 13.7844L1.19958 9.82827C0.415862 9.25887 0.81864 8.01925 1.78736 8.01925L8.51801 8.01925C8.95123 8.01925 9.33519 7.74029 9.46906 7.32827L11.5489 0.927054Z"
-									fill="white" />
-							</svg>
-						</div>
-						<div class="reviews-item__star-wrapper">
-							<svg class="reviews-item__star gold" width="25" height="23" viewBox="0 0 25 23" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M11.5489 0.927054C11.8483 0.00574327 13.1517 0.00573969 13.4511 0.92705L15.5309 7.32827C15.6648 7.74029 16.0488 8.01925 16.482 8.01925L23.2126 8.01925C24.1814 8.01925 24.5841 9.25887 23.8004 9.82827L18.3552 13.7844C18.0047 14.0391 17.8581 14.4905 17.9919 14.9025L20.0718 21.3037C20.3712 22.225 19.3167 22.9911 18.533 22.4217L13.0878 18.4656C12.7373 18.2109 12.2627 18.2109 11.9122 18.4656L6.46701 22.4217C5.6833 22.9911 4.62882 22.225 4.92817 21.3037L7.00805 14.9025C7.14193 14.4905 6.99527 14.0391 6.64478 13.7844L1.19958 9.82827C0.415862 9.25887 0.81864 8.01925 1.78736 8.01925L8.51801 8.01925C8.95123 8.01925 9.33519 7.74029 9.46906 7.32827L11.5489 0.927054Z"
-									fill="white" />
-							</svg>
-						</div>
-						<div class="reviews-item__star-wrapper">
-							<svg class="reviews-item__star gold" width="25" height="23" viewBox="0 0 25 23" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M11.5489 0.927054C11.8483 0.00574327 13.1517 0.00573969 13.4511 0.92705L15.5309 7.32827C15.6648 7.74029 16.0488 8.01925 16.482 8.01925L23.2126 8.01925C24.1814 8.01925 24.5841 9.25887 23.8004 9.82827L18.3552 13.7844C18.0047 14.0391 17.8581 14.4905 17.9919 14.9025L20.0718 21.3037C20.3712 22.225 19.3167 22.9911 18.533 22.4217L13.0878 18.4656C12.7373 18.2109 12.2627 18.2109 11.9122 18.4656L6.46701 22.4217C5.6833 22.9911 4.62882 22.225 4.92817 21.3037L7.00805 14.9025C7.14193 14.4905 6.99527 14.0391 6.64478 13.7844L1.19958 9.82827C0.415862 9.25887 0.81864 8.01925 1.78736 8.01925L8.51801 8.01925C8.95123 8.01925 9.33519 7.74029 9.46906 7.32827L11.5489 0.927054Z"
-									fill="white" />
-							</svg>
-						</div>
-						<div class="reviews-item__star-wrapper">
-							<svg class="reviews-item__star gold" width="25" height="23" viewBox="0 0 25 23" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M11.5489 0.927054C11.8483 0.00574327 13.1517 0.00573969 13.4511 0.92705L15.5309 7.32827C15.6648 7.74029 16.0488 8.01925 16.482 8.01925L23.2126 8.01925C24.1814 8.01925 24.5841 9.25887 23.8004 9.82827L18.3552 13.7844C18.0047 14.0391 17.8581 14.4905 17.9919 14.9025L20.0718 21.3037C20.3712 22.225 19.3167 22.9911 18.533 22.4217L13.0878 18.4656C12.7373 18.2109 12.2627 18.2109 11.9122 18.4656L6.46701 22.4217C5.6833 22.9911 4.62882 22.225 4.92817 21.3037L7.00805 14.9025C7.14193 14.4905 6.99527 14.0391 6.64478 13.7844L1.19958 9.82827C0.415862 9.25887 0.81864 8.01925 1.78736 8.01925L8.51801 8.01925C8.95123 8.01925 9.33519 7.74029 9.46906 7.32827L11.5489 0.927054Z"
-									fill="white" />
-							</svg>
-						</div>
-					</div>
-					<h4 class="reviews-item__title">Заходили с семьей в ваше заведение несколько дней назад по совету друзей
-					</h4>
-					<p class="reviews-item__text">Заходили с семьей в ваше заведение несколько дней назад по совету друзей
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi libero aliquam asperiores commodi
-						dolorum. Dolorum repellendus eius libero deleniti molestiae sint eum in consequatur harum, facere at
-						voluptas vel obcaecati.
-					</p>
-					<button class="reviews-item__more-button air-open-btn" data-popup-current="review__full">показати
-						все</button>
-					<button class="reviews-item__feedback-button air-open-btn" data-popup-current="review_form">залишити
-						видгук</button>
-				</div>
-			</div>
-			<div class="reviews-item__social">
-				<div class="reviews-item__img-wrapper">
-					<div class="reviews-item__img"><img src="img/review_img.jpg" alt="photo"></div>
-				</div>
-			</div>
-			<div class="reviews-item">
-				<div class="reviews-item__content">
-					<p class="reviews-item__name">Анна</p>
-					<div class="reviews-item__stars">
-						<div class="reviews-item__star-wrapper">
-							<svg class="reviews-item__star gold" width="25" height="23" viewBox="0 0 25 23" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M11.5489 0.927054C11.8483 0.00574327 13.1517 0.00573969 13.4511 0.92705L15.5309 7.32827C15.6648 7.74029 16.0488 8.01925 16.482 8.01925L23.2126 8.01925C24.1814 8.01925 24.5841 9.25887 23.8004 9.82827L18.3552 13.7844C18.0047 14.0391 17.8581 14.4905 17.9919 14.9025L20.0718 21.3037C20.3712 22.225 19.3167 22.9911 18.533 22.4217L13.0878 18.4656C12.7373 18.2109 12.2627 18.2109 11.9122 18.4656L6.46701 22.4217C5.6833 22.9911 4.62882 22.225 4.92817 21.3037L7.00805 14.9025C7.14193 14.4905 6.99527 14.0391 6.64478 13.7844L1.19958 9.82827C0.415862 9.25887 0.81864 8.01925 1.78736 8.01925L8.51801 8.01925C8.95123 8.01925 9.33519 7.74029 9.46906 7.32827L11.5489 0.927054Z"
-									fill="white" />
-							</svg>
-						</div>
-						<div class="reviews-item__star-wrapper">
-							<svg class="reviews-item__star gold" width="25" height="23" viewBox="0 0 25 23" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M11.5489 0.927054C11.8483 0.00574327 13.1517 0.00573969 13.4511 0.92705L15.5309 7.32827C15.6648 7.74029 16.0488 8.01925 16.482 8.01925L23.2126 8.01925C24.1814 8.01925 24.5841 9.25887 23.8004 9.82827L18.3552 13.7844C18.0047 14.0391 17.8581 14.4905 17.9919 14.9025L20.0718 21.3037C20.3712 22.225 19.3167 22.9911 18.533 22.4217L13.0878 18.4656C12.7373 18.2109 12.2627 18.2109 11.9122 18.4656L6.46701 22.4217C5.6833 22.9911 4.62882 22.225 4.92817 21.3037L7.00805 14.9025C7.14193 14.4905 6.99527 14.0391 6.64478 13.7844L1.19958 9.82827C0.415862 9.25887 0.81864 8.01925 1.78736 8.01925L8.51801 8.01925C8.95123 8.01925 9.33519 7.74029 9.46906 7.32827L11.5489 0.927054Z"
-									fill="white" />
-							</svg>
-						</div>
-						<div class="reviews-item__star-wrapper">
-							<svg class="reviews-item__star gold" width="25" height="23" viewBox="0 0 25 23" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M11.5489 0.927054C11.8483 0.00574327 13.1517 0.00573969 13.4511 0.92705L15.5309 7.32827C15.6648 7.74029 16.0488 8.01925 16.482 8.01925L23.2126 8.01925C24.1814 8.01925 24.5841 9.25887 23.8004 9.82827L18.3552 13.7844C18.0047 14.0391 17.8581 14.4905 17.9919 14.9025L20.0718 21.3037C20.3712 22.225 19.3167 22.9911 18.533 22.4217L13.0878 18.4656C12.7373 18.2109 12.2627 18.2109 11.9122 18.4656L6.46701 22.4217C5.6833 22.9911 4.62882 22.225 4.92817 21.3037L7.00805 14.9025C7.14193 14.4905 6.99527 14.0391 6.64478 13.7844L1.19958 9.82827C0.415862 9.25887 0.81864 8.01925 1.78736 8.01925L8.51801 8.01925C8.95123 8.01925 9.33519 7.74029 9.46906 7.32827L11.5489 0.927054Z"
-									fill="white" />
-							</svg>
-						</div>
-						<div class="reviews-item__star-wrapper">
-							<svg class="reviews-item__star gold" width="25" height="23" viewBox="0 0 25 23" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M11.5489 0.927054C11.8483 0.00574327 13.1517 0.00573969 13.4511 0.92705L15.5309 7.32827C15.6648 7.74029 16.0488 8.01925 16.482 8.01925L23.2126 8.01925C24.1814 8.01925 24.5841 9.25887 23.8004 9.82827L18.3552 13.7844C18.0047 14.0391 17.8581 14.4905 17.9919 14.9025L20.0718 21.3037C20.3712 22.225 19.3167 22.9911 18.533 22.4217L13.0878 18.4656C12.7373 18.2109 12.2627 18.2109 11.9122 18.4656L6.46701 22.4217C5.6833 22.9911 4.62882 22.225 4.92817 21.3037L7.00805 14.9025C7.14193 14.4905 6.99527 14.0391 6.64478 13.7844L1.19958 9.82827C0.415862 9.25887 0.81864 8.01925 1.78736 8.01925L8.51801 8.01925C8.95123 8.01925 9.33519 7.74029 9.46906 7.32827L11.5489 0.927054Z"
-									fill="white" />
-							</svg>
-						</div>
-						<div class="reviews-item__star-wrapper">
-							<svg class="reviews-item__star" width="25" height="23" viewBox="0 0 25 23" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M11.5489 0.927054C11.8483 0.00574327 13.1517 0.00573969 13.4511 0.92705L15.5309 7.32827C15.6648 7.74029 16.0488 8.01925 16.482 8.01925L23.2126 8.01925C24.1814 8.01925 24.5841 9.25887 23.8004 9.82827L18.3552 13.7844C18.0047 14.0391 17.8581 14.4905 17.9919 14.9025L20.0718 21.3037C20.3712 22.225 19.3167 22.9911 18.533 22.4217L13.0878 18.4656C12.7373 18.2109 12.2627 18.2109 11.9122 18.4656L6.46701 22.4217C5.6833 22.9911 4.62882 22.225 4.92817 21.3037L7.00805 14.9025C7.14193 14.4905 6.99527 14.0391 6.64478 13.7844L1.19958 9.82827C0.415862 9.25887 0.81864 8.01925 1.78736 8.01925L8.51801 8.01925C8.95123 8.01925 9.33519 7.74029 9.46906 7.32827L11.5489 0.927054Z"
-									fill="white" />
-							</svg>
-						</div>
-					</div>
-					<h4 class="reviews-item__title">Обратилась в клинику по рекомендации и ни разу не пожалела.</h4>
-					<p class="reviews-item__text">Обратилась в клинику по рекомендации и ни разу не пожалела. На
-						протяжении
-						всего реабилитационного периода Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt labore
-						eveniet ipsa molestias, non nesciunt cumque architecto nulla id aliquid consectetur voluptate,
-						fugiat
-						mollitia dolore repudiandae! Asperiores aliquid dicta quaerat.
-					</p>
-					<button class="reviews-item__more-button air-open-btn" data-popup-current="review__full">показати
-						все</button>
-					<button class="reviews-item__feedback-button air-open-btn" data-popup-current="review_form">залишити
-						видгук</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- боковая плашка с соц сетями -->
+<!-- обнова -->
 <div class="social-abs">
 	<div class="social-abs__items">
-		<div class="social-abs__item">
-			<a href="#" target="_blank" class="social-item__img"><img src="img/svg/icon_table_wa.svg" alt="wa"></a>
-		</div>
-		<div class="social-abs__item">
-			<a href="#" target="_blank" class="social-item__img"><img src="img/svg/icon_table_inst.svg" alt="inst"></a>
-		</div>
-		<div class="social-abs__item">
-			<a href="#" target="_blank" class="social-item__img"><img src="img/svg/icon_table_tg.svg" alt="tg"></a>
-		</div>
-		<div class="social-abs__item">
-			<a href="#" class="social-item__img"><img src="img/svg/icon_table_phone.svg" alt="wa"></a>
-		</div>
+		<a href="#" target="_blank" class="social-abs__item">
+			<div class="social-item__img"><img src="img/svg/icon_table_wa.svg" alt="wa"></div>
+		</a>
+		<a href="#" target="_blank" class="social-abs__item">
+			<div class="social-item__img"><img src="img/svg/icon_table_inst.svg" alt="inst"></div>
+		</a>
+		<a href="#" target="_blank" class="social-abs__item">
+			<div class="social-item__img"><img src="img/svg/icon_table_tg.svg" alt="tg"></div>
+		</a>
+		<a href="tel:+30665759888" class="social-abs__item">
+			<div class="social-item__img"><img src="img/svg/icon_table_phone.svg" alt="wa"></div>
+		</a>
 	</div>
 	<div class="social-abs__btn">
 		<div class="social-abs__chat">
@@ -322,12 +72,244 @@
 		</div>
 	</div>
 </div>
-<!-- popups -->
-<div class="popup-review-body popup-air" data-air="review__full">
-	<div class="review-body">
-		<p class="review-body__name"></p>
-		<div class="review-body__stars"></div>
-		<h4 class="review-body__title"></h4>
-		<p class="review-body__text"></p>
+<!-- хедер -->
+<header class="header">
+	<div class="header__body container__big">
+		<div class="header__logo">
+			<a href="#" class="header__logo-link"><img src="img/logo.png" alt="logo"></a>
+		</div>
+		<div class="header__content">
+			<div class="header-info">
+				<div class="header-item">
+					<div class="item-phone__icon"><img src="img/svg/icon_phone.svg" alt="phone"></div>
+					<a href="tel:+380665759888" class="item-phone__text">(066) 575 98 88</a>
+				</div>
+				<div class="header-item">
+					<div class="item-geo__icon"><img src="img/svg/icon_map_pin.svg" alt="map-pin"></div>
+					<a href="#" target="_blank" class="item-geo__text">Київ, пр-т. Героев Сталинграда, 24А</a>
+				</div>
+				<div class="header-item">
+					<div class="item__social"><a href="#" target="_blank"><img src="img/svg/icon_facebook.svg" alt="facebook"></a>
+					</div>
+					<div class="item__social"><a href="#" target="_blank"><img src="img/svg/icon_instagram.svg"
+								alt="instagram"></a></div>
+				</div>
+			</div>
+			<div class="header__down">
+				<nav class="header__nav">
+					<ul class="header__list">
+						<li class="current_page_item menu-item-has-children">
+							<a href="#">про нас</a>
+							<ul>
+								<li class="menu-item-has-children">ін'єкційна косметологія
+									<ul>
+										<li><a href="#">уколи RADIESSE</a></li>
+										<li><a href="#">мезотерапія</a></li>
+										<li><a href="#">біоревіталізація</a></li>
+										<li><a href="#">лікування гіпергідрозу</a></li>
+										<li><a href="#">лікування випадання</a></li>
+										<li><a href="#">волосся</a></li>
+									</ul>
+								</li>
+								<li class="menu-item-has-children">косметологія
+									<ul>
+										<li><a href="#">уколи RADIESSE</a></li>
+										<li><a href="#">мезотерапія</a></li>
+										<li><a href="#">біоревіталізація</a></li>
+										<li><a href="#">лікування гіпергідрозу</a></li>
+										<li><a href="#">лікування випадання</a></li>
+										<li><a href="#">волосся</a></li>
+										<li><a href="#">лікування випадання</a></li>
+										<li><a href="#">волосся</a></li>
+									</ul>
+								</li>
+								<li class="menu-item-has-children">лазерна медицина
+									<ul>
+										<li><a href="#">уколи RADIESSE</a></li>
+										<li><a href="#">мезотерапія</a></li>
+									</ul>
+								</li>
+								<li class="menu-item-has-children">сертифікати
+									<ul>
+										<li><a href="#">уколи RADIESSE</a></li>
+										<li><a href="#">мезотерапія</a></li>
+										<li><a href="#">біоревіталізація</a></li>
+										<li><a href="#">лікування гіпергідрозу</a></li>
+										<li><a href="#">лікування випадання</a></li>
+										<li><a href="#">волосся</a></li>
+										<li><a href="#">лікування випадання</a></li>
+										<li><a href="#">волосся</a></li>
+									</ul>
+								</li>
+								<li class="menu-item-has-children">дерматологія
+									<ul>
+										<li><a href="#">лікування гіпергідрозу</a></li>
+										<li><a href="#">лікування випадання</a></li>
+										<li><a href="#">волосся</a></li>
+									</ul>
+								</li>
+								<li class="menu-item-has-children">естетична гінекологія
+									<ul>
+										<li><a href="#">уколи RADIESSE</a></li>
+										<li><a href="#">мезотерапія</a></li>
+										<li><a href="#">біоревіталізація</a></li>
+										<li><a href="#">лікування гіпергідрозу</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="service.html">послуги</a></li>
+						<li><a href="#">ціни</a></li>
+						<li><a href="#">статті</a></li>
+						<li><a href="#">спеціалісти</a></li>
+					</ul>
+				</nav>
+				<div class="header__lang">
+					<select class="custom-select" name="lang">
+						<option value="ua">ua</option>
+						<option value="ru">ru</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="header-mobile">
+			<div class="haeder-mobile__links">
+				<div class="header__link-geo"><a href="#"><img src="img/svg/icon_map_pin.svg" alt="map-pin"></a></div>
+				<div class="header__link-phone"><a href="tel:+30665759888"><img src="img/svg/icon_phone.svg" alt="phone"></a>
+				</div>
+			</div>
+			<div class="header__burger">
+				<span></span>
+			</div>
+			<div class="header-mobile__nav">
+				<nav class="header__nav">
+					<ul class="header__list">
+						<li class="current_page_item menu-item-has-children">
+							<a href="#">про нас</a>
+							<ul>
+								<li class="menu-item-has-children">ін'єкційна косметологія
+									<ul>
+										<li><a href="#">уколи RADIESSE</a></li>
+										<li><a href="#">мезотерапія</a></li>
+										<li><a href="#">біоревіталізація</a></li>
+										<li><a href="#">лікування гіпергідрозу</a></li>
+										<li><a href="#">лікування випадання</a></li>
+										<li><a href="#">волосся</a></li>
+									</ul>
+								</li>
+								<li class="menu-item-has-children">косметологія
+									<ul>
+										<li><a href="#">уколи RADIESSE</a></li>
+										<li><a href="#">мезотерапія</a></li>
+										<li><a href="#">біоревіталізація</a></li>
+										<li><a href="#">лікування гіпергідрозу</a></li>
+										<li><a href="#">лікування випадання</a></li>
+										<li><a href="#">волосся</a></li>
+										<li><a href="#">лікування випадання</a></li>
+										<li><a href="#">волосся</a></li>
+									</ul>
+								</li>
+								<li class="menu-item-has-children">лазерна медицина
+									<ul>
+										<li><a href="#">уколи RADIESSE</a></li>
+										<li><a href="#">мезотерапія</a></li>
+									</ul>
+								</li>
+								<li class="menu-item-has-children">сертифікати
+									<ul>
+										<li><a href="#">уколи RADIESSE</a></li>
+										<li><a href="#">мезотерапія</a></li>
+										<li><a href="#">біоревіталізація</a></li>
+										<li><a href="#">лікування гіпергідрозу</a></li>
+										<li><a href="#">лікування випадання</a></li>
+										<li><a href="#">волосся</a></li>
+										<li><a href="#">лікування випадання</a></li>
+										<li><a href="#">волосся</a></li>
+									</ul>
+								</li>
+								<li class="menu-item-has-children">дерматологія
+									<ul>
+										<li><a href="#">лікування гіпергідрозу</a></li>
+										<li><a href="#">лікування випадання</a></li>
+										<li><a href="#">волосся</a></li>
+									</ul>
+								</li>
+								<li class="menu-item-has-children">естетична гінекологія
+									<ul>
+										<li><a href="#">уколи RADIESSE</a></li>
+										<li><a href="#">мезотерапія</a></li>
+										<li><a href="#">біоревіталізація</a></li>
+										<li><a href="#">лікування гіпергідрозу</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="service.html">послуги</a></li>
+						<li><a href="#">ціни</a></li>
+						<li><a href="#">статті</a></li>
+						<li><a href="#">спеціалісти</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 	</div>
-</div>
+</header>
+<!-- футер -->
+<footer class="footer">
+	<div class="footer__body container">
+		<div class="footer__content">
+			<div class="footer__logo"><a href="#"><img src="img/footer_logo.png" alt="logo"></a></div>
+			<div class="footer-contacts">
+				<div class="footer-contacts__item">
+					<div class="footer-contacts__item-img"><img src="img/svg/icon_map_pin.svg" alt="map-pin"></div>
+					<a href="#" class="footer-contacts__geo-text">м.Київ, пр-т Героїв Сталінграда, 24А</a>
+				</div>
+				<div class="footer-contacts__item">
+					<div class="footer-contacts__item-img"><img src="img/svg/icon_phone.svg" alt="phone"></div>
+					<a href="tel:+380665759888" class="footer-contacts__phone-text">+38 066 575 98 88</a>
+				</div>
+				<div class="footer__social-items">
+					<div class="footer__social-item"><a href="#" target="_blank"><img src="img/svg/icon_instagram.svg"
+								alt="instagram"></a></div>
+					<div class="footer__social-item"><a href="#" target="_blank"><img src="img/svg/icon_facebook.svg"
+								alt="facebook"></a></div>
+				</div>
+			</div>
+			<div class="footer__nav">
+				<ul>
+					<li><a href="#">про нас</a></li>
+					<li><a href="#">ціни</a></li>
+					<li><a href="#">статті</a></li>
+					<li><a href="#">СПЕЦІАЛІСТИ</a></li>
+					<li><a href="#">кАРТА САЙТУ</a></li>
+					<li><a href="#">Privacy POLICY</a></li>
+					<li><a href="#">контакти</a></li>
+				</ul>
+			</div>
+			<div class="footer__service">
+				<p><a href="#" class="footer__service-title">послуги</a></p>
+				<ul>
+					<li><a href="#">ін’єкційна косметологія</a></li>
+					<li><a href="#">лазерна медицина</a></li>
+					<li><a href="#">косметология</a></li>
+					<li><a href="#">естетична гінекологія</a></li>
+					<li><a href="#">дерматологія</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer__down">
+			<div class="footer__license">
+				<p>Ліцензію видано Указом МОЗ України від 07.08.2020 р. #1822</p>
+			</div>
+			<div class="footer__social-items">
+				<div class="footer__social-item"><a href="#" target="_blank"><img src="img/svg/icon_instagram.svg"
+							alt="instagram"></a></div>
+				<div class="footer__social-item"><a href="#" target="_blank"><img src="img/svg/icon_facebook.svg"
+							alt="facebook"></a></div>
+			</div>
+		</div>
+		<div class="footer__other">
+			<p>Разработчик: <a href="#">spacesdev.space</a></p>
+		</div>
+	</div>
+</footer>

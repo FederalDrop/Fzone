@@ -280,7 +280,7 @@
 	transition: all 0.3s ease;
 }
 .med__body {
-	max-width: 1000px;
+	max-width: 1000px!important;
 	display: flex;
 	justify-content: space-between;
 }
@@ -357,7 +357,7 @@
 .med__text-abs {
 	position: absolute;
 	top: 0;
-	right: -82px;
+	right: -75px;
 }
 .med__dots-img {
 	width: 490px;
@@ -449,6 +449,10 @@
 	top: 62%;
 	right: 17%;
 }
+.popup__form-item input:focus::placeholder, .review__form-item input:focus::placeholder, .callback__form input:focus::placeholder {
+	color: transparent;
+	transition: all 0.3s ease;
+}
 .reviews {
 	padding: 80px 0 60px 0;
 	background: url('../img/reviews_bg.jpg')no-repeat;
@@ -480,10 +484,13 @@
 .reviews-item__content {
 	background: rgba(255, 255, 255, 0.15);
 	opacity: 0.9;
-	width: 660px;
+	max-width: 660px;
 	height: 450px;
 	backdrop-filter: blur(7.5px);
 	padding: 40px 75px 50px 75px;
+}
+.reviews__btn-wrapper {
+	display: none;
 }
 .reviews-item__name {
 	font-weight: 600;
@@ -559,16 +566,6 @@
 	overflow: visible;
 	transition: all 0.3s ease;
 }
-.titles-switch.view-callback .callback__title {
-	font-weight: 500;
-	font-size: 60px;
-	line-height: 60px;
-	color: #000;
-}
-.titles-switch.view-callback .callback__line {
-	width: 310px;
-	transition: all 0.3s ease;
-}
 .callback__title {
 	font-weight: 500;
 	font-size: 48px;
@@ -579,10 +576,7 @@
 .callback__form {
 	width: 46%;
 }
-.callback__line {
-	width: 0;
-	transition: all 0.3s ease;
-}
+
 .callback__img {
 	width: 472px;
 	height: 649px;
@@ -619,6 +613,7 @@
 		padding: 20px 50px;
 		width: 100%;
 		margin: 0 0 30px 0;
+		transition: all 0.3s ease;
 	}
 	input[type=submit] {
 		background: #F1DDDA;
@@ -641,8 +636,8 @@
 }
 .partners__slider {
 	position: relative;
-	width: calc(100% + 120px);
-	margin: 80px 0 0 -60px;
+	width: calc(100% + 100px);
+	margin: 80px 0 0 -50px;
 }
 .partners__slider-item {
 	width: auto;
@@ -664,7 +659,7 @@
 	align-items: flex-end;
 }
 .clinic__info {
-	width: 55%;
+	width: 61%;
 }
 .clinic__info-title {
 	font-weight: 700;
@@ -680,8 +675,9 @@
 	margin: 20px 0 40px 0;
 }
 .clinic__info-redactor {
-	max-height: 590px;
+	max-height: 550px;
 	overflow: auto;
+	padding: 0 25px 0 0;
 	h1 {
 		font-weight: 700;
 		font-size: 32px;
@@ -757,5 +753,441 @@
 		height: 100%;
 		object-fit: cover;
 		border-radius: 194px 194px 0 0;
+	}
+}
+//404
+.error__info {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: flex-end;
+}
+.error-info__title {
+	font-size: 60px;
+	margin: 0 0 40px 0;
+	width: 55%;
+	text-align: right;
+}
+.error-info__btn {
+	color: #000;
+}
+@media only screen and (max-width: 1160px){
+	.social-abs {
+		right: 20px;
+	}
+	.med__body {
+		justify-content: center;
+	}
+	.med__slider {
+		width: 47%;
+		margin: 0 20px 0 0;
+	}
+	.med-item__img {
+		width: 470px;
+	}
+	.med__dots-img {
+		width: 470px;
+	}
+}
+@media only screen and (max-width: 1125px){
+	.reviews__slider .slick-list {
+		box-shadow: none;
+	}
+	.reviews-item__img-wrapper {
+		max-width: 430px;
+		margin: 0 auto;
+	}
+	.reviews-item__content {
+		margin: 0 auto;
+		box-shadow: 0 4px 15px rgb(0 0 0 / 25%);
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+	}
+	.reviews__slider .slick-list {
+		padding: 10px 0 20px 0!important;
+	}
+	.reviews__slider .slick-dots {
+		margin: 40px 0 0 0;
+	}
+	.reviews__btn-wrapper {
+		display: flex;
+		justify-content: center;
+		margin: 55px 0 0 0;
+	}
+	.reviews-btn__feedback {
+		background: rgba(255, 255, 255, 0.8);
+		box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+		border-radius: 50px;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		border: 1px solid transparent;
+		padding: 23px 65px;
+		transition: all 0.3s ease;
+		color: #000000;
+	}
+	.reviews-item__feedback-button {
+		display: none;
+	}
+	.reviews-item__more-button {
+		margin: 10px 0 0 0;
+	}
+}
+@media only screen and (max-width: 1100px){
+	.clinic__info {
+		width: 57%;
+	}
+	.med__slider {
+		width: 42%;
+	}
+	.med-item__img {
+		width: 410px;
+	}
+	.med__dots-img {
+		width: 410px;
+	}
+	.med__text-abs {
+		right: -82px;
+	}
+	.dots-item__one {
+    top: 50%;
+    left: 3%;
+	}
+}
+@media only screen and (max-width: 1000px){
+	.help__items {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		margin: 100px 0 0 0;
+	}
+	.help-item__body {
+		display: flex;
+		align-items: center;
+	}
+	.help-item__img {
+		width: 120px;
+		height: 120px;
+	}
+	.help-item__text {
+		margin: 0 0 0 30px;
+		width: calc(100% - 150px);
+		text-align: left;
+	}
+	.help-item {
+		width: 48%;
+		margin: 0 0 30px 0;
+		padding: 12px 15px;
+		&:last-child {
+			margin: 0;
+		}
+	}
+	.med__body {
+		flex-direction: column-reverse;
+		align-items: flex-end;
+	}
+	.med__dots-img img {
+		margin: 0;
+	}
+	.med__slider {
+		width: 100%;
+		margin: 15px 0 0 0;
+	}
+	.med-item__img {
+		width: 450px;
+		height: 500px;
+		& img {
+			border-radius: 0 0 191px 191px;
+		}
+	}
+	.med__slider .slick-list {
+		border-radius: 0 0 0 191px;
+	}
+	.med__dots-img {
+		width: 490px;
+		height: 600px;
+	}
+	.med__text-abs {
+		top: -97px;
+		right: auto;
+		left: -60px;
+		transform: rotate(-90deg);
+	}
+	.med__slider .slick-dots {
+		position: relative;
+		bottom: auto;
+		margin: 35px 0 0 0;
+	}
+	.med__slider .slick-arrow.slick-next {
+		bottom: 0;
+	}
+	.med__slider .slick-arrow.slick-prev {
+		bottom: 0;
+	}
+	.med-item__info {
+		width: 45%;
+		max-height: 450px;
+		margin: 0;
+		padding: 0 0 0 20px;
+	}
+	.med-item__title {
+		text-align: right;
+	}
+	.med-item__wrapper {
+		flex-direction: row-reverse;
+		justify-content: center;
+	}
+	.partners__slider {
+		width: calc(100% + 50px);
+		margin: 50px 0 0 -25px;
+	}
+	.partners__slider-item {
+		margin: 0 50px;
+	}
+	.clinic__body {
+		flex-direction: row-reverse;
+	}
+	.clinic__info {
+		width: 65%;
+	}
+	.clinic__info-redactor {
+		max-height: 490px;
+	}
+	.clinic__img {
+		width: 265px;
+		height: 490px;
+	}
+	.clinic__info-subtitle {
+		text-align: left;
+	}
+	.clinic__info-title {
+		text-align: right;
+	}
+} 
+@media only screen and (max-width: 900px){
+	.help-item {
+		width: 54%;
+	}
+}
+@media only screen and (max-width: 850px){
+	.med__dots-img {
+		width: 400px;
+		height: 550px;
+	}
+	.med__text-abs {
+		top: -108px;
+		left: -68px;
+	}
+	.med-item__img {
+		width: 382px;
+		height: 462px;
+	}
+	.med-item__info {
+		width: 50%;
+	}
+	.clinic__info-title, .clinic__info-subtitle {
+		font-size: 34px;
+	}
+	.clinic__info-redactor p {
+		font-size: 18px;
+		margin: 0 0 15px 0;
+	}
+	.clinic__info {
+		width: 60%;
+	}
+}
+@media only screen and (max-width: 800px){
+	.help-item {
+		width: 62%;
+	}
+}
+@media only screen and (max-width: 750px){
+	.clinic__info {
+		width: 55%;
+	}
+}
+@media only screen and (max-width: 700px){
+	.help-item {
+		width: 74%;
+	}
+	.callback__img {
+		display: none;
+	}
+	.callback__form {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 650px){
+	.med-item__img {
+		width: 280px;
+		height: 360px;
+	}
+	.med__dots-img {
+		width: 350px;
+		height: 400px;
+	}
+	.clinic__img {
+		display: none;
+	}
+	.clinic__info {
+		width: 100%;
+	}
+	.reviews-item__content {
+		padding: 30px 30px;
+	}
+}
+@media only screen and (max-width: 600px){
+	.partners__slider {
+		width: calc(100% + 20px);
+		margin: 50px 0 0 -10px;
+	}
+	.partners__slider-item {
+		margin: 0 20px;
+	}
+}
+@media only screen and (max-width: 580px){
+	.med-item__title {
+		font-size: 28px;
+	}
+	.med-item__text {
+		font-size: 18px;
+	}
+	.med-item__info {
+		max-height: 360px;
+	}
+	.med__slider .slick-list {
+    border-radius: 0 0 0 130px;
+	}
+}
+@media only screen and (max-width: 480px){
+	.med__slider .slick-list {
+    border-radius: 0 0 0 110px;
+	}
+	.med-item__info {
+    max-height: 270px;
+	}
+	.med-item__img {
+		width: 190px;
+		height: 270px;
+	}
+	.med__dots-img {
+		width: 240px;
+		height: 330px;
+	}
+	.help-item {
+		width: 85%;
+	}
+	.help-item__text {
+		margin: 0 0 0 15px;
+		width: calc(100% - 135px);
+	}
+	.partners__slider {
+		width: 100%;
+		margin: 40px 0 0 0;
+	}
+	.partners__slider-item {
+		margin: 0;
+	}
+	.reviews-item__img {
+		width: 320px;
+		height: 320px;
+		margin: 0 auto;
+	}
+	.reviews-item__img-wrapper {
+		padding: 40px 0;
+	}
+	.reviews-item__content {
+		height: 400px;
+	}
+	.reviews-item__title {
+		font-size: 20px;
+	}
+	.reviews-item__text {
+		font-size: 20px;
+	}
+	.reviews-item__more-button {
+		font-size: 18px;
+	}
+	.reviews-item__content {
+		box-shadow: none;
+	}
+	.reviews__slider .slick-list {
+		box-shadow: 0 4px 15px rgb(0 0 0 / 25%);
+		padding: 0!important;
+	}
+}
+@media only screen and (max-width: 420px){
+	.callback__form input[type=submit] {
+		font-size: 20px;
+	}
+	.callback__form input {
+		font-size: 20px;
+	}
+	.callback__form-title {
+		margin: 0 0 30px 0;
+	}
+	.callback__form-policits {
+		margin: 10px 0 0 0;
+	}
+	.med-item__title {
+		font-size: 24px;
+	}
+	.med-item__text {
+		font-size: 16px;
+	}
+	.help-item__text {
+		font-size: 20px;
+		width: calc(100% - 115px);
+	}
+	.help-item {
+    width: 90%;
+	}
+	.help-item__img {
+		width: 100px;
+		height: 100px;
+	}
+	.clinic__info-redactor p {
+		font-size: 16px;
+		margin: 0 0 10px 0;
+	}
+	.clinic__info-subtitle {
+		margin: 10px 0 25px 0;
+	}
+	.reviews-item__stars {
+		margin: 8px 0;
+	}
+	.reviews-item__title {
+		font-size: 18px;
+		margin: 0 0 10px 0;
+	}
+	.reviews-item__text {
+		font-size: 16px;
+	}
+}
+@media only screen and (max-width: 370px){
+	.med-item__info {
+		padding: 0 0 0 5px;
+		width: 40%;
+	}
+	.med-item__title {
+		font-size: 16px;
+		margin: 0 0 10px 0;
+	}
+	.clinic__info-subtitle, .clinic__info-title {
+		font-size: 28px;
+	}
+	.reviews-item__img {
+		width: 270px;
+		height: 270px;
+	}
+	.reviews-item__content {
+		height: 350px;
 	}
 }
