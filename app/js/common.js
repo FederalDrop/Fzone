@@ -2,8 +2,14 @@ $(function () {
 	$('.home__slider').slick({
 		dots: true,
 		arrows: false,
+		asNavFor: '.home-slider__text',
+	});
+	$('.home-slider__text').slick({
+		dots: false,
+		arrows: false,
 		autoplay: true,
-		autoplaySpeed: 3000,
+		autoplaySpeed: 5000,
+		asNavFor: '.home__slider',
 	});
 	$('.inside__slider').slick({
 		dots: true,

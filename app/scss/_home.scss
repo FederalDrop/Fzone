@@ -194,6 +194,33 @@
 	bottom: 50px;
 	width: 100%;
 }
+.home-sliders__wrapper {
+	position: relative;
+}
+.home-slider__text .slick-list {
+	padding: 0 25px 27px 0!important;
+}
+.home-slider__text {
+	position: absolute;
+	z-index: 10;
+	width: calc(1200px + 27px);
+	height: 100%;
+	display: flex;
+	//flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+	bottom: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+.slider-text__item {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
 .home__info {
 	position: absolute;
 	width: 1200px;
@@ -212,7 +239,7 @@
 	text-align: right;
 	text-transform: uppercase;
 	margin: 0 0 40px 0;
-	width: 56%;
+	width: 50%;
 }
 .help {
 	padding: 100px 0 150px 0;
