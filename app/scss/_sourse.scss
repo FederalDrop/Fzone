@@ -249,15 +249,6 @@ ul {
 		transform: scale(0.9);
 		transition: all 0.3s ease;
 	}
-	.callback__form input[type=submit]:hover, .review__form-item input[type=submit]:hover, .popup__form-item input[type=submit]:hover {
-		box-shadow: 4px 4px 10px rgba(128, 28, 78, 0.5), inset 4px 4px 20px rgba(128, 28, 78, 0);
-		border: none;
-		transition: all 0.3s ease;
-	}
-	.callback__form input[type=submit]:active, .review__form-item input[type=submit]:active, .popup__form-item input[type=submit]:active {
-		box-shadow: 4px 4px 10px rgba(128, 28, 78, 0), inset 4px 4px 20px rgba(128, 28, 78, 0.5);
-		transition: all 0.3s ease;
-	}
 	.reviews-item__more-button:hover {
 		color: #867955;
 	}
@@ -267,7 +258,7 @@ ul {
 		border: 1px solid #000;
 		animation: none;
 	}
-	.review__form-item input:hover, .callback__form input:hover, .popup__form-item input:hover {
+	.review__form-item input:hover, .callback__form input:hover, .popup__form-item input:hover, .review__form-item.wrapper:hover {
 		filter: drop-shadow(0px 0px 10px rgba(128, 28, 78, 0.5));
 		border: 1px solid rgba(128, 28, 78, 0.5);
 		transition: all 0.3s ease;
@@ -276,6 +267,21 @@ ul {
 		filter: drop-shadow(0px 0px 10px rgba(128, 28, 78, 0.5));
 		border: 1px solid rgba(128, 28, 78, 0.5);
 		transition: all 0.3s ease;
+	}
+	.callback__form input[type=submit]:hover, .review__form-item input[type=submit]:hover, .popup__form-item input[type=submit]:hover {
+		box-shadow: 4px 4px 10px rgba(128, 28, 78, 0.5), inset 4px 4px 20px rgba(128, 28, 78, 0);
+		border: 1px color transparent!important;
+		transition: all 0.3s ease;
+	}
+	.callback__form input[type=submit]:active, .review__form-item input[type=submit]:active, .popup__form-item input[type=submit]:active {
+		box-shadow: 4px 4px 10px rgba(128, 28, 78, 0), inset 4px 4px 20px rgba(128, 28, 78, 0.5);
+		transition: all 0.3s ease;
+	}
+	.popup__form-item input[type=submit]:hover, .callback__form input[type=submit]:hover, .review__form-item input[type=submit]:hover {
+		border: 1px solid transparent;
+	}
+	.popup__form-item input[type=submit]:focus, .callback__form input[type=submit]:focus, .review__form-item input[type=submit]:focus {
+		border: 1px solid transparent;
 	}
 	.link a:hover {
 		border-bottom: 1px solid #3d3d3d;

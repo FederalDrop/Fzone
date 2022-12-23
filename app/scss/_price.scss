@@ -25,7 +25,7 @@
 		font-weight: 400;
 		font-size: 32px;
 		line-height: 38px;
-		padding: 25px 70px;
+		padding: 25px 50px;
 		color: #000000;
 		background: #D9D9D9;
 		border-radius: 166px;
@@ -46,6 +46,55 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+	}
+}
+.search__down {
+	background: #D9D9D9;
+	border-radius: 0 0 10px 10px;
+	padding: 20px 50px;
+	max-height: 220px;
+	overflow: auto;
+}
+.search__down::-webkit-scrollbar {
+	width: 3px;
+}
+
+.search__down::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.search__down::-webkit-scrollbar-thumb {
+	background-color: darkgrey;
+	outline: 1px solid slategrey;
+}
+.search-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #000;
+	margin: 0 0 10px 0;
+	padding: 0 0 3px 0;
+}
+.search-item__text {
+	font-weight: 500;
+	font-size: 25px;
+	line-height: 30px;
+}
+.search-item__desc {
+	font-weight: 500;
+	font-size: 25px;
+	line-height: 30px;
+}
+.search-item__price {
+	p {
+		font-weight: 500;
+		font-size: 25px;
+		line-height: 30px;
+	}
+	.sale {
+		text-decoration-line: line-through;
+	}
+	.stock {
+		font-weight: 700;
 	}
 }
 .price__items {

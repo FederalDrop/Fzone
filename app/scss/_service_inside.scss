@@ -43,10 +43,14 @@
 		border-radius: 245px 0 0 0;
 	}
 }
-.inside-item__first-abs {
+.inside-item__img-first::before {
+	content: '';
 	position: absolute;
 	top: -90px;
 	left: -55px;
+	background: url('../img/slider_before_text.png');
+	width: 185px;
+	height: 215px;
 }
 .inside-item__img-second {
 	width: 490px;
@@ -59,10 +63,14 @@
 		border-radius: 0 0 245px 0;
 	}
 }
-.inside-item__second-abs {
+.inside-item__img-second::before {
+	content: '';
 	position: absolute;
 	right: -50px;
-	bottom: -40px;
+	bottom: -55px;
+	background: url('../img/slide_after_text.png');
+	width: 185px;
+	height: 215px;
 }
 .inside .title__wrapper {
 	margin: 0 0 40px 0;
@@ -70,7 +78,7 @@
 .inside__content {
 	padding: 40px 0;
 }
-.inside-btns__section, .inside-slider__section, .inside__video-section, .inside__proc-section {
+.inside-btns__section, .inside-slider__section, .inside__video-section, .inside__proc-section, .inside-slide__section-two {
 	padding: 40px 0;
 }
 .inside__btns {
@@ -103,8 +111,8 @@
 	text-transform: uppercase;
 	color: #000000;
 	border: none;
-	padding: 20px 0;
-	width: 335px;
+	padding: 27px 0;
+	width: 400px;
 	transition: all 0.3s ease;
 	&:first-child {
 		margin: 0 100px 0 0;
@@ -131,7 +139,8 @@
 .mony {
 	background: url('../img/inside_bg.jpg')no-repeat center;
 	padding: 110px 0 75px 0;
-	background-size: 100% 100%;
+	background-size: cover;
+	margin: 40px 0
 }
 .mony__text {
 	width: 75%;
@@ -254,6 +263,10 @@
 .effect__video {
 	margin: 70px 0;
 	cursor: pointer;
+	& iframe {
+		width: 100%;
+		height: 100%;
+	}
 }
 .effect__gold {
 	padding: 40px 0;
@@ -324,6 +337,7 @@
 .faq {
 	background: #F0EAE4;
 	padding: 80px 0 90px 0;
+	margin: 40px 0;
 }
 .faq__title {
 	font-weight: 600;

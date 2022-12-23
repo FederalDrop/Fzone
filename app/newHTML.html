@@ -1,21 +1,19 @@
 <section class="home__head">
 	<div class="home__body">
 		<div class="home-sliders__wrapper">
+			<div class="home-btn__wrapper">
+				<button class="sercive-info__btn main__btn air-open-btn" data-popup-current="callback_form">Онлайн
+					запис</button>
+			</div>
 			<div class="home-slider__text">
 				<div class="slider-text__item">
 					<h3 class="home-info__title">Краса в нюансах</h3>
-					<button class="sercive-info__btn main__btn air-open-btn" data-popup-current="callback_form">Онлайн
-						запис</button>
 				</div>
 				<div class="slider-text__item">
 					<h3 class="home-info__title">Краса в деталях</h3>
-					<button class="sercive-info__btn main__btn air-open-btn" data-popup-current="callback_form">Онлайн
-						запис</button>
 				</div>
 				<div class="slider-text__item">
 					<h3 class="home-info__title">Краса в деталях</h3>
-					<button class="sercive-info__btn main__btn air-open-btn" data-popup-current="callback_form">Онлайн
-						запис</button>
 				</div>
 			</div>
 			<div class="home__slider">
@@ -65,251 +63,88 @@
 	</div>
 	<div class="social-abs__btn">
 		<div class="social-abs__chat">
-			<div class="social-abs__img"><img src="img/svg/icon_table_chat.svg" alt="chat"></div>
+			<div class="social-abs__img">
+				<img src="img/svg/icon_table_chat.svg" alt="chat">
+				<span class="pulse-button__rings"></span>
+				<span class="pulse-button__rings"></span>
+				<span class="pulse-button__rings"></span>
+			</div>
 		</div>
 		<div class="social-abs__cross">
 			<div class="social-abs__img"><img src="img/svg/icon_table_cross.svg" alt="cross"></div>
 		</div>
 	</div>
 </div>
-<!-- хедер -->
-<header class="header">
-	<div class="header__body container__big">
-		<div class="header__logo">
-			<a href="#" class="header__logo-link"><img src="img/logo.png" alt="logo"></a>
-		</div>
-		<div class="header__content">
-			<div class="header-info">
-				<div class="header-item">
-					<div class="item-phone__icon"><img src="img/svg/icon_phone.svg" alt="phone"></div>
-					<a href="tel:+380665759888" class="item-phone__text">(066) 575 98 88</a>
-				</div>
-				<div class="header-item">
-					<div class="item-geo__icon"><img src="img/svg/icon_map_pin.svg" alt="map-pin"></div>
-					<a href="#" target="_blank" class="item-geo__text">Київ, пр-т. Героев Сталинграда, 24А</a>
-				</div>
-				<div class="header-item">
-					<div class="item__social"><a href="#" target="_blank"><img src="img/svg/icon_facebook.svg" alt="facebook"></a>
+<!-- отзывы -->
+<div class="popup_form_body review_form_body popup-air" data-air="review_form">
+	<div class="review__form">
+		<form action="#">
+			<div class="title__wrapper">
+				<div class="article__line main__line"></div>
+				<h3 class="article__title main__title">залишити відгуки</h3>
+			</div>
+			<div class="review__form-wrapper">
+				<div class="popup-input__wrapper">
+					<div class="review__form-item">
+						<input type="text" name="name" placeholder="Ваше ім’я">
 					</div>
-					<div class="item__social"><a href="#" target="_blank"><img src="img/svg/icon_instagram.svg"
-								alt="instagram"></a></div>
+					<div class="review__form-item">
+						<input type="text" name="phone" placeholder="Ваш email">
+					</div>
+				</div>
+				<div class="review__form-item wrapper">
+					<div class="form-stars">
+						<div class="form-star">
+							<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M11.5489 1.42705C11.8483 0.505743 13.1517 0.50574 13.4511 1.42705L15.5309 7.82827C15.6648 8.24029 16.0488 8.51925 16.482 8.51925L23.2126 8.51925C24.1814 8.51925 24.5841 9.75887 23.8004 10.3283L18.3552 14.2844C18.0047 14.5391 17.8581 14.9905 17.9919 15.4025L20.0718 21.8037C20.3712 22.725 19.3167 23.4911 18.533 22.9217L13.0878 18.9656C12.7373 18.7109 12.2627 18.7109 11.9122 18.9656L6.46701 22.9217C5.6833 23.4911 4.62882 22.725 4.92817 21.8037L7.00805 15.4025C7.14193 14.9905 6.99527 14.5391 6.64478 14.2844L1.19958 10.3283C0.415862 9.75887 0.81864 8.51925 1.78736 8.51925L8.51801 8.51925C8.95123 8.51925 9.33519 8.24029 9.46906 7.82827L11.5489 1.42705Z"
+									fill="#D9D9D9" />
+							</svg>
+						</div>
+						<div class="form-star">
+							<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M11.5489 1.42705C11.8483 0.505743 13.1517 0.50574 13.4511 1.42705L15.5309 7.82827C15.6648 8.24029 16.0488 8.51925 16.482 8.51925L23.2126 8.51925C24.1814 8.51925 24.5841 9.75887 23.8004 10.3283L18.3552 14.2844C18.0047 14.5391 17.8581 14.9905 17.9919 15.4025L20.0718 21.8037C20.3712 22.725 19.3167 23.4911 18.533 22.9217L13.0878 18.9656C12.7373 18.7109 12.2627 18.7109 11.9122 18.9656L6.46701 22.9217C5.6833 23.4911 4.62882 22.725 4.92817 21.8037L7.00805 15.4025C7.14193 14.9905 6.99527 14.5391 6.64478 14.2844L1.19958 10.3283C0.415862 9.75887 0.81864 8.51925 1.78736 8.51925L8.51801 8.51925C8.95123 8.51925 9.33519 8.24029 9.46906 7.82827L11.5489 1.42705Z"
+									fill="#D9D9D9" />
+							</svg>
+						</div>
+						<div class="form-star">
+							<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M11.5489 1.42705C11.8483 0.505743 13.1517 0.50574 13.4511 1.42705L15.5309 7.82827C15.6648 8.24029 16.0488 8.51925 16.482 8.51925L23.2126 8.51925C24.1814 8.51925 24.5841 9.75887 23.8004 10.3283L18.3552 14.2844C18.0047 14.5391 17.8581 14.9905 17.9919 15.4025L20.0718 21.8037C20.3712 22.725 19.3167 23.4911 18.533 22.9217L13.0878 18.9656C12.7373 18.7109 12.2627 18.7109 11.9122 18.9656L6.46701 22.9217C5.6833 23.4911 4.62882 22.725 4.92817 21.8037L7.00805 15.4025C7.14193 14.9905 6.99527 14.5391 6.64478 14.2844L1.19958 10.3283C0.415862 9.75887 0.81864 8.51925 1.78736 8.51925L8.51801 8.51925C8.95123 8.51925 9.33519 8.24029 9.46906 7.82827L11.5489 1.42705Z"
+									fill="#D9D9D9" />
+							</svg>
+						</div>
+						<div class="form-star">
+							<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M11.5489 1.42705C11.8483 0.505743 13.1517 0.50574 13.4511 1.42705L15.5309 7.82827C15.6648 8.24029 16.0488 8.51925 16.482 8.51925L23.2126 8.51925C24.1814 8.51925 24.5841 9.75887 23.8004 10.3283L18.3552 14.2844C18.0047 14.5391 17.8581 14.9905 17.9919 15.4025L20.0718 21.8037C20.3712 22.725 19.3167 23.4911 18.533 22.9217L13.0878 18.9656C12.7373 18.7109 12.2627 18.7109 11.9122 18.9656L6.46701 22.9217C5.6833 23.4911 4.62882 22.725 4.92817 21.8037L7.00805 15.4025C7.14193 14.9905 6.99527 14.5391 6.64478 14.2844L1.19958 10.3283C0.415862 9.75887 0.81864 8.51925 1.78736 8.51925L8.51801 8.51925C8.95123 8.51925 9.33519 8.24029 9.46906 7.82827L11.5489 1.42705Z"
+									fill="#D9D9D9" />
+							</svg>
+						</div>
+						<div class="form-star">
+							<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M11.5489 1.42705C11.8483 0.505743 13.1517 0.50574 13.4511 1.42705L15.5309 7.82827C15.6648 8.24029 16.0488 8.51925 16.482 8.51925L23.2126 8.51925C24.1814 8.51925 24.5841 9.75887 23.8004 10.3283L18.3552 14.2844C18.0047 14.5391 17.8581 14.9905 17.9919 15.4025L20.0718 21.8037C20.3712 22.725 19.3167 23.4911 18.533 22.9217L13.0878 18.9656C12.7373 18.7109 12.2627 18.7109 11.9122 18.9656L6.46701 22.9217C5.6833 23.4911 4.62882 22.725 4.92817 21.8037L7.00805 15.4025C7.14193 14.9905 6.99527 14.5391 6.64478 14.2844L1.19958 10.3283C0.415862 9.75887 0.81864 8.51925 1.78736 8.51925L8.51801 8.51925C8.95123 8.51925 9.33519 8.24029 9.46906 7.82827L11.5489 1.42705Z"
+									fill="#D9D9D9" />
+							</svg>
+						</div>
+					</div>
+					<input class="counter" type="text">
+					<textarea name="review" placeholder="Ваша оцінка та коментарій"></textarea>
+				</div>
+				<div class="review__form-item">
+					<input type="submit" name="btn" value="надіслати"></input>
 				</div>
 			</div>
-			<div class="header__down">
-				<nav class="header__nav">
-					<ul class="header__list">
-						<li class="current_page_item menu-item-has-children">
-							<a href="#">про нас</a>
-							<ul>
-								<li class="menu-item-has-children">ін'єкційна косметологія
-									<ul>
-										<li><a href="#">уколи RADIESSE</a></li>
-										<li><a href="#">мезотерапія</a></li>
-										<li><a href="#">біоревіталізація</a></li>
-										<li><a href="#">лікування гіпергідрозу</a></li>
-										<li><a href="#">лікування випадання</a></li>
-										<li><a href="#">волосся</a></li>
-									</ul>
-								</li>
-								<li class="menu-item-has-children">косметологія
-									<ul>
-										<li><a href="#">уколи RADIESSE</a></li>
-										<li><a href="#">мезотерапія</a></li>
-										<li><a href="#">біоревіталізація</a></li>
-										<li><a href="#">лікування гіпергідрозу</a></li>
-										<li><a href="#">лікування випадання</a></li>
-										<li><a href="#">волосся</a></li>
-										<li><a href="#">лікування випадання</a></li>
-										<li><a href="#">волосся</a></li>
-									</ul>
-								</li>
-								<li class="menu-item-has-children">лазерна медицина
-									<ul>
-										<li><a href="#">уколи RADIESSE</a></li>
-										<li><a href="#">мезотерапія</a></li>
-									</ul>
-								</li>
-								<li class="menu-item-has-children">сертифікати
-									<ul>
-										<li><a href="#">уколи RADIESSE</a></li>
-										<li><a href="#">мезотерапія</a></li>
-										<li><a href="#">біоревіталізація</a></li>
-										<li><a href="#">лікування гіпергідрозу</a></li>
-										<li><a href="#">лікування випадання</a></li>
-										<li><a href="#">волосся</a></li>
-										<li><a href="#">лікування випадання</a></li>
-										<li><a href="#">волосся</a></li>
-									</ul>
-								</li>
-								<li class="menu-item-has-children">дерматологія
-									<ul>
-										<li><a href="#">лікування гіпергідрозу</a></li>
-										<li><a href="#">лікування випадання</a></li>
-										<li><a href="#">волосся</a></li>
-									</ul>
-								</li>
-								<li class="menu-item-has-children">естетична гінекологія
-									<ul>
-										<li><a href="#">уколи RADIESSE</a></li>
-										<li><a href="#">мезотерапія</a></li>
-										<li><a href="#">біоревіталізація</a></li>
-										<li><a href="#">лікування гіпергідрозу</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="service.html">послуги</a></li>
-						<li><a href="#">ціни</a></li>
-						<li><a href="#">статті</a></li>
-						<li><a href="#">спеціалісти</a></li>
-					</ul>
-				</nav>
-				<div class="header__lang">
-					<select class="custom-select" name="lang">
-						<option value="ua">ua</option>
-						<option value="ru">ru</option>
-					</select>
-				</div>
-			</div>
-		</div>
-		<div class="header-mobile">
-			<div class="haeder-mobile__links">
-				<div class="header__link-geo"><a href="#"><img src="img/svg/icon_map_pin.svg" alt="map-pin"></a></div>
-				<div class="header__link-phone"><a href="tel:+30665759888"><img src="img/svg/icon_phone.svg" alt="phone"></a>
-				</div>
-			</div>
-			<div class="header__burger">
-				<span></span>
-			</div>
-			<div class="header-mobile__nav">
-				<nav class="header__nav">
-					<ul class="header__list">
-						<li class="current_page_item menu-item-has-children">
-							<a href="#">про нас</a>
-							<ul>
-								<li class="menu-item-has-children">ін'єкційна косметологія
-									<ul>
-										<li><a href="#">уколи RADIESSE</a></li>
-										<li><a href="#">мезотерапія</a></li>
-										<li><a href="#">біоревіталізація</a></li>
-										<li><a href="#">лікування гіпергідрозу</a></li>
-										<li><a href="#">лікування випадання</a></li>
-										<li><a href="#">волосся</a></li>
-									</ul>
-								</li>
-								<li class="menu-item-has-children">косметологія
-									<ul>
-										<li><a href="#">уколи RADIESSE</a></li>
-										<li><a href="#">мезотерапія</a></li>
-										<li><a href="#">біоревіталізація</a></li>
-										<li><a href="#">лікування гіпергідрозу</a></li>
-										<li><a href="#">лікування випадання</a></li>
-										<li><a href="#">волосся</a></li>
-										<li><a href="#">лікування випадання</a></li>
-										<li><a href="#">волосся</a></li>
-									</ul>
-								</li>
-								<li class="menu-item-has-children">лазерна медицина
-									<ul>
-										<li><a href="#">уколи RADIESSE</a></li>
-										<li><a href="#">мезотерапія</a></li>
-									</ul>
-								</li>
-								<li class="menu-item-has-children">сертифікати
-									<ul>
-										<li><a href="#">уколи RADIESSE</a></li>
-										<li><a href="#">мезотерапія</a></li>
-										<li><a href="#">біоревіталізація</a></li>
-										<li><a href="#">лікування гіпергідрозу</a></li>
-										<li><a href="#">лікування випадання</a></li>
-										<li><a href="#">волосся</a></li>
-										<li><a href="#">лікування випадання</a></li>
-										<li><a href="#">волосся</a></li>
-									</ul>
-								</li>
-								<li class="menu-item-has-children">дерматологія
-									<ul>
-										<li><a href="#">лікування гіпергідрозу</a></li>
-										<li><a href="#">лікування випадання</a></li>
-										<li><a href="#">волосся</a></li>
-									</ul>
-								</li>
-								<li class="menu-item-has-children">естетична гінекологія
-									<ul>
-										<li><a href="#">уколи RADIESSE</a></li>
-										<li><a href="#">мезотерапія</a></li>
-										<li><a href="#">біоревіталізація</a></li>
-										<li><a href="#">лікування гіпергідрозу</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="service.html">послуги</a></li>
-						<li><a href="#">ціни</a></li>
-						<li><a href="#">статті</a></li>
-						<li><a href="#">спеціалісти</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
+		</form>
 	</div>
-</header>
-<!-- футер -->
-<footer class="footer">
-	<div class="footer__body container">
-		<div class="footer__content">
-			<div class="footer__logo"><a href="#"><img src="img/footer_logo.png" alt="logo"></a></div>
-			<div class="footer-contacts">
-				<div class="footer-contacts__item">
-					<div class="footer-contacts__item-img"><img src="img/svg/icon_map_pin.svg" alt="map-pin"></div>
-					<a href="#" class="footer-contacts__geo-text">м.Київ, пр-т Героїв Сталінграда, 24А</a>
-				</div>
-				<div class="footer-contacts__item">
-					<div class="footer-contacts__item-img"><img src="img/svg/icon_phone.svg" alt="phone"></div>
-					<a href="tel:+380665759888" class="footer-contacts__phone-text">+38 066 575 98 88</a>
-				</div>
-				<div class="footer__social-items">
-					<div class="footer__social-item"><a href="#" target="_blank"><img src="img/svg/icon_instagram.svg"
-								alt="instagram"></a></div>
-					<div class="footer__social-item"><a href="#" target="_blank"><img src="img/svg/icon_facebook.svg"
-								alt="facebook"></a></div>
-				</div>
-			</div>
-			<div class="footer__nav">
-				<ul>
-					<li><a href="#">про нас</a></li>
-					<li><a href="#">ціни</a></li>
-					<li><a href="#">статті</a></li>
-					<li><a href="#">СПЕЦІАЛІСТИ</a></li>
-					<li><a href="#">кАРТА САЙТУ</a></li>
-					<li><a href="#">Privacy POLICY</a></li>
-					<li><a href="#">контакти</a></li>
-				</ul>
-			</div>
-			<div class="footer__service">
-				<p><a href="#" class="footer__service-title">послуги</a></p>
-				<ul>
-					<li><a href="#">ін’єкційна косметологія</a></li>
-					<li><a href="#">лазерна медицина</a></li>
-					<li><a href="#">косметология</a></li>
-					<li><a href="#">естетична гінекологія</a></li>
-					<li><a href="#">дерматологія</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="footer__down">
-			<div class="footer__license">
-				<p>Ліцензію видано Указом МОЗ України від 07.08.2020 р. #1822</p>
-			</div>
-			<div class="footer__social-items">
-				<div class="footer__social-item"><a href="#" target="_blank"><img src="img/svg/icon_instagram.svg"
-							alt="instagram"></a></div>
-				<div class="footer__social-item"><a href="#" target="_blank"><img src="img/svg/icon_facebook.svg"
-							alt="facebook"></a></div>
-			</div>
-		</div>
-		<div class="footer__other">
-			<p>Разработчик: <a href="#">spacesdev.space</a></p>
-		</div>
+</div>
+<!-- всплывающее окно -->
+<div class="popup-air" data-air="formdone">
+	<div class="done-body">
+		<p class="done-body__thanks">Дякуємо!!!</p>
+		<p class="done-body__title">Ваша заявка надіслана</p>
+		<p class="done-body__subtitle">Незабаром наші спеціалісти зв'яжуться з Вами</p>
 	</div>
-</footer>
+</div>

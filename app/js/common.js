@@ -7,7 +7,8 @@ $(function () {
 	$('.home__slider').slick({
 		dots: true,
 		arrows: false,
-		//asNavFor: '.home-slider__text',
+		asNavFor: '.home-slider__text',
+		speed: 1000,
 	});
 	$('.home-slider__text').slick({
 		dots: false,
@@ -15,6 +16,7 @@ $(function () {
 		autoplay: true,
 		autoplaySpeed: 5000,
 		asNavFor: '.home__slider',
+		speed: 2000,
 	});
 	$('.inside__slider').slick({
 		dots: true,
@@ -190,7 +192,7 @@ window.addEventListener('load', function () {
 			function openAirPopup() {
 				let currentAirPopupBtn = this.getAttribute('data-popup-current');
 				let allPopups = document.querySelectorAll('.popup-air');
-				let currentAirPopup = document.querySelector(`.popup-air[data-air="${currentAirPopupBtn}"]`);
+				let currentAirPopup = document.querySelector(`.popup-air[data-air="${currentAirPopupBtn}"]`)
 				let closeAirIcon = currentAirPopup.querySelector('.air-close');
 				closeAllAirPopups(allPopups);
 				openAirConteiner();
@@ -201,6 +203,24 @@ window.addEventListener('load', function () {
 					closeAirConteiner()
 				})
 			}
+
+
+			function openAirPopupForForm(curretnDonePopup) {
+				let allPopups = document.querySelectorAll('.popup-air');
+				let currentAirPopup = document.querySelector(`.popup-air[data-air="${curretnDonePopup}"]`)
+				let closeAirIcon = currentAirPopup.querySelector('.air-close');
+				closeAllAirPopups(allPopups);
+				openAirConteiner();
+				currentAirPopup.classList.add('air-popup_active');
+
+				closeAirIcon.addEventListener('click', function () {
+					currentAirPopup.classList.remove('air-popup_active');
+					closeAirConteiner()
+				})
+
+			}
+
+
 
 			function openAirConteiner() {
 				let airConteier = document.querySelector('.air-conteiner');
@@ -216,28 +236,71 @@ window.addEventListener('load', function () {
 				let airConteier = document.querySelector('.air-conteiner');
 				airConteier.classList.remove('air-conteiner_active');
 			}
-		}
 
+			function sendFormDone() {
+				let allPopups = document.querySelectorAll('.popup-air');
+				let curretnDonePopup = 'formdone';
+				closeAllAirPopups(allPopups)
+				openAirPopupForForm(curretnDonePopup);
+				setTimeout(function () {
+					closeAllAirPopups(allPopups)
+					setTimeout(closeAirConteiner, 400);
+
+				}, 3000);
+			}
+
+			//Успешная отправка формы
+			document.addEventListener('wpcf7mailsent', function (event) {
+				if ('279' == event.detail.contactFormId) {
+					sendFormDone();
+				}
+				if ('280' == event.detail.contactFormId) {
+					sendFormDone();
+				}
+				if ('199' == event.detail.contactFormId) {
+					sendFormDone();
+				}
+				if ('108' == event.detail.contactFormId) {
+					sendFormDone();
+				}
+			}, false);
+		}
 	}
 	popupAir()
 
-	function videoLoad() {
-		let videoBtn = document.querySelectorAll('.video-btn');
-		for (let i = 0; i < videoBtn.length; i++) {
-			videoBtn[i].addEventListener('click', function () {
-				let videoUrl = this.getAttribute('data-video-src');
-				let closeVideoBtn = document.querySelector('.video-popup').closest('.popup-air').querySelector('.air-close');
-				document.querySelector('.video-popup iframe').setAttribute('src', videoUrl)
-				closeVideoBtn.addEventListener('click', function () {
-					setTimeout(function () {
-						document.querySelector('.video-popup iframe').setAttribute('src', '')
-					}, 800)
-				});
+	function formStars() {
+		let stars = document.querySelectorAll('.form-star');
+		let inputOut = document.querySelector('.counter');
+		for (let i = 0; i < stars.length; i++) {
+			stars[i].addEventListener('click', function () {
+				inputOut.value = i + 1;
+				for (let k = 0; k < stars.length; k++) {
+					stars[k].classList.remove('active');
+				}
+				stars[i].classList.add('active');
+				console.log(stars[0]);
+				if (i == 1) {
+					stars[0].classList.add('active');
+				}
+				if (i == 2) {
+					stars[0].classList.add('active');
+					stars[1].classList.add('active');
+				}
+				if (i == 3) {
+					stars[0].classList.add('active');
+					stars[1].classList.add('active');
+					stars[2].classList.add('active');
+				}
+				if (i == 4) {
+					stars[0].classList.add('active');
+					stars[1].classList.add('active');
+					stars[2].classList.add('active');
+					stars[3].classList.add('active');
+				}
 			})
 		}
 	}
-	videoLoad()
-
+	formStars();
 	//Подгрузка отзыва во всплывающее окно 
 	function loadReview() {
 		let review = document.querySelectorAll('.reviews-item');
@@ -269,10 +332,10 @@ window.addEventListener('load', function () {
 		let menuHover = document.querySelector('.header__list>.menu-item-has-children');
 		menuHover.addEventListener('mouseover', function (e) {
 			e.preventDefault();
-			document.querySelector('.header__list>.menu-item-has-children>ul').style.maxHeight = '750px';
+			document.querySelector('.header__list>.menu-item-has-children>ul').style.maxHeight = '500px';
 			document.querySelector('.header__list>.menu-item-has-children>ul').style.opacity = '1';
 			document.querySelector('.header__list>.menu-item-has-children>ul').style.padding = '75px 120px 55px 120px';
-			document.querySelector('.header__list>.menu-item-has-children>ul').style.overflow = 'visible';
+			document.querySelector('.header__list>.menu-item-has-children>ul').style.overflow = 'auto';
 		})
 		menuHover.addEventListener('mouseleave', function () {
 			document.querySelector('.header__list>.menu-item-has-children>ul').style.maxHeight = '0';
@@ -318,6 +381,40 @@ window.addEventListener('load', function () {
 		titleWrapper.classList.add('view-callback');
 		info.classList.remove('view-contacts');
 		callbackInfo.classList.add('view-callback');
+	});
+
+	[].forEach.call(document.querySelectorAll('input[type=tel]'), function (input) {
+		var keyCode;
+		function mask(event) {
+			event.keyCode && (keyCode = event.keyCode);
+			var pos = this.selectionStart;
+			if (pos < 3) event.preventDefault();
+			var matrix = "+3 (___) ___ ____",
+				i = 0,
+				def = matrix.replace(/\D/g, ""),
+				val = this.value.replace(/\D/g, ""),
+				new_value = matrix.replace(/[_\d]/g, function (a) {
+					return i < val.length ? val.charAt(i++) || def.charAt(i) : a
+				});
+			i = new_value.indexOf("_");
+			if (i != -1) {
+				i < 5 && (i = 3);
+				new_value = new_value.slice(0, i)
+			}
+			var reg = matrix.substr(0, this.value.length).replace(/_+/g,
+				function (a) {
+					return "\\d{1," + a.length + "}"
+				}).replace(/[+()]/g, "\\$&");
+			reg = new RegExp("^" + reg + "$");
+			if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+			if (event.type == "blur" && this.value.length < 5) this.value = ""
+		}
+
+		input.addEventListener("input", mask, false);
+		input.addEventListener("focus", mask, false);
+		input.addEventListener("blur", mask, false);
+		input.addEventListener("keydown", mask, false)
+
 	});
 
 }, false);

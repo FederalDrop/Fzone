@@ -228,14 +228,19 @@
 				</div>
 				<div class="social-abs__btn">
 					<div class="social-abs__chat">
-						<div class="social-abs__img"><img src="img/svg/icon_table_chat.svg" alt="chat"></div>
+						<div class="social-abs__img">
+							<img src="img/svg/icon_table_chat.svg" alt="chat">
+							<span class="pulse-button__rings"></span>
+							<span class="pulse-button__rings"></span>
+							<span class="pulse-button__rings"></span>
+						</div>
 					</div>
 					<div class="social-abs__cross">
 						<div class="social-abs__img"><img src="img/svg/icon_table_cross.svg" alt="cross"></div>
 					</div>
 				</div>
 			</div>
-			<section class="home__head">
+			<!-- <section class="home__head">
 				<div class="home__body">
 					<div class="home__slider">
 						<div class="home__slider-item">
@@ -279,25 +284,23 @@
 						</div>
 					</div>
 				</div>
-			</section>
-			<!-- <section class="home__head">
+			</section> -->
+			<section class="home__head">
 				<div class="home__body">
 					<div class="home-sliders__wrapper">
+						<div class="home-btn__wrapper">
+							<button class="sercive-info__btn main__btn air-open-btn" data-popup-current="callback_form">Онлайн
+								запис</button>
+						</div>
 						<div class="home-slider__text">
 							<div class="slider-text__item">
 								<h3 class="home-info__title">Краса в нюансах</h3>
-								<button class="sercive-info__btn main__btn air-open-btn" data-popup-current="callback_form">Онлайн
-									запис</button>
 							</div>
 							<div class="slider-text__item">
 								<h3 class="home-info__title">Краса в деталях</h3>
-								<button class="sercive-info__btn main__btn air-open-btn" data-popup-current="callback_form">Онлайн
-									запис</button>
 							</div>
 							<div class="slider-text__item">
 								<h3 class="home-info__title">Краса в деталях</h3>
-								<button class="sercive-info__btn main__btn air-open-btn" data-popup-current="callback_form">Онлайн
-									запис</button>
 							</div>
 						</div>
 						<div class="home__slider">
@@ -328,7 +331,7 @@
 						</div>
 					</div>
 				</div>
-			</section> -->
+			</section>
 			<section class="help">
 				<div class="help__body container">
 					<div class="title__wrapper">
@@ -410,7 +413,6 @@
 						</div>
 					</div>
 					<div class="med__dots-wrapper">
-						<div class="med__text-abs"><img src="img/med_text.png" alt="text"></div>
 						<div class="med__dots-img">
 							<img src="img/med_slider_img-2.jpg" alt="photo">
 							<div class="med__dots-items">
@@ -672,7 +674,7 @@
 									<input type="text" placeholder="ім’я">
 								</div>
 								<div class="callback__form-item">
-									<input type="tel" placeholder="Телефон">
+									<input class="tel" type="tel" placeholder="Телефон">
 								</div>
 								<div class="callback__form-item">
 									<input type="submit" value="надіслати">
@@ -828,6 +830,7 @@
 			<div class="popup__form">
 				<form action="#">
 					<p class="popup__form-title">Обратная связь</p>
+					<p class="popup__form-subtitle">Залиште свої контакти і ми з Вами зв'яжемось для запису на консультацію.</p>
 					<div class="popup__form-item">
 						<input type="text" name="name" placeholder="Ваше имя">
 					</div>
@@ -836,6 +839,9 @@
 					</div>
 					<div class="popup__form-item">
 						<input type="submit" name="btn" value="Отправить"></input>
+					</div>
+					<div class="popup__form-politics">
+						<a href="#">Натискаючи кнопку "Надіслати", я даю згоду на обробку персональних даних.</a>
 					</div>
 				</form>
 			</div>
@@ -856,7 +862,45 @@
 								<input type="text" name="phone" placeholder="Ваш email">
 							</div>
 						</div>
-						<div class="review__form-item">
+						<div class="review__form-item wrapper">
+							<div class="form-stars">
+								<div class="form-star">
+									<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M11.5489 1.42705C11.8483 0.505743 13.1517 0.50574 13.4511 1.42705L15.5309 7.82827C15.6648 8.24029 16.0488 8.51925 16.482 8.51925L23.2126 8.51925C24.1814 8.51925 24.5841 9.75887 23.8004 10.3283L18.3552 14.2844C18.0047 14.5391 17.8581 14.9905 17.9919 15.4025L20.0718 21.8037C20.3712 22.725 19.3167 23.4911 18.533 22.9217L13.0878 18.9656C12.7373 18.7109 12.2627 18.7109 11.9122 18.9656L6.46701 22.9217C5.6833 23.4911 4.62882 22.725 4.92817 21.8037L7.00805 15.4025C7.14193 14.9905 6.99527 14.5391 6.64478 14.2844L1.19958 10.3283C0.415862 9.75887 0.81864 8.51925 1.78736 8.51925L8.51801 8.51925C8.95123 8.51925 9.33519 8.24029 9.46906 7.82827L11.5489 1.42705Z"
+											fill="#D9D9D9" />
+									</svg>
+								</div>
+								<div class="form-star">
+									<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M11.5489 1.42705C11.8483 0.505743 13.1517 0.50574 13.4511 1.42705L15.5309 7.82827C15.6648 8.24029 16.0488 8.51925 16.482 8.51925L23.2126 8.51925C24.1814 8.51925 24.5841 9.75887 23.8004 10.3283L18.3552 14.2844C18.0047 14.5391 17.8581 14.9905 17.9919 15.4025L20.0718 21.8037C20.3712 22.725 19.3167 23.4911 18.533 22.9217L13.0878 18.9656C12.7373 18.7109 12.2627 18.7109 11.9122 18.9656L6.46701 22.9217C5.6833 23.4911 4.62882 22.725 4.92817 21.8037L7.00805 15.4025C7.14193 14.9905 6.99527 14.5391 6.64478 14.2844L1.19958 10.3283C0.415862 9.75887 0.81864 8.51925 1.78736 8.51925L8.51801 8.51925C8.95123 8.51925 9.33519 8.24029 9.46906 7.82827L11.5489 1.42705Z"
+											fill="#D9D9D9" />
+									</svg>
+								</div>
+								<div class="form-star">
+									<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M11.5489 1.42705C11.8483 0.505743 13.1517 0.50574 13.4511 1.42705L15.5309 7.82827C15.6648 8.24029 16.0488 8.51925 16.482 8.51925L23.2126 8.51925C24.1814 8.51925 24.5841 9.75887 23.8004 10.3283L18.3552 14.2844C18.0047 14.5391 17.8581 14.9905 17.9919 15.4025L20.0718 21.8037C20.3712 22.725 19.3167 23.4911 18.533 22.9217L13.0878 18.9656C12.7373 18.7109 12.2627 18.7109 11.9122 18.9656L6.46701 22.9217C5.6833 23.4911 4.62882 22.725 4.92817 21.8037L7.00805 15.4025C7.14193 14.9905 6.99527 14.5391 6.64478 14.2844L1.19958 10.3283C0.415862 9.75887 0.81864 8.51925 1.78736 8.51925L8.51801 8.51925C8.95123 8.51925 9.33519 8.24029 9.46906 7.82827L11.5489 1.42705Z"
+											fill="#D9D9D9" />
+									</svg>
+								</div>
+								<div class="form-star">
+									<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M11.5489 1.42705C11.8483 0.505743 13.1517 0.50574 13.4511 1.42705L15.5309 7.82827C15.6648 8.24029 16.0488 8.51925 16.482 8.51925L23.2126 8.51925C24.1814 8.51925 24.5841 9.75887 23.8004 10.3283L18.3552 14.2844C18.0047 14.5391 17.8581 14.9905 17.9919 15.4025L20.0718 21.8037C20.3712 22.725 19.3167 23.4911 18.533 22.9217L13.0878 18.9656C12.7373 18.7109 12.2627 18.7109 11.9122 18.9656L6.46701 22.9217C5.6833 23.4911 4.62882 22.725 4.92817 21.8037L7.00805 15.4025C7.14193 14.9905 6.99527 14.5391 6.64478 14.2844L1.19958 10.3283C0.415862 9.75887 0.81864 8.51925 1.78736 8.51925L8.51801 8.51925C8.95123 8.51925 9.33519 8.24029 9.46906 7.82827L11.5489 1.42705Z"
+											fill="#D9D9D9" />
+									</svg>
+								</div>
+								<div class="form-star">
+									<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M11.5489 1.42705C11.8483 0.505743 13.1517 0.50574 13.4511 1.42705L15.5309 7.82827C15.6648 8.24029 16.0488 8.51925 16.482 8.51925L23.2126 8.51925C24.1814 8.51925 24.5841 9.75887 23.8004 10.3283L18.3552 14.2844C18.0047 14.5391 17.8581 14.9905 17.9919 15.4025L20.0718 21.8037C20.3712 22.725 19.3167 23.4911 18.533 22.9217L13.0878 18.9656C12.7373 18.7109 12.2627 18.7109 11.9122 18.9656L6.46701 22.9217C5.6833 23.4911 4.62882 22.725 4.92817 21.8037L7.00805 15.4025C7.14193 14.9905 6.99527 14.5391 6.64478 14.2844L1.19958 10.3283C0.415862 9.75887 0.81864 8.51925 1.78736 8.51925L8.51801 8.51925C8.95123 8.51925 9.33519 8.24029 9.46906 7.82827L11.5489 1.42705Z"
+											fill="#D9D9D9" />
+									</svg>
+								</div>
+							</div>
+							<input class="counter" type="text">
 							<textarea name="review" placeholder="Ваша оцінка та коментарій"></textarea>
 						</div>
 						<div class="review__form-item">
@@ -872,6 +916,13 @@
 				<div class="review-body__stars"></div>
 				<h4 class="review-body__title"></h4>
 				<p class="review-body__text"></p>
+			</div>
+		</div>
+		<div class="popup-air" data-air="formdone">
+			<div class="done-body">
+				<p class="done-body__thanks">Дякуємо!!!</p>
+				<p class="done-body__title">Ваша заявка надіслана</p>
+				<p class="done-body__subtitle">Незабаром наші спеціалісти зв'яжуться з Вами</p>
 			</div>
 		</div>
 
