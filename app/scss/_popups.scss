@@ -133,6 +133,13 @@
     border-radius: 50px;
     margin: 45px 0;
     transition: all 0.3s ease;
+    height: 75px;
+    & br {
+        display: none;
+    }
+}
+.review__form-item input {
+    width: 100%;
 }
 .review__form-item input, textarea {
     background: #FFFFFF;
@@ -183,19 +190,25 @@
 .form-stars {
     display: flex;
     align-items: center;
-    padding: 0 0 0 50px;
 }
 .form-star {
     cursor: pointer;
     transition: all 0.3s ease;
+    width: 25px;
+    height: 25px;
+    background: url('../img/svg/star_def.svg');
+    background-size: cover;
 }
-.form-star.active svg path {
-    fill: #EEC112;
-    transition: all 0.3s ease;
+.form-star.active {
+    background: url('../img/svg/star_gold.svg');
+    background-size: cover;
 }
 .review__form-item {
     display: flex;
     justify-content: center;
+    &:first-child {
+        margin: 0 80px 0 0;
+    }
 }
 .review-body {
     max-width: 1050px;

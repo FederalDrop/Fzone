@@ -51,6 +51,7 @@
 	background: url('../img/slider_before_text.png');
 	width: 185px;
 	height: 215px;
+	transform: rotate(-1deg);
 }
 .inside-item__img-second {
 	width: 490px;
@@ -71,6 +72,7 @@
 	background: url('../img/slide_after_text.png');
 	width: 185px;
 	height: 215px;
+	transform: rotate(-8deg);
 }
 .inside .title__wrapper {
 	margin: 0 0 40px 0;
@@ -114,6 +116,9 @@
 	padding: 27px 0;
 	width: 400px;
 	transition: all 0.3s ease;
+	& a {
+		color: #000;
+	}
 	&:first-child {
 		margin: 0 100px 0 0;
 	}

@@ -8,7 +8,8 @@ $(function () {
 		dots: true,
 		arrows: false,
 		asNavFor: '.home-slider__text',
-		speed: 1000,
+		speed: 1800,
+		pauseOnHover: false,
 	});
 	$('.home-slider__text').slick({
 		dots: false,
@@ -17,6 +18,7 @@ $(function () {
 		autoplaySpeed: 5000,
 		asNavFor: '.home__slider',
 		speed: 2000,
+		pauseOnHover: false,
 	});
 	$('.inside__slider').slick({
 		dots: true,
@@ -244,7 +246,7 @@ window.addEventListener('load', function () {
 				openAirPopupForForm(curretnDonePopup);
 				setTimeout(function () {
 					closeAllAirPopups(allPopups)
-					setTimeout(closeAirConteiner, 400);
+					setTimeout(closeAirConteiner, 1000);
 
 				}, 3000);
 			}
@@ -389,7 +391,7 @@ window.addEventListener('load', function () {
 			event.keyCode && (keyCode = event.keyCode);
 			var pos = this.selectionStart;
 			if (pos < 3) event.preventDefault();
-			var matrix = "+3 (___) ___ ____",
+			var matrix = "+38 (___) ___ __ __",
 				i = 0,
 				def = matrix.replace(/\D/g, ""),
 				val = this.value.replace(/\D/g, ""),

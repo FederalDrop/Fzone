@@ -319,15 +319,17 @@
 .help__items {
 	margin: 100px 0 0 -17px;
 	display: flex;
+	flex-wrap: wrap;
 	width: calc(100% + 34px);
 }
 .help-item {
 	display: block;
 	width: calc(20% - 34px);
-	margin: 0 17px;
+	margin: 0 17px 20px 17px;
 	border: 1px solid #000000;
 	border-radius: 138.5px;
 	padding: 20px 15px 50px 15px;
+	min-height: 312px;
 }
 .help-item__img {
 	width: auto;
@@ -530,6 +532,7 @@
 	transition: all 0.3s ease;
 }
 .reviews {
+	margin: 40px 0 0 0;
 	padding: 80px 0 60px 0;
 	background: url('../img/reviews_bg.jpg')no-repeat;
 	background-position: center;
