@@ -66,6 +66,12 @@
 	}
 }
 @media only screen and (max-width: 1000px){
+	.article__head-body .main__btn {
+		margin: 0!important;
+	}
+	.article__head-body {
+		padding: 0!important;
+	}
 	.article__head {
 		height: 1150px;
 	}
@@ -141,7 +147,7 @@
     width: 75%;
   }
 }
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 420px){
 	.articles-item {
     width: 85%;
   }

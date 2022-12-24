@@ -286,6 +286,17 @@
 	}
 }
 @media only screen and (max-width: 1000px){
+	.sercive__info {
+		width: 100%;
+		align-items: center;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 100%);
+		backdrop-filter: blur(7.5px);
+		padding: 20px 20px 75px 20px;
+		margin: 0;
+	}
+	.service__body  {
+		padding: 0!important;
+	}
 	.cosmo__item-text {
     padding: 0 25px;
 	}
@@ -331,6 +342,9 @@
 @media only screen and (max-width: 680px){
 	.service__head {
     height: 800px;
+	}
+	.sercive__info {
+		padding: 20px 20px 50px 20px;
 	}
 }
 @media only screen and (max-width: 500px){
