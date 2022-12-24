@@ -1060,6 +1060,10 @@
 	}
 }
 @media only screen and (max-width: 850px){
+	.error-info__title {
+		font-size: 48px;
+		width: 65%;
+	}
 	.med__dots-img {
 		width: 400px;
 		height: 550px;
@@ -1095,6 +1099,9 @@
 	.clinic__info {
 		width: 55%;
 	}
+	.error-info__title {
+		width: 83%;
+	}
 }
 @media only screen and (max-width: 700px){
 	.help-item {
@@ -1127,6 +1134,10 @@
 	}
 }
 @media only screen and (max-width: 600px){
+	.error-info__title {
+		font-size: 40px;
+		width: 83%;
+	}
 	.partners__slider {
 		width: calc(100% + 20px);
 		margin: 50px 0 0 -10px;
@@ -1147,6 +1158,16 @@
 	}
 	.med__slider .slick-list {
     border-radius: 0 0 0 130px;
+	}
+}
+@media only screen and (max-width: 500px){
+	.error__info {
+		align-items: center;
+	}
+	.error-info__title {
+		font-size: 36px;
+		width: 100%;
+		text-align: center;
 	}
 }
 @media only screen and (max-width: 480px){
@@ -1214,6 +1235,9 @@
 	}
 }
 @media only screen and (max-width: 420px){
+	.error-info__title {
+		font-size: 32px;
+	}
 	.callback__form input[type=submit] {
 		font-size: 20px;
 	}
@@ -1262,6 +1286,9 @@
 	}
 }
 @media only screen and (max-width: 370px){
+	.error-info__title {
+		font-size: 26px;
+	}
 	.med-item__info {
 		padding: 0 0 0 5px;
 		width: 40%;

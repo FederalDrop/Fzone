@@ -295,3 +295,14 @@ ul {
 		transition: all 0.3s ease;
 	}
 }
+@media only screen and (max-width: 500px){
+	.main__btn {
+		font-size: 20px;
+		padding: 16px 0;
+	}
+}
+@media only screen and (max-width: 420px){
+	.main__btn {
+		width: 100%;
+	}
+}

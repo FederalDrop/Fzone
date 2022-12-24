@@ -102,6 +102,9 @@
 	color: #A69873;
 	margin: 25px 0 35px 0;
 }
+.inside__btns-wrapper {
+	display: flex;
+}
 .inside__btn {
 	background: rgba(255, 255, 255, 0.8);
 	box-shadow: inset 4px 4px 20px rgba(128, 28, 78, 0), 4px 4px 20px rgba(0, 0, 0, 0.25);
@@ -113,11 +116,13 @@
 	text-transform: uppercase;
 	color: #000000;
 	border: none;
+	display: block;
 	padding: 27px 0;
 	width: 400px;
 	transition: all 0.3s ease;
 	& a {
 		color: #000;
+		display: block;
 	}
 	&:first-child {
 		margin: 0 100px 0 0;
