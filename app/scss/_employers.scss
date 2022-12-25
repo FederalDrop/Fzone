@@ -46,12 +46,16 @@
 		height: 300px;
 	}
 	.spec-item {
-		width: calc(50% - 60px);
-		margin: 0 30px 70px 30px;
+		width: 50%;
+		margin: 0 0 70px 0;
 	}
 	.spec__items {
-		width: calc(100% + 60px);
-		margin: 90px 0 0 -30px;
+		width: 100%;
+		margin: 90px 0 0 0;
+		justify-content: space-between;
+	}
+	.spec-item__info {
+		margin: 30px 0 0 0;
 	}
 	.spec-item__info {
 		padding: 0 60px;
@@ -61,12 +65,6 @@
 	}
 }
 @media only screen and (max-width: 680px){
-	.article__head {
-		height: 800px;
-	}
-	.adaptive__head-bg {
-		height: 800px;
-	}
 	.spec-item {
 		width: 100%;
 		margin: 0 0 35px 0;

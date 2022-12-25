@@ -1,7 +1,8 @@
 $(function () {
 	$('.header__burger').click(function (event) {
 		$('.header__burger').toggleClass('active');
-		$('.header-mobile__nav').toggleClass('active');
+		$('.header').toggleClass('active');
+		$('.header__down').toggleClass('active');
 		$('body').toggleClass('lock');
 	});
 	$('.home__slider').slick({
@@ -133,7 +134,6 @@ window.addEventListener('load', function () {
 		const header = document.querySelector('.header') // находим header и записываем в константу
 
 		let prevScroll = window.pageYOffset // узнаем на сколько была прокручена страница ранее
-		console.log(prevScroll);
 		let currentScroll // на сколько прокручена страница сейчас (пока нет значения)
 
 		window.addEventListener('scroll', () => { // при прокрутке страницы
@@ -305,7 +305,6 @@ window.addEventListener('load', function () {
 					stars[k].classList.remove('active');
 				}
 				stars[i].classList.add('active');
-				console.log(stars[0]);
 				if (i == 1) {
 					stars[0].classList.add('active');
 				}
@@ -373,8 +372,7 @@ window.addEventListener('load', function () {
 	}
 	const mediaQuery2 = window.matchMedia('(max-width: 1000px)')
 	if (mediaQuery2.matches) {
-		let menuHover = document.querySelector('.header-mobile__nav .menu-item-has-children');
-		console.log(menuHover)
+		let menuHover = document.querySelector('.header__list>.menu-item-has-children');
 		menuHover.addEventListener('click', function () {
 			menuHover.classList.toggle('down');
 		})

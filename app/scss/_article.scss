@@ -72,14 +72,8 @@
 	.article__head-body {
 		padding: 0!important;
 	}
-	.article__head {
-		height: 1150px;
-	}
 	.article__head-body {
 		justify-content: center;
-	}
-	.adaptive__head-bg {
-		height: 1150px;
 	}
 }
 @media only screen and (max-width: 950px){
@@ -88,6 +82,10 @@
 	}
 }
 @media only screen and (max-width: 850px){
+	.item-body__img {
+		width: 250px;
+		height: 250px;
+	}
 	.article__head-body .main__btn {
 		margin: 0 0 120px 0;
 	}
@@ -95,7 +93,8 @@
 		margin: 60px 0 0 -27px;
 	}
 	.articles-item {
-    width: calc(46% - 56px);
+    width: calc(50% - 56px);
+		margin: 0 27px 60px 27px;
 	}
 	.item-body__title {
 		font-size: 30px;

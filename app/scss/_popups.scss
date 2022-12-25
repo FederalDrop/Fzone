@@ -104,8 +104,7 @@
 .review__form {
     background: #FFFFFF;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
-    max-width: 1100px;
-    width: 1100px;
+    width: 1050px;
     padding: 40px 0 80px 0;
     & .article__title {
         font-weight: 500;
@@ -295,4 +294,147 @@
 					height: 100%;
 			}
 	}
+}
+@media only screen and (max-width: 1080px){
+    .review_form_body, .popup-review-body  {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .review__form {
+        width: 100%;
+        padding: 40px 30px 80px 30px;
+    }
+}
+@media only screen and (max-width: 900px){
+    .review-body {
+        padding: 40px 30px 80px 30px;
+    }
+}
+@media only screen and (max-width: 850px){
+    .review__form-item:first-child {
+        margin: 0 30px 0 0;
+    }
+    .review__form-item input, textarea {
+        font-size: 24px;
+        padding: 13px 30px;
+    }
+    .review__form-item input[type=submit] {
+        padding: 17px 0;
+        font-size: 24px;
+    }
+    .review__form-item.wrapper {
+        height: 69px;
+    }
+    .review__form-item textarea {
+        height: 66px;
+        padding: 16px 30px 0 30px;
+    }
+    .review__form .article__title {
+        font-size: 32px;
+    }
+    .review__form .main__line {
+        margin: 10px 10px 0 0;
+    }
+    .form-stars {
+        padding: 0 0 0 20px;
+    }
+}
+@media only screen and (max-width: 700px){
+    .review-body__title {
+        font-size: 20px;
+    }
+    .review-body__text {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 550px){
+    .review-body__title {
+        font-size: 18px;
+    }
+    .review-body__text {
+        font-size: 16px;
+    }
+    .review-body {
+        padding: 20px 20px 40px 20px;
+    }
+    .form-stars {
+        position: absolute;
+        top: 93px;
+        left: 0;
+        z-index: 10;
+    }
+    .review__form-item.wrapper {
+        margin: 45px 0 80px 0;
+        border: none;
+        filter: none;
+        position: relative;
+        height: auto;
+    }
+    .review__form-item textarea {
+        border: 1px solid #000;
+        border-radius: 50px;
+        width: 100%;
+        padding: 16px 30px 0 30px;
+        filter: drop-shadow(1px 2px 10px rgba(0, 0, 0, .1));
+        height: 66px;
+    }
+    .popup-input__wrapper {
+        flex-direction: column;
+    }
+    .review__form-item:first-child {
+        margin: 0 0 20px 0;
+    }
+    .review__form-item.wrapper {
+        margin: 20px 0 70px 0;
+    }
+    .review__form .main__line {
+        display: none;
+    }
+    .review__form .title__wrapper {
+        justify-content: center;
+    }
+    .review__form-item p {
+        width: 100%;
+    }
+    .review__form-item input[type=submit] {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 420px){
+    .popup__form {
+        width: 95%;
+        margin: 0 auto;
+        padding: 30px 20px;
+    }
+    .popup__form-title {
+        font-size: 24px;
+        margin: 0 0 15px 0;
+    }
+    .popup__form-subtitle {
+        font-size: 18px;
+        margin: 0 0 15px 0;
+    }
+    .review__form-item input, textarea {
+        font-size: 16px;
+    }
+    .review__form-item input {
+        padding: 6px 30px;
+    }
+    .review__form-item textarea {
+        padding: 6px 30px 0 30px;
+        height: 50px;
+    }
+    .form-stars {
+        top: 71px;
+    }
+    .review__form-item input[type=submit] {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+    .review__form .title__wrapper {
+        margin: 0 0 20px 0;
+    }
+    .review__form {
+        padding: 20px 20px 40px 20px;
+    }
 }
