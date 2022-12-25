@@ -70,6 +70,9 @@
 	.spec-item {
 		width: 100%;
 		margin: 0 0 35px 0;
+		&:last-child {
+			margin: 0;
+		}
 	}
 	.spec-item__img {
 		width: 320px;

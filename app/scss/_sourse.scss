@@ -171,7 +171,7 @@ ul {
 .main__title {
 	font-weight: 500;
 	font-size: 60px;
-	line-height: 60px;
+	line-height: 100%;
 }
 .main__line {
 	height: 3px;
@@ -180,6 +180,9 @@ ul {
 	margin: 20px 20px 0 -131px;
 }
 .eployer__line {
+	height: 3px;
+	width: 310px;
+	background: #000;
 	margin: 20px -131px 0 20px;
 }
 .callback__line {
@@ -203,6 +206,21 @@ ul {
 .titles-switch.view-contacts .contacts__line {
 	width: 310px;
 	transition: all 0.3s ease;
+}
+.eployer, .med {
+	padding: 50px 0 70px 0;
+}
+.help, .popular {
+	padding: 100px 0 70px 0;
+}
+.contacts, .cosmo__items {
+	padding: 100px 0 120px 0;
+}
+.pertners, .price, .articles, .spec, .about {
+	padding: 0 0 120px 0;
+}
+.documents {
+	padding: 50px 0 0 0;
 }
 
 
@@ -296,6 +314,23 @@ ul {
 		transition: all 0.3s ease;
 	}
 }
+@media only screen and (max-width: 1000px){
+	.eployer, .med {
+		padding: 40px 0 60px 0;
+	}
+	.help, .popular {
+		padding: 80px 0 60px 0;
+	}
+	.contacts, .cosmo__items {
+		padding: 80px 0 100px 0;
+	}
+	.pertners, .price, .articles, .spec, .about {
+		padding: 0 0 100px 0;
+	}
+	.documents {
+		padding: 40px 0 0 0;
+	}
+}
 @media only screen and (max-width: 850px){
 	.main__line {
 		width: 200px;
@@ -303,6 +338,23 @@ ul {
 	}
 	.main__title {
 		font-size: 45px;
+	}
+}
+@media only screen and (max-width: 600px){
+	.eployer, .med {
+		padding: 20px 0 40px 0;
+	}
+	.help, .popular {
+		padding: 60px 0 60px 0;
+	}
+	.contacts, .cosmo__items {
+		padding: 60px 0 80px 0;
+	}
+	.pertners, .price, .articles, .spec, .about {
+		padding: 0 0 80px 0;
+	}
+	.documents {
+		padding: 20px 0 0 0;
 	}
 }
 @media only screen and (max-width: 500px){

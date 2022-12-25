@@ -26,7 +26,6 @@
 	margin: 0 0 45px 0;
 }
 .cosmo__items {
-	padding: 120px 0 150px 0;
 	display: flex;
 	flex-wrap: wrap;
 	width: calc(100% + 70px);
@@ -272,11 +271,8 @@
   border-radius: 7px;       /* закругления плашки */
 }
 @media only screen and (max-width: 1100px){
-	.cosmo__items {
-		justify-content: center;
-	}
 	.cosmo__item {
-		width: calc(45% - 70px);
+		width: calc(50% - 70px);
 	}
 	.cosmo__item-img {
 		margin: 0 auto;
@@ -286,6 +282,9 @@
 	}
 }
 @media only screen and (max-width: 1000px){
+	.cosmo__info {
+		padding: 80px 0;
+	}
 	.sercive__info {
 		width: 100%;
 		align-items: center;
@@ -315,6 +314,16 @@
 	.cosmo__item-text {
     padding: 0 10px;
 	}
+	.info__content {
+		margin: 0 10px 0 0;
+	}
+	.vertical-text {
+		font-size: 60px;
+		margin: 20px 0 0 0;
+	}
+	.vertical-text__left, .vertical-text__right {
+		font-size: 80px;
+	}
 }
 @media only screen and (max-width: 850px){
 	.cosmo__item {
@@ -328,6 +337,7 @@
 	.cosmo__items {
 		width: 100%;
 		padding: 80px 0 110px 0;
+		margin: 0;
 	}
 	.cosmo__item-text {
     padding: 0;
@@ -337,14 +347,70 @@
 	.cosmo__item {
     width: 100%;
 		margin: 0 0 50px 0;
+		&:last-child {
+			margin: 0;
+		}
 	}
 }
 @media only screen and (max-width: 680px){
+	.info__body {
+		flex-direction: column;
+	} 
+	.info__content {
+		margin: 0;
+	}
+	.info__vertical {
+		flex-direction: column;
+		margin: 0 0 50px 0;
+	}
+	.vertical-text {
+		margin: 0;
+		font-size: 44px;
+		text-align: right;
+	}
+	.vertical-text__wrapper {
+		justify-content: flex-end;
+	}
+	.vertical-text__left, .vertical-text__right {
+		font-size: 54px;
+	}
+	.vertical-text, .vertical-text__left, .vertical-text__right {
+		writing-mode: horizontal-tb;
+		transform: rotate(0deg);
+	}
 	.service__head {
     height: 800px;
 	}
 	.sercive__info {
 		padding: 20px 20px 50px 20px;
+	}
+}
+@media only screen and (max-width: 600px){
+	.cosmo__info {
+		padding: 60px 0;
+	}
+}
+@media only screen and (max-width: 520px){
+	.info__content-text {
+		& p {
+			font-size: 20px;
+			line-height: 125%;
+			margin: 0 0 10px 0;
+		}
+		& strong {
+			font-weight: 600;
+		}
+		& ul li {
+			list-style-type: disc;
+			margin: 0 0 10px 0;
+			font-size: 20px;
+		}
+	}
+	.vertical-text {
+		font-size: 32px;
+	}
+	.vertical-text__left, .vertical-text__right {
+		font-size: 42px;
 	}
 }
 @media only screen and (max-width: 500px){
@@ -358,6 +424,15 @@
 		font-size: 16px;
 	}
 }
+@media only screen and (max-width: 390px){
+	.vertical-text {
+		font-size: 26px;
+	}
+	.vertical-text__left, .vertical-text__right {
+		font-size: 36px;
+	}
+}
+
 @media only screen and (max-width: 370px){
 	.cosmo__item-img {
 		width: 280px;

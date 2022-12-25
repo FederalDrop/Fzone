@@ -143,6 +143,7 @@
 	flex-wrap: wrap;
 	font-size: 24px;
 	letter-spacing: 0.03em;
+	align-items: flex-end;
 }
 .crumb__page-link {
 	color: #A6A4A4;
@@ -313,9 +314,7 @@
 	text-transform: uppercase;
 	width: 50%;
 }
-.help {
-	padding: 100px 0 150px 0;
-}
+
 .help__items {
 	margin: 100px 0 0 -17px;
 	display: flex;
@@ -712,9 +711,6 @@
 		transition: all 0.3s ease;
 	}
 }
-.pertners {
-	padding: 0 0 120px 0;
-}
 .partners__slider {
 	position: relative;
 	width: calc(100% + 100px);
@@ -952,6 +948,9 @@
 	}
 }
 @media only screen and (max-width: 1000px){
+	.help__items {
+		margin: 80px 0 0 0;
+	}
 	.home__slider-item {
 		height: 1150px;
 	}
@@ -1187,6 +1186,9 @@
 	}
 }
 @media only screen and (max-width: 600px){
+	.help__items, .reviews__slider {
+		margin: 60px 0 0 0;
+	}
 	.slick-slider .slick-dots li.slick-active button {
 		width: 11px;
 		height: 11px;

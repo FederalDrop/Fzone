@@ -130,6 +130,9 @@
 	.articles-item {
     width: 54%;
 		margin: 0 0 60px 0;
+		&:last-child {
+			margin: 0;
+		}
   }
 }
 @media only screen and (max-width: 550px){

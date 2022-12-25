@@ -68,6 +68,14 @@ $(function () {
 	$('.about__slider').slick({
 		dots: true,
 		vertical: true,
+		responsive: [
+			{
+				breakpoint: 550,
+				settings: {
+					vertical: false,
+				}
+			},
+		]
 	});
 	$('.popular__slider').slick({
 		slidesToShow: 3,
@@ -90,6 +98,20 @@ $(function () {
 	$('.employer__slider').slick({
 		slidesToShow: 3,
 		dots: true,
+		responsive: [
+			{
+				breakpoint: 1100,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 770,
+				settings: {
+					slidesToShow: 1,
+				}
+			},
+		]
 	});
 	$('a[href*="#"]').on('click.smoothscroll', function (e) {
 		var hash = this.hash, _hash = hash.replace(/#/, ''), theHref = $(this).attr('href').replace(/#.*/, '');
