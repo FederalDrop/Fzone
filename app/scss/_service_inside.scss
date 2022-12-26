@@ -433,7 +433,7 @@
 		width: 100%;
 		margin: 0;
 	}
-	.when__img {
+	.when__img, .effect__proc-img {
 		width: 305px;
 		height: 440px;
 		float: left;
@@ -635,7 +635,7 @@
 	.service__body-btns {
 		padding: 20px 20px 50px 20px;
 	}
-	.when__img {
+	.when__img, .effect__proc-img {
 		clear: left;
 		height: 400px;
 		margin: 0 auto;
@@ -810,8 +810,19 @@
 		margin: 20px 0;
 	}
 }
+@media only screen and (max-width: 390px){
+	.effect__video {
+		height: 280px;
+	}
+}
 @media only screen and (max-width: 350px){
 	.inside__slider-item {
 		margin: 0 10px;
+	}
+	.effect__video {
+		height: 250px;
+	}
+	.when__img, .effect__proc-img {
+		width: 280px;
 	}
 }

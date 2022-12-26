@@ -2,7 +2,7 @@
 	height: 100vh;
 }
 .price-info__title {
-	font-weight: 400;
+	font-weight: 300;
 	width: 80%;
 	font-size: 90px;
 	line-height: 90px;
@@ -48,7 +48,7 @@
 .search__down {
 	background: #D9D9D9;
 	border-radius: 0 0 10px 10px;
-	padding: 20px 50px;
+	padding: 35px 50px 20px 50px;
 	overflow: auto;
 	margin: -7px 0 0 0;
 }
@@ -75,6 +75,11 @@
 	font-weight: 500;
 	font-size: 25px;
 	line-height: 30px;
+}
+.price-item.active-price .price-item__head {
+	border: 1px solid rgba(171, 39, 79, 0.5);
+	box-shadow: inset 0px 0px 35px rgba(171, 39, 79, 0.5), 4px 5px 25px rgba(128, 28, 78, 0);
+	color: #000;
 }
 .search-item__desc {
 	font-weight: 500;
@@ -225,6 +230,17 @@
 		margin: 0 0 0px 0;
   }
 }
+@media only screen and (max-width: 900px){
+	.price__items {
+		width: 100%;
+	}
+	.price__wrapper {
+		max-width: 600px;
+	}
+	.search__down {
+		padding: 35px 30px 20px 30px;
+	}
+}
 @media only screen and (max-width: 850px){
 	.price__search {
 		margin: 100px 0 0 0;
@@ -238,12 +254,12 @@
 	.price {
 		padding: 0 0 75px 0;
 	}
-	.price__search input {
-		font-size: 24px;
-	}
 	.price__btn {
 		width: 30px;
 		height: 30px;
+	}
+	.price__btn-wrapper {
+		top: 20px;
 	}
 }
 @media only screen and (max-width: 650px){
@@ -262,6 +278,22 @@
 	}
 }
 @media only screen and (max-width: 500px){
+	.price-item__head {
+		font-size: 28px;
+	}
+	.price-item__head {
+		padding: 22px 0;
+	}
+	.price__search input {
+		font-size: 25px;
+		padding: 20px 25px;
+	}
+	.price__btn-wrapper {
+		top: 30px;
+	}
+	.body-child__price .sale, .body-child__price p, .body-child__text, .search-item__price p, .search-item__text {
+		font-size: 16px;
+	}
 	.price__search {
 		margin: 50px 0 0 0;
 	}
@@ -270,9 +302,6 @@
 	}
 	.price-item {
 		margin: 0 0 20px 0;
-	}
-	.search__down, .price__search input {
-		padding: 20px 30px;
 	}
 	.body-child__info {
 		width: 65%;

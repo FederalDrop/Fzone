@@ -1,113 +1,114 @@
-<section class="home__head">
-	<div class="home__body">
-		<div class="home-sliders__wrapper">
-			<div class="home-btn__wrapper">
-				<button class="sercive-info__btn main__btn air-open-btn" data-popup-current="callback_form">Онлайн
-					запис</button>
+<footer class="footer">
+	<div class="footer__body container">
+		<div class="footer__content">
+
+			<div class="footer__logo">
+				<a href="<?php echo home_url(); ?>">
+					<img src="<?php the_field('footer_logo', 'option'); ?>" alt="logo">
+				</a>
 			</div>
-			<div class="home-slider__text">
-				<div class="slider-text__item">
-					<h3 class="home-info__title">Краса в нюансах</h3>
+			<div class="footer-contacts">
+				<div class="footer-contacts__item">
+					<div class="footer-contacts__item-img"><img src="img/svg/icon_map_pin.svg" alt="map-pin"></div>
+					<a href="#" class="footer-contacts__geo-text">м.Київ, пр-т Героїв Сталінграда, 24А</a>
 				</div>
-				<div class="slider-text__item">
-					<h3 class="home-info__title">Краса в деталях</h3>
+				<div class="footer-contacts__item">
+					<div class="footer-contacts__item-img"><img src="img/svg/icon_phone.svg" alt="phone"></div>
+					<a href="tel:+380665759888" class="footer-contacts__phone-text">+38 066 575 98 88</a>
 				</div>
-				<div class="slider-text__item">
-					<h3 class="home-info__title">Краса в деталях</h3>
+				<div class="footer__social-items">
+					<div class="footer__social-item"><a href="#" target="_blank"><img src="img/svg/icon_instagram.svg"
+								alt="instagram"></a></div>
+					<div class="footer__social-item"><a href="#" target="_blank"><img src="img/svg/icon_facebook.svg"
+								alt="facebook"></a></div>
 				</div>
 			</div>
-			<div class="home__slider">
-				<div class="home__slider-item">
-					<picture>
-						<source srcset="img/home_bg.jpg" type="image/jpeg" media="(min-width:1000px)">
-						<source srcset="img/home_bg-medium.jpg" type="image/jpeg" media="(min-width: 500px)">
-						<source srcset="img/home_bg-small.jpg" type="image/jpeg" media="(max-width: 500px)">
-						<img src="img/home_bg.jpg" alt="slider">
-					</picture>
-				</div>
-				<div class="home__slider-item">
-					<picture>
-						<source srcset="img/about_bg.jpg" type="image/jpeg" media="(min-width:1000px)">
-						<source srcset="img/about_bg-medium.jpg" type="image/jpeg" media="(min-width: 500px)">
-						<source srcset="img/about_bg-small.jpg" type="image/jpeg" media="(max-width: 500px)">
-						<img src="img/about_bg.jpg" alt="slider">
-					</picture>
-				</div>
-				<div class="home__slider-item">
-					<picture>
-						<source srcset="img/article_bg.jpg" type="image/jpeg" media="(min-width:1000px)">
-						<source srcset="img/article_bg-medium.jpg" type="image/jpeg" media="(min-width: 500px)">
-						<source srcset="img/article_bg-small.jpg" type="image/jpeg" media="(max-width: 500px)">
-						<img src="img/article_bg.jpg" alt="slider">
-					</picture>
-				</div>
+			<div class="footer__nav">
+				<?php 
+	//footer meny component
+	get_template_part('components/meny/footer-meny'); 
+	?>
+			</div>
+
+			<div class="footer__service">
+				<p><a class="footer__service-title">послуги</a></p>
+				<?php 
+	//services meny component
+	get_template_part('components/meny/services-meny'); 
+	?>
+			</div>
+
+		</div>
+		<div class="footer__down">
+			<div class="footer__license">
+				<p>
+					<?php the_field('текст_внизу_сайту', 'option'); ?>
+				</p>
+			</div>
+			<div class="footer__social-items">
+				<?php 
+	//networks meny component
+	get_template_part('components/meny/meny-networks'); 
+	?>
 			</div>
 		</div>
-	</div>
-</section>
-<!-- обнова -->
-<div class="social-abs">
-	<div class="social-abs__items">
-		<a href="#" target="_blank" class="social-abs__item">
-			<div class="social-item__img"><img src="img/svg/icon_table_wa.svg" alt="wa"></div>
-		</a>
-		<a href="#" target="_blank" class="social-abs__item">
-			<div class="social-item__img"><img src="img/svg/icon_table_inst.svg" alt="inst"></div>
-		</a>
-		<a href="#" target="_blank" class="social-abs__item">
-			<div class="social-item__img"><img src="img/svg/icon_table_tg.svg" alt="tg"></div>
-		</a>
-		<a href="tel:+30665759888" class="social-abs__item">
-			<div class="social-item__img"><img src="img/svg/icon_table_phone.svg" alt="wa"></div>
-		</a>
-	</div>
-	<div class="social-abs__btn">
-		<div class="social-abs__chat">
-			<div class="social-abs__img">
-				<img src="img/svg/icon_table_chat.svg" alt="chat">
-				<span class="pulse-button__rings"></span>
-				<span class="pulse-button__rings"></span>
-				<span class="pulse-button__rings"></span>
-			</div>
-		</div>
-		<div class="social-abs__cross">
-			<div class="social-abs__img"><img src="img/svg/icon_table_cross.svg" alt="cross"></div>
+		<div class="footer__other">
+			<p>developed by: <a href="https://www.spacesdev.space/">spacesdev.space</a></p>
 		</div>
 	</div>
+</footer>
+
+
+<?php 
+	//callback popup component
+	get_template_part('components/popups/callback-popup'); 
+	?>
+
+
+<?php 
+	//callback popup component
+	get_template_part('components/popups/add-reviews-popup'); 
+	?>
+
+
+<?php 
+	//review-full-info component
+	get_template_part('components/popups/review-full-info'); 
+	?>
+
+
+<?php 
+	//review-full-info component
+	get_template_part('components/popups/fixed-networks'); 
+	?>
+
+<?php 
+	//form-done-popup component
+	get_template_part('components/popups/form-done-popup'); 
+	?>
+
+
+<?php 
+	// map element for home and about pages
+	if(is_page_template('pages/home.php') || is_page_template('pages/about.php')) {
+	?>
+<?php 
+	
+	//map component
+	get_template_part('components/all/map-component'); 
+	
+	?>
+<?php
+	}
+	elseif(is_page_template('pages/about.php') ) {
+	
+	}
+	?>
+
+
 </div>
-<!-- Форма из вп -->
-<div class="title__wrapper">
-	<div class="article__line main__line"></div>
-	<h3 class="article__title main__title">залишити відгуки</h3>
-</div>
-<div class="review__form-wrapper">
-	<div class="popup-input__wrapper">
-		<div class="review__form-item">
-			[text* text-291 placeholder "Ваше ім’я"]
-		</div>
-		<div class="review__form-item">
-			[text* text-291 placeholder "Ваш email"]
-		</div>
-	</div>
-	<div class="review__form-item wrapper">
-		<div class="form-stars">
-			<div class="form-star"></div>
-			<div class="form-star"></div>
-			<div class="form-star"></div>
-			<div class="form-star"></div>
-			<div class="form-star"></div>
-		</div>
-		[text text-546 class:counter]
-		[textarea textarea-801 placeholder "Ваша оцінка та коментарій"]
-	</div>
-	<div class="review__form-item">
-		[submit "Надiслати"]
-	</div>
-	<!-- всплывающее окно -->
-	<div class="popup-air" data-air="formdone">
-		<div class="done-body">
-			<p class="done-body__thanks">Дякуємо!!!</p>
-			<p class="done-body__title">Ваша заявка надіслана</p>
-			<p class="done-body__subtitle">Незабаром наші спеціалісти зв'яжуться з Вами</p>
-		</div>
-	</div>
+
+<?php wp_footer(); ?>
+</body>
+
+</html>

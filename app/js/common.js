@@ -23,10 +23,12 @@ $(function () {
 	});
 	$('.inside__slider').slick({
 		dots: true,
+		speed: 1500,
 	});
 	$('.partners__slider').slick({
 		slidesToShow: 3,
 		dots: true,
+		speed: 1500,
 		responsive: [
 			{
 				breakpoint: 800,
@@ -45,15 +47,18 @@ $(function () {
 	$('.med__slider').slick({
 		dots: true,
 		adaptiveHeight: false,
+		speed: 1500,
 	});
 	$('.effect__slider').slick({
 		dots: true,
+		speed: 1500,
 	});
 	$('.reviews__slider').slick({
 		dots: true,
 		slidesToShow: 1,
 		slidesToScroll: 2,
 		variableWidth: true,
+		speed: 2000,
 		responsive: [
 			{
 				breakpoint: 1125,
@@ -68,7 +73,9 @@ $(function () {
 	});
 	$('.about__slider').slick({
 		dots: true,
-		vertical: true,
+		speed: 700,
+		fade: true,
+		cssEase: 'linear',
 		responsive: [
 			{
 				breakpoint: 550,
@@ -81,6 +88,7 @@ $(function () {
 	$('.popular__slider').slick({
 		slidesToShow: 3,
 		dots: true,
+		speed: 1500,
 		responsive: [
 			{
 				breakpoint: 1000,
@@ -99,6 +107,7 @@ $(function () {
 	$('.employer__slider').slick({
 		slidesToShow: 3,
 		dots: true,
+		speed: 1500,
 		responsive: [
 			{
 				breakpoint: 1100,
@@ -360,7 +369,7 @@ window.addEventListener('load', function () {
 			e.preventDefault();
 			document.querySelector('.header__list>.menu-item-has-children>ul').style.maxHeight = '500px';
 			document.querySelector('.header__list>.menu-item-has-children>ul').style.opacity = '1';
-			document.querySelector('.header__list>.menu-item-has-children>ul').style.padding = '75px 120px 55px 120px';
+			document.querySelector('.header__list>.menu-item-has-children>ul').style.padding = '75px 50px 55px 50px';
 			document.querySelector('.header__list>.menu-item-has-children>ul').style.overflow = 'auto';
 		})
 		menuHover.addEventListener('mouseleave', function () {
@@ -369,21 +378,66 @@ window.addEventListener('load', function () {
 			document.querySelector('.header__list>.menu-item-has-children>ul').style.padding = '0';
 			document.querySelector('.header__list>.menu-item-has-children>ul').style.overflow = 'hidden';
 		})
+		let ulHover = document.querySelectorAll('.header__list>.menu-item-has-children>ul>li');
+		ulHover.forEach(element => {
+			element.addEventListener('mouseover', event => {
+				if (event.target == event.currentTarget)
+					element.classList.add('down');
+			})
+		})
+		ulHover.forEach(element => {
+			element.addEventListener('mouseleave', event => {
+				if (event.target == event.currentTarget)
+					element.classList.remove('down');
+			})
+		})
 	}
 	const mediaQuery2 = window.matchMedia('(max-width: 1000px)')
 	if (mediaQuery2.matches) {
 		let menuHover = document.querySelector('.header__list>.menu-item-has-children');
-		menuHover.addEventListener('click', function () {
-			menuHover.classList.toggle('down');
+		menuHover.addEventListener('click', event => {
+			if (event.target == event.currentTarget)
+				menuHover.classList.toggle('down');
+		})
+		let menuDown = document.querySelectorAll('.header__list>.menu-item-has-children>ul>li');
+		console.log(menuDown)
+		menuDown.forEach(element => {
+			element.addEventListener('click', event => {
+				if (event.target == event.currentTarget)
+					element.classList.toggle('down');
+			})
 		})
 	}
 
-	let menuDown = document.querySelectorAll('.header__list>.menu-item-has-children>ul>li');
-	menuDown.forEach(element => {
-		element.addEventListener('click', event => {
-			element.classList.toggle('down');
-		})
-	})
+
+
+	function wrapperNav() {
+		let navItems = document.querySelectorAll('.header__list>.menu-item-has-children>ul>li')
+		let wrapper = document.createElement('div');
+		wrapper.classList.add('nav-wrapper');
+		let wrapper2 = document.createElement('div');
+		wrapper2.classList.add('nav-wrapper');
+		let wrapper3 = document.createElement('div');
+		wrapper3.classList.add('nav-wrapper');
+		for (let i = 0; i < navItems.length; i++) {
+			if (i == 0 || i == 3 || i == 6) {
+				wrapper.append(navItems[i]);
+			}
+			if (i == 1 || i == 4 || i == 7) {
+				wrapper2.append(navItems[i]);
+			}
+			if (i == 2 || i == 5 || i == 8) {
+				wrapper3.append(navItems[i]);
+			}
+		}
+		let secondUl = document.querySelector('.header__list>.menu-item-has-children>ul');
+		secondUl.classList.add('second-ul');
+		secondUl.append(wrapper);
+		secondUl.append(wrapper2);
+		secondUl.append(wrapper3);
+	}
+
+	wrapperNav();
 
 	if (document.querySelector('.contacts__title') !== null) {
 		let contacts = document.querySelector('.contacts__title');
@@ -445,3 +499,313 @@ window.addEventListener('load', function () {
 	});
 
 }, false);
+
+window.addEventListener('load', function () {
+	let preloaderConteiner = document.querySelector('.preloader-conteiner');
+	let app = document.querySelector('.app')
+	setTimeout(() => {
+		preloaderConteiner.classList.add('hidePreloader')
+		app.style.display = "block"
+
+	}, 200)
+
+
+	function loadCurrentPrice() {
+		let allelements = document.querySelectorAll('.body-item');
+		if (allelements.length) {
+			let getValue = document.querySelector('#get-value').value;
+			for (let i = 0; i < allelements.length; i++) {
+				let currentText = allelements[i].querySelector('.body-item__head .body-head__title').innerHTML;
+				if (getValue == currentText) {
+					allelements[i].closest('.price-item').classList.add('active-price');
+					allelements[i].classList.add('active-price-category');
+					allelements[i].classList.add('highlight');
+					setTimeout(() => {
+						allelements[i].classList.remove('highlight');
+					}, 4000)
+					let topheight = document.getElementById("pricemain").offsetTop;
+					window.scrollTo({
+						top: topheight,
+						left: 0,
+						behavior: 'smooth'
+					});
+				}
+			}
+		}
+	}
+	loadCurrentPrice();
+
+	function openPrice() {
+		let category = document.querySelectorAll('.price-item');
+		for (let i = 0; i < category.length; i++) {
+			category[i].querySelector('.price-item__head').addEventListener('click', function () {
+				category[i].classList.toggle('active-price');
+			})
+		}
+	}
+	openPrice();
+
+	function openPriceCategory() {
+		let categoryPrice = document.querySelectorAll('.body-item')
+		for (let i = 0; i < categoryPrice.length; i++) {
+			categoryPrice[i].querySelector('.body-item__head').addEventListener('click', function () {
+				// for(let k = 0; k < categoryPrice.length; k++){
+				// 	categoryPrice[k].classList.remove('active-price-category');
+				// }
+				categoryPrice[i].classList.toggle('active-price-category');
+			})
+		}
+	}
+	openPriceCategory();
+
+
+	function search() {
+		let input = document.getElementById("inputSearch");
+		let filter = input.value.toUpperCase();
+		let ul = document.getElementById("list");
+		let li = ul.getElementsByTagName("li");
+
+		// Перебирайте все элементы списка и скрывайте те, которые не соответствуют поисковому запросу
+		for (let i = 0; i < li.length; i++) {
+			let h5 = li[i].getElementsByTagName("h5")[0];
+			if (h5.innerHTML.toUpperCase().indexOf(filter) > -1) {
+				li[i].style.display = "";
+				document.querySelector('.search__down').classList.remove('hedesearch')
+			} else {
+				li[i].style.display = "none";
+				document.querySelector('.search__down').classList.add('hedesearch')
+			}
+		}
+	}
+	function startSearch() {
+		let currentInput = document.querySelector('#inputSearch')
+		if (currentInput != null) {
+			currentInput.addEventListener('keyup', search);
+		}
+		else {
+			return;
+		}
+	}
+	startSearch()
+
+
+	function animateController() {
+		new Skroll({
+			mobile: true,
+		})
+			.add(".service-info__title", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".home-info__title", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".title__wrapper", {
+				delay: 100,
+				duration: 1200,
+				animation: "fadeInLeft"
+			})
+
+			.add(".help-item", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".med__dots-wrapper", {
+				delay: 300,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".med__slider", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+
+			.add(".popular__slider-item", {
+				delay: 100,
+				duration: 1000,
+				animation: "flipInY"
+			})
+			.add(".reviews__slider", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".contacts__content", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".title__wrapper-eployer", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInRight"
+			})
+			.add(".partners__slider", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".clinic__info-title", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInLeft"
+			})
+			.add(".clinic__info-subtitle", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInRight"
+			})
+			.add(".clinic__info-redactor", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".clinic__img", {
+				delay: 300,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".price-info__title", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+
+			.add(".sercive-info__btn", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+
+			.add(".price__search", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".price-item", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".spec-item", {
+				delay: 200,
+				duration: 1000,
+				animation: "flipInY"
+			})
+			.add(".articles-item", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".cosmo__item", {
+				delay: 200,
+				duration: 1000,
+				animation: "flipInY"
+			})
+			.add(".inside__content .wp__redactors", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".inside-slider__section", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".inside-btns__section", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".mony ul li", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".mony h3", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".inside__video-section", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+
+			.add(".inside__gold", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+
+			.add(".inside-slide__section-two", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+
+
+			.add(".faq__title", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".faq-item", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".about__info-text", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".about__slider-wrapper", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".benefits-item", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".employer__slider-item", {
+				delay: 200,
+				duration: 1000,
+				animation: "flipInY"
+			})
+			.add(".documents__item", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".info__content", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".vertical-text", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
+			.add(".vertical-text__wrapper", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInDown"
+			})
+
+			.init()
+			.recalcPosition()
+	}
+
+	animateController()
+})
+

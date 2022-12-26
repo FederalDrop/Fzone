@@ -178,6 +178,7 @@ ul {
 	font-weight: 500;
 	font-size: 60px;
 	line-height: 100%;
+	text-transform: lowercase;
 }
 .main__line {
 	height: 3px;
@@ -230,8 +231,11 @@ ul {
 .contacts, .cosmo__items {
 	padding: 100px 0 120px 0;
 }
-.pertners, .price, .articles, .spec, .about {
+.pertners, .price, .spec, .about, .news-category-sec {
 	padding: 0 0 120px 0;
+}
+.articles {
+	padding: 0 0 60px 0;
 }
 .documents {
 	padding: 50px 0 0 0;
@@ -260,6 +264,9 @@ ul {
 	.titles-switch.view-callback .callback__title, .titles-switch.view-contacts .contacts__title  {
 		font-size: 45px;
 	}
+	.articles {
+		padding: 0 0 20px 0;
+	}
 }
 @media only screen and (max-width: 680px){
 	.container {
@@ -280,11 +287,17 @@ ul {
 		transition: all 0.3s ease;
 	}
 	.documents__item-button:hover, .price-item__head:hover {
-		border: 1px solid rgb(243, 150, 196);
-		box-shadow: inset 4px 4px 20px rgba(128, 28, 78, 0),4px 5px 25px rgba(128, 28, 78, 0.8);
+		border: 1px solid rgba(171, 39, 79, 0.5);
+		box-shadow: inset 4px 4px 20px rgba(128, 28, 78, 0),2px 2px 8px rgba(128, 28, 78, 0.8);
 		transition: all 0.3s ease;
+		color: #AB274F;
 	}
-	.main__btn:active, .inside__btn:active, .btns__body-btn:active, .documents__item-button:active, .price-item__head:active, .reviews-item__feedback-button:active {
+	.documents__item-button:active, .price-item__head:active {
+		border: 1px solid rgba(171, 39, 79, 0.5);
+		box-shadow: inset 0px 0px 35px rgba(171, 39, 79, 0.5), 4px 5px 25px rgba(128, 28, 78, 0);
+		color: #000;
+	}
+	.main__btn:active, .inside__btn:active, .btns__body-btn:active, .reviews-item__feedback-button:active {
 		box-shadow: inset 4px 4px 20px rgba(128, 28, 78, 0.5), 4px 5px 25px rgba(128, 28, 78, 0);
 		transition: all 0.3s ease;
 	}
@@ -294,11 +307,11 @@ ul {
 	}
 	.help-item:hover .help-item__img img, .articles-item:hover .item-body__img:hover img, .spec-item__img:hover img {
 		transform: scale(1.1);
-		transition: all 0.3s ease;
+		transition: all 0.5s ease;
 	}
 	.popular__slider-item:hover .popular-item__img img, .cosmo__item:hover .cosmo__item-img img {
 		transform: scale(0.9);
-		transition: all 0.3s ease;
+		transition: all 0.5s ease;
 	}
 	.reviews-item__more-button:hover {
 		color: #867955;
@@ -340,7 +353,7 @@ ul {
 	}
 	.employer__slider-item:hover img {
 		transform: scale(1.1);
-		transition: all 0.3s ease;
+		transition: all 0.5s ease;
 	}
 }
 @media only screen and (max-width: 1000px){
@@ -353,7 +366,7 @@ ul {
 	.contacts, .cosmo__items {
 		padding: 80px 0 100px 0;
 	}
-	.pertners, .price, .articles, .spec, .about {
+	.pertners, .price, .spec, .about, .news-category-sec {
 		padding: 0 0 100px 0;
 	}
 	.documents {
@@ -383,11 +396,14 @@ ul {
 	.contacts, .cosmo__items {
 		padding: 60px 0 80px 0;
 	}
-	.pertners, .price, .articles, .spec, .about {
+	.pertners, .price, .spec, .about, .news-category-sec {
 		padding: 0 0 80px 0;
 	}
 	.documents {
 		padding: 20px 0 0 0;
+	}
+	.articles {
+		padding: 0 0 30px 0;
 	}
 }
 @media only screen and (max-width: 500px){
@@ -425,5 +441,17 @@ ul {
 		width: 100px;
 		height: 1.3px;
 		margin: 7px -30px 0 8px;
+	}
+}
+@media only screen and (max-width: 390px){
+	.container {
+		padding: 0;
+		width: 320px;
+	}
+}
+@media only screen and (max-width: 350px){
+	.container {
+		padding: 0 20px;
+		width: 100%;
 	}
 }
