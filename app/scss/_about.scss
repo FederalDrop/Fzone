@@ -275,6 +275,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	transition: all 0.7s ease;
 }
 .contacts__body {
 	position: relative;
@@ -288,14 +289,14 @@
 	left: 0;
 	opacity: 0!important;
 	z-index: -10;
-	transition: all 0.7s ease;
+	transition: all 1.3s ease;
 }
 .contacts__content.view-contacts {
 	position: relative;
 	top: 100px;
 	z-index: 10;
 	opacity: 1!important;
-	transition: all 0.7s ease;
+	transition: all 1.3s ease;
 }
 .contacts__title {
 	font-weight: 500;
@@ -303,6 +304,7 @@
 	line-height: 58px;
 	color: #A6A4A4;
 	cursor: pointer;
+	transition: all 0.7s ease;
 }
 
 .titles-switch.view-contacts .contacts__title {
@@ -310,11 +312,13 @@
 	font-size: 60px;
 	line-height: 60px;
 	color: #000;
+	transition: all 0.7s ease;
 }
 
 .title__wrapper-contacts {
 	display: flex;
 	align-items: flex-start;
+	transition: all 0.7s ease;
 }
 .contacts__info {
 	display: flex;

@@ -29,7 +29,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: all 0.3s ease;
+	transition: all 0.7s ease;
 }
 .social-abs__item {
 	margin: 0 0 10px 0;
@@ -37,13 +37,13 @@
 .social-abs__items {
 	transform: translateY(200%);
 	opacity: 0;
-	transition: all 0.3s ease;
+	transition: all 0.7s ease;
 	max-height: 0;
 }
 .social-abs.up .social-abs__items {
 	transform: translateY(0);
 	opacity: 1;
-	transition: all 0.3s ease;
+	transition: all 0.7s ease;
 	max-height: 700px;
 }
 .social-abs__btn {
@@ -53,18 +53,18 @@
 .social-abs.up .social-abs__cross {
 	top: 0;
 	opacity: 1;
-	transition: all 0.3s ease;
+	transition: all 0.7s ease;
 }
 .social-abs.up .social-abs__chat {
 	transform: translateY(200px);
 	opacity: 0;
-	transition: all 0.3s ease;
+	transition: all 0.7s ease;
 }
 .social-abs__cross {
 	position: absolute;
 	top: 200px;
 	opacity: 0;
-	transition: all 0.3s ease;
+	transition: all 0.7s ease;
 }
 .pulse-button__rings.second {
 	bottom: -2px;
@@ -639,14 +639,14 @@
 	z-index: -10;
 	opacity: 0;
 	left: 0;
-	transition: all 0.7s ease;
+	transition: all 1.3s ease;
 }
 .callback__content.view-callback {
 	opacity: 1;
 	position: relative;
 	z-index: 10;
 	top: 0;
-	transition: all 0.7s ease;
+	transition: all 1.3s ease;
 }
 .callback__title {
 	font-weight: 500;

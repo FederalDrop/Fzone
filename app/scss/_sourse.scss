@@ -198,10 +198,11 @@ ul {
 	margin: 0;
 	height: 3px;
 	background: #000;
+	transition: all 0.7s ease;
 }
 .titles-switch.view-callback .callback__line {
 	width: 310px;
-	transition: all 0.3s ease;
+	transition: all 0.7s ease;
 	margin: 20px 20px 0 -131px;
 }
 .titles-switch.view-callback .callback__title {
@@ -209,17 +210,18 @@ ul {
 	font-size: 60px;
 	line-height: 60px;
 	color: #000;
+	transition: all 0.7s ease;
 }
 .contacts__line {
 	width: 0;
-	transition: all 0.3s ease;
+	transition: all 0.7s ease;
 	margin: 0;
 	height: 3px;
 	background: #000;
 }
 .titles-switch.view-contacts .contacts__line {
 	width: 310px;
-	transition: all 0.3s ease;
+	transition: all 0.7s ease;
 	margin: 20px -131px 0 20px;
 }
 .eployer, .med {
@@ -278,7 +280,7 @@ ul {
 @media only screen and (min-width: 1000px){
 	.social-abs__item:hover, .social-abs__chat:hover, .social-abs__cross:hover {
 		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-		transition: all 0.3s ease;
+		transition: all 0.7s ease;
 		transform: translateY(-1px);
 	}
 	.main__btn:hover, .inside__btn:hover, .btns__body-btn:hover, .reviews-item__feedback-button:hover {

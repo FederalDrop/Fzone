@@ -391,6 +391,33 @@ window.addEventListener('load', function () {
 					element.classList.remove('down');
 			})
 		})
+		function wrapperNav() {
+			let navItems = document.querySelectorAll('.header__list>.menu-item-has-children>ul>li')
+			let wrapper = document.createElement('div');
+			wrapper.classList.add('nav-wrapper');
+			let wrapper2 = document.createElement('div');
+			wrapper2.classList.add('nav-wrapper');
+			let wrapper3 = document.createElement('div');
+			wrapper3.classList.add('nav-wrapper');
+			for (let i = 0; i < navItems.length; i++) {
+				if (i == 0 || i == 3 || i == 6) {
+					wrapper.append(navItems[i]);
+				}
+				if (i == 1 || i == 4 || i == 7) {
+					wrapper2.append(navItems[i]);
+				}
+				if (i == 2 || i == 5 || i == 8) {
+					wrapper3.append(navItems[i]);
+				}
+			}
+			let secondUl = document.querySelector('.header__list>.menu-item-has-children>ul');
+			secondUl.classList.add('second-ul');
+			secondUl.append(wrapper);
+			secondUl.append(wrapper2);
+			secondUl.append(wrapper3);
+		}
+
+		wrapperNav();
 	}
 	const mediaQuery2 = window.matchMedia('(max-width: 1000px)')
 	if (mediaQuery2.matches) {
@@ -400,7 +427,6 @@ window.addEventListener('load', function () {
 				menuHover.classList.toggle('down');
 		})
 		let menuDown = document.querySelectorAll('.header__list>.menu-item-has-children>ul>li');
-		console.log(menuDown)
 		menuDown.forEach(element => {
 			element.addEventListener('click', event => {
 				if (event.target == event.currentTarget)
@@ -408,36 +434,6 @@ window.addEventListener('load', function () {
 			})
 		})
 	}
-
-
-
-	function wrapperNav() {
-		let navItems = document.querySelectorAll('.header__list>.menu-item-has-children>ul>li')
-		let wrapper = document.createElement('div');
-		wrapper.classList.add('nav-wrapper');
-		let wrapper2 = document.createElement('div');
-		wrapper2.classList.add('nav-wrapper');
-		let wrapper3 = document.createElement('div');
-		wrapper3.classList.add('nav-wrapper');
-		for (let i = 0; i < navItems.length; i++) {
-			if (i == 0 || i == 3 || i == 6) {
-				wrapper.append(navItems[i]);
-			}
-			if (i == 1 || i == 4 || i == 7) {
-				wrapper2.append(navItems[i]);
-			}
-			if (i == 2 || i == 5 || i == 8) {
-				wrapper3.append(navItems[i]);
-			}
-		}
-		let secondUl = document.querySelector('.header__list>.menu-item-has-children>ul');
-		secondUl.classList.add('second-ul');
-		secondUl.append(wrapper);
-		secondUl.append(wrapper2);
-		secondUl.append(wrapper3);
-	}
-
-	wrapperNav();
 
 	if (document.querySelector('.contacts__title') !== null) {
 		let contacts = document.querySelector('.contacts__title');
@@ -598,6 +594,11 @@ window.addEventListener('load', function () {
 				duration: 1000,
 				animation: "fadeInUp"
 			})
+			// .add(".main__btn-container", {
+			//        delay: 100,
+			//        duration: 1000,
+			//        animation: "fadeInUp"
+			//    })
 			.add(".home-info__title", {
 				delay: 100,
 				duration: 1000,
@@ -692,10 +693,10 @@ window.addEventListener('load', function () {
 				duration: 1000,
 				animation: "fadeInUp"
 			})
-			.add(".spec-item", {
-				delay: 200,
+			.add(".spec__items", {
+				delay: 100,
 				duration: 1000,
-				animation: "flipInY"
+				animation: "fadeopacity"
 			})
 			.add(".articles-item", {
 				delay: 100,
@@ -707,7 +708,7 @@ window.addEventListener('load', function () {
 				duration: 1000,
 				animation: "flipInY"
 			})
-			.add(".inside__content .wp__redactors", {
+			.add(".inside__content", {
 				delay: 100,
 				duration: 1000,
 				animation: "fadeInUp"
@@ -776,10 +777,10 @@ window.addEventListener('load', function () {
 				duration: 1000,
 				animation: "fadeInUp"
 			})
-			.add(".employer__slider-item", {
-				delay: 200,
+			.add(".employer__slider", {
+				delay: 100,
 				duration: 1000,
-				animation: "flipInY"
+				animation: "fadeopacity"
 			})
 			.add(".documents__item", {
 				delay: 100,
