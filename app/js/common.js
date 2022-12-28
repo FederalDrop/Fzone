@@ -47,7 +47,7 @@ $(function () {
 	$('.med__slider').slick({
 		dots: true,
 		adaptiveHeight: false,
-		speed: 1500,
+		speed: 700,
 		fade: true,
 		cssEase: 'linear',
 	});
@@ -433,6 +433,7 @@ window.addEventListener('load', function () {
 			function sendFormDone() {
 				let allPopups = document.querySelectorAll('.popup-air');
 				let curretnDonePopup = 'formdone';
+				console.log(curretnDonePopup);
 				closeAllAirPopups(allPopups)
 				openAirPopupForForm(curretnDonePopup);
 				setTimeout(function () {
@@ -654,9 +655,6 @@ window.addEventListener('load', function () {
 
 	});
 
-}, false);
-
-window.addEventListener('load', function () {
 	let preloaderConteiner = document.querySelector('.preloader-conteiner');
 	let app = document.querySelector('.app')
 	setTimeout(() => {
@@ -833,11 +831,11 @@ window.addEventListener('load', function () {
 				animation: "fadeInUp"
 			})
 
-			.add(".sercive-info__btn", {
-				delay: 100,
-				duration: 1000,
-				animation: "fadeInUp"
-			})
+			// .add(".sercive-info__btn", {
+			//     delay: 100,
+			//     duration: 1000,
+			//     animation: "fadeInUp"
+			// })
 
 			.add(".price__search", {
 				delay: 100,
@@ -964,5 +962,7 @@ window.addEventListener('load', function () {
 	}
 
 	animateController()
-})
+
+}, false);
+
 

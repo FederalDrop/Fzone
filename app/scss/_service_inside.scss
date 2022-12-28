@@ -714,6 +714,9 @@
 	}
 }
 @media only screen and (max-width: 450px){
+	.when__img, .effect__proc-img {
+		width: 100%;
+	}
 	.mony__text {
 		h1 {
 			font-size: 18px;
@@ -821,8 +824,5 @@
 	}
 	.effect__video {
 		height: 250px;
-	}
-	.when__img, .effect__proc-img {
-		width: 280px;
 	}
 }

@@ -177,8 +177,13 @@
 
     &__content {
       z-index: 2;
+      max-width: 1190px;
       position: absolute;
-      right: 10%;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      text-align: center;
       bottom: 15%;
       display: flex;
       flex-direction: column;
@@ -189,7 +194,7 @@
       margin-bottom: 20px;
       text-transform: uppercase;
 			line-height: 100px;
-      width: 99%;
+      width: 53%;
 
       &-line {
         overflow: hidden;
@@ -635,6 +640,12 @@ $cubOut: cubic-bezier(.67,-0.16,.47,1.61);
         transform: rotate(-45deg) scaleX(0) translateZ(0);
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1210px){
+  .fnc-slide__content {
+    padding: 0 20px;
   }
 }
 
