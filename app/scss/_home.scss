@@ -372,11 +372,13 @@
 	bottom: 600px;
 	right: auto;
 	right: 30%;
+	z-index: 1000;
 }
 .med__slider .slick-arrow.slick-prev {
 	bottom: 600px;
 	right: auto;
 	left: 30%;
+	z-index: 1000;
 }
 .med-item {
 	display: flex;
@@ -423,6 +425,8 @@
 	& img {
 		width: 100%;
 		height: 100%;
+		object-fit: cover;
+		display: block;
 	}
 }
 .med__dots-wrapper {
@@ -453,6 +457,7 @@
 	display: flex;
 	flex-direction: column-reverse;
 	align-items: center;
+	z-index: 1000;
 }
 .dots-item.down .dots-item__circle{
   animation: none;

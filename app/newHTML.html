@@ -1,114 +1,137 @@
-<footer class="footer">
-	<div class="footer__body container">
-		<div class="footer__content">
-
-			<div class="footer__logo">
-				<a href="<?php echo home_url(); ?>">
-					<img src="<?php the_field('footer_logo', 'option'); ?>" alt="logo">
-				</a>
-			</div>
-			<div class="footer-contacts">
-				<div class="footer-contacts__item">
-					<div class="footer-contacts__item-img"><img src="img/svg/icon_map_pin.svg" alt="map-pin"></div>
-					<a href="#" class="footer-contacts__geo-text">м.Київ, пр-т Героїв Сталінграда, 24А</a>
+<div class="demo-cont">
+	<!-- slider start -->
+	<div class="fnc-slider example-slider">
+		<div class="fnc-slider__slides">
+			<!-- slide start -->
+			<div class="fnc-slide m--blend-green m--active-slide">
+				<div class="fnc-slide__inner">
+					<img src="img/girl_1.jpg" alt="">
+					<div class="fnc-slide__mask">
+						<div class="fnc-slide__mask-inner"><img src="img/girl_1.jpg" alt=""></div>
+					</div>
+					<div class="fnc-slide__content">
+						<h2 class="fnc-slide__heading">
+							<div class="fnc-slide__heading-line">
+								<span>Краса в деталях</span>
+							</div>
+						</h2>
+						<button type="button" class="fnc-slide__action-btn main__btn air-open-btn"
+							data-popup-current="callback_form">
+							<span data-text="Онлайн запис">Онлайн запис</span>
+						</button>
+					</div>
 				</div>
-				<div class="footer-contacts__item">
-					<div class="footer-contacts__item-img"><img src="img/svg/icon_phone.svg" alt="phone"></div>
-					<a href="tel:+380665759888" class="footer-contacts__phone-text">+38 066 575 98 88</a>
+			</div>
+			<!-- slide end -->
+			<div class="fnc-slide m--blend-dark">
+				<div class="fnc-slide__inner">
+					<img src="img/girl_2.jpeg" alt="">
+					<div class="fnc-slide__mask">
+						<div class="fnc-slide__mask-inner"><img src="img/girl_2.jpeg" alt=""></div>
+					</div>
+					<div class="fnc-slide__content">
+						<h2 class="fnc-slide__heading">
+							<div class="fnc-slide__heading-line">
+								<span>Краса в деталях</span>
+							</div>
+						</h2>
+						<button type="button" class="fnc-slide__action-btn main__btn air-open-btn"
+							data-popup-current="callback_form">
+							<span data-text="Онлайн запис">Онлайн запис</span>
+						</button>
+					</div>
 				</div>
-				<div class="footer__social-items">
-					<div class="footer__social-item"><a href="#" target="_blank"><img src="img/svg/icon_instagram.svg"
-								alt="instagram"></a></div>
-					<div class="footer__social-item"><a href="#" target="_blank"><img src="img/svg/icon_facebook.svg"
-								alt="facebook"></a></div>
+			</div>
+			<!-- slide start -->
+			<div class="fnc-slide m--blend-dark">
+				<div class="fnc-slide__inner">
+					<img src="img/girl_3.jpg" alt="">
+					<div class="fnc-slide__mask">
+						<div class="fnc-slide__mask-inner"><img src="img/girl_3.jpg" alt=""></div>
+					</div>
+					<div class="fnc-slide__content">
+						<h2 class="fnc-slide__heading">
+							<div class="fnc-slide__heading-line">
+								<span>Краса в деталях</span>
+							</div>
+						</h2>
+						<button type="button" class="fnc-slide__action-btn main__btn air-open-btn"
+							data-popup-current="callback_form">
+							<span data-text="Онлайн запис">Онлайн запис</span>
+						</button>
+					</div>
 				</div>
 			</div>
-			<div class="footer__nav">
-				<?php 
-	//footer meny component
-	get_template_part('components/meny/footer-meny'); 
-	?>
+			<!-- slide end -->
+			<!-- slide start -->
+			<div class="fnc-slide m--blend-red">
+				<div class="fnc-slide__inner">
+					<img src="img/girl_4.jpg" alt="">
+					<div class="fnc-slide__mask">
+						<div class="fnc-slide__mask-inner"><img src="img/girl_4.jpg" alt=""></div>
+					</div>
+					<div class="fnc-slide__content">
+						<h2 class="fnc-slide__heading">
+							<div class="fnc-slide__heading-line">
+								<span>Краса в деталях</span>
+							</div>
+						</h2>
+						<button type="button" class="fnc-slide__action-btn main__btn air-open-btn"
+							data-popup-current="callback_form">
+							<span data-text="Онлайн запис">Онлайн запис</span>
+						</button>
+					</div>
+				</div>
 			</div>
-
-			<div class="footer__service">
-				<p><a class="footer__service-title">послуги</a></p>
-				<?php 
-	//services meny component
-	get_template_part('components/meny/services-meny'); 
-	?>
+			<!-- slide end -->
+			<!-- slide start -->
+			<div class="fnc-slide m--blend-blue">
+				<div class="fnc-slide__inner">
+					<img src="img/girl_5.jpg" alt="">
+					<div class="fnc-slide__mask">
+						<div class="fnc-slide__mask-inner"><img src="img/girl_5.jpg" alt=""></div>
+					</div>
+					<div class="fnc-slide__content">
+						<h2 class="fnc-slide__heading">
+							<div class="fnc-slide__heading-line">
+								<span>Краса в деталях</span>
+							</div>
+						</h2>
+						<button type="button" class="fnc-slide__action-btn main__btn air-open-btn"
+							data-popup-current="callback_form">
+							<span data-text="Онлайн запис">Онлайн запис</span>
+						</button>
+					</div>
+				</div>
 			</div>
-
+			<!-- slide end -->
 		</div>
-		<div class="footer__down">
-			<div class="footer__license">
-				<p>
-					<?php the_field('текст_внизу_сайту', 'option'); ?>
-				</p>
+		<nav class="fnc-nav">
+			<div class="fnc-nav__bgs">
+				<div class="fnc-nav__bg m--navbg-green m--active-nav-bg"></div>
+				<div class="fnc-nav__bg m--navbg-dark"></div>
+				<div class="fnc-nav__bg m--navbg-red"></div>
+				<div class="fnc-nav__bg m--navbg-red"></div>
+				<div class="fnc-nav__bg m--navbg-blue"></div>
 			</div>
-			<div class="footer__social-items">
-				<?php 
-	//networks meny component
-	get_template_part('components/meny/meny-networks'); 
-	?>
+			<div class="fnc-nav__controls">
+				<button class="fnc-nav__control">
+					<span class="fnc-nav__control-progress"></span>
+				</button>
+				<button class="fnc-nav__control">
+					<span class="fnc-nav__control-progress"></span>
+				</button>
+				<button class="fnc-nav__control">
+					<span class="fnc-nav__control-progress"></span>
+				</button>
+				<button class="fnc-nav__control">
+					<span class="fnc-nav__control-progress"></span>
+				</button>
+				<button class="fnc-nav__control">
+					<span class="fnc-nav__control-progress"></span>
+				</button>
 			</div>
-		</div>
-		<div class="footer__other">
-			<p>developed by: <a href="https://www.spacesdev.space/">spacesdev.space</a></p>
-		</div>
+		</nav>
 	</div>
-</footer>
-
-
-<?php 
-	//callback popup component
-	get_template_part('components/popups/callback-popup'); 
-	?>
-
-
-<?php 
-	//callback popup component
-	get_template_part('components/popups/add-reviews-popup'); 
-	?>
-
-
-<?php 
-	//review-full-info component
-	get_template_part('components/popups/review-full-info'); 
-	?>
-
-
-<?php 
-	//review-full-info component
-	get_template_part('components/popups/fixed-networks'); 
-	?>
-
-<?php 
-	//form-done-popup component
-	get_template_part('components/popups/form-done-popup'); 
-	?>
-
-
-<?php 
-	// map element for home and about pages
-	if(is_page_template('pages/home.php') || is_page_template('pages/about.php')) {
-	?>
-<?php 
-	
-	//map component
-	get_template_part('components/all/map-component'); 
-	
-	?>
-<?php
-	}
-	elseif(is_page_template('pages/about.php') ) {
-	
-	}
-	?>
-
-
+	<!-- slider end -->
 </div>
-
-<?php wp_footer(); ?>
-</body>
-
-</html>

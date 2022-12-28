@@ -48,6 +48,8 @@ $(function () {
 		dots: true,
 		adaptiveHeight: false,
 		speed: 1500,
+		fade: true,
+		cssEase: 'linear',
 	});
 	$('.effect__slider').slick({
 		dots: true,

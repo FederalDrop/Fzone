@@ -309,6 +309,15 @@
 		right: 5px;
 	}
 }
+@media only screen and (max-width: 1110px){
+	.header__list>li {
+		font-size: 22px;
+		margin: 0 20px 0 0;
+	}
+	.current_page_item {
+		font-size: 28px!important;
+	}
+}
 @media only screen and (max-width: 1080px){
 	.header__list>.menu-item-has-children>ul>li {
 		font-size: 20px;
@@ -326,9 +335,6 @@
 @media only screen and (max-width: 1020px){
 	.header-item:nth-child(2) {
 		margin: 0 30px;
-	}
-	.header__list>li {
-		margin: 0 30px 0 0;
 	}
 }
 @media only screen and (max-width: 1000px){
