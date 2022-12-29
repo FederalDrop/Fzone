@@ -80,10 +80,18 @@
 .inside .title__wrapper {
 	margin: 0 0 40px 0;
 }
+.big-image-box {
+	width: 100%;
+	& img {
+		width: 100%;
+		display: block;
+		object-fit: cover;
+	}
+}
 .inside__content {
 	padding: 40px 0;
 }
-.inside-btns__section, .inside-slider__section, .inside__video-section, .inside__proc-section, .inside-slide__section-two {
+.inside-btns__section, .inside-slider__section, .inside__video-section, .inside__proc-section, .inside-slide__section-two, .inside__big-image {
 	padding: 40px 0;
 }
 .inside__btns {
@@ -131,10 +139,6 @@
 		margin: 0 100px 0 0;
 	}
 }
-.when__body {
-	display: flex;
-	justify-content: space-between;
-}
 .when__img {
 	width: 487px;
 	height: 611px;
@@ -147,8 +151,7 @@
 	}
 }
 .when__body .wp__redactor {
-	width: 50%;
-	margin: 0 0 0 40px;
+	width: 100%;
 }
 .mony {
 	background: url('../img/inside_bg.jpg')no-repeat center;
@@ -208,6 +211,9 @@
 		font-size: 27px;
 		font-weight: 500;
 		margin: 0 0 20px 0;
+		&::marker {
+			font-size: 0.7em;
+		}
 	}
 	ol li {
 		list-style-type: decimal;
@@ -254,15 +260,19 @@
 		margin: 0 0 25px 0;
 	}
 	ul, ol {
-		padding: 0 0 0 30px;
 		margin: 0 0 25px 0;
 	}
 	ul li {
 		font-size: 24px;
 		margin: 0 0 15px 0;
 		list-style-type: disc;
+		list-style-position: inside;
 		&:last-child {
 			margin: 0;
+		}
+		&::marker {
+			margin: 0!important;
+			font-size: 0.7em;
 		}
 	}
 	ol li {
@@ -306,6 +316,10 @@
 .effect__proc-text {
 	width: 50%;
 	margin: 0 0 0 40px;
+}
+.when__img, .effect__proc-img {
+	float: left;
+	margin: 0 70px 20px 0;
 }
 .effect__proc-img {
 	width: 487px;
@@ -506,7 +520,7 @@
 		width: 100%;
 		padding: 15px 0;
 	}
-	.inside-btns__section, .inside-slide__section-two, .inside-slider__section, .inside__proc-section, .inside__video-section, .inside__content, .effect__gold {
+	.inside-btns__section, .inside-slide__section-two, .inside-slider__section, .inside__proc-section, .inside__video-section, .inside__content, .effect__gold, .inside__big-image {
 		padding: 30px 0;
 	}
 	.mony, .faq {
@@ -670,7 +684,7 @@
 	.mony {
 		padding: 60px 0;
 	}
-	.inside-btns__section, .inside-slide__section-two, .inside-slider__section, .inside__content, .inside__proc-section, .inside__video-section, .effect__gold {
+	.inside-btns__section, .inside-slide__section-two, .inside-slider__section, .inside__content, .inside__proc-section, .inside__video-section, .effect__gold, .inside__big-image {
 		padding: 20px 0;
 	}
 	.faq, .mony {

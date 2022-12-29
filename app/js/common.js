@@ -957,6 +957,11 @@ window.addEventListener('load', function () {
 				animation: "fadeInDown"
 			})
 
+			.add(".big-image-box", {
+				delay: 100,
+				duration: 1000,
+				animation: "fadeInUp"
+			})
 			.init()
 			.recalcPosition()
 	}
