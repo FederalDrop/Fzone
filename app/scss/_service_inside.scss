@@ -346,11 +346,18 @@
 .result {
 	display: flex;
 	justify-content: space-between;
+	width: 75%;
 	& .wp__redactor:nth-child(1) {
-		width: 48%;
+		width: 50%;
 	}
 	& .wp__redactor:nth-child(2) {
-		width: 37%;
+		width: calc(50% - 30px);
+		ul, ol {
+			padding: 0 0 0 20px;
+		}
+		ul li, ol li {
+			list-style-position: outside;
+		}
 	}
 }
 .effect__video {
@@ -394,9 +401,11 @@
 	font-size: 24px;
 	line-height: 30px;
 	margin: 0 0 0 30px;
+	font-weight: 600;
 }
 .faq-answer__text {
 	padding: 20px 0 0 53px;
+	font-size: 24px;
 }
 .faq-answer__wrappper {
 	max-height: 0;
@@ -440,6 +449,9 @@
 	}
 }
 @media only screen and (max-width: 1000px){
+	.result {
+		width: 100%;
+	}
 	.when__body {
 		display: block;
 	}
