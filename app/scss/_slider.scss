@@ -430,6 +430,7 @@ body {
 					width: 100%;
 					height: 100%;
 					object-fit: cover;
+          min-height: 900px;
 				}
 			}
   }
@@ -650,6 +651,9 @@ $cubOut: cubic-bezier(.67,-0.16,.47,1.61);
 }
 
 @media only screen and (max-width: 1000px){
+  .fnc-slide__inner img {
+    min-height: auto;
+  }
   .fnc-slide__content {
     width: 100%;
     right: 0;
