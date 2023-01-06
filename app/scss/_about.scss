@@ -364,6 +364,11 @@
 }
 .map-container {
 	position: relative;
+	overflow: hidden;
+}
+.map-container.active .map-abs {
+	transform: translateY(-100%);
+	transition: all 0.7s ease;
 }
 .map {
 	width: 623px;
@@ -377,6 +382,7 @@
 	top: 0;
 	left: 0;
 	z-index: 100;
+	transition: all 0.7s ease;
 	cursor: pointer;
 	& img {
 		width: 100%;
@@ -384,9 +390,6 @@
 		object-fit: cover;
 		display: block;
 	}
-}
-.map-abs.none {
-	display: none;
 }
 @media only screen and (max-width: 1200px) {
 	.about__slider .slick-arrow.slick-prev {

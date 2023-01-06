@@ -326,9 +326,17 @@ window.addEventListener('load', function () {
 		})
 	})
 
-	document.querySelector('.map-abs').addEventListener('click', event => {
-		document.querySelector('.map-abs').classList.add('none');
-	});
+	function map() {
+		if (document.getElementById('map') !== null) {
+			document.querySelector('.map-abs').addEventListener('click', event => {
+				document.querySelector('.map-container').classList.add('active');
+			});
+		}
+		else {
+			return;
+		}
+	}
+	map();
 
 	let vipad = document.querySelectorAll('.faq-item__plug');
 	vipad.forEach(element => {
