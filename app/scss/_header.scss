@@ -94,12 +94,21 @@
 	width: 1200px;
 	top: 30px; left: -50px; right: -50px;
 	left: auto;
-	padding: 0 120px 0 120px;
-	background: #FFFFFF;
+	background: none;
 	transition: all 0.3s ease;
+	padding: 20px 0 0 0;
 	max-height: 0;
 	overflow: hidden;
 	opacity: 0;
+}
+.header__list>.menu-item-has-children>ul::before {
+	content: '';
+	position: absolute;
+	top: 14px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #FFF;
 }
 .second-ul {
 	display: flex;
