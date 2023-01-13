@@ -324,12 +324,12 @@ ul {
 		border: 1px solid #000;
 		animation: none;
 	}
-	.review__form-item input:hover, .callback__form input:hover, .popup__form-item input:hover, .review__form-item.wrapper:hover {
+	.review__form-item input:hover, .callback__form input:hover, .popup__form-item input:hover, .review__form-item.wrapper:hover, .header-search form input[type=text]:hover {
 		filter: drop-shadow(0px 0px 10px rgba(128, 28, 78, 0.5));
 		border: 1px solid rgba(128, 28, 78, 0.5);
 		transition: all 0.3s ease;
 	}
-	.review__form-item input:focus, .callback__form input:focus, .popup__form-item input:focus {
+	.review__form-item input:focus, .callback__form input:focus, .popup__form-item input:focus, .header-search form input[type=text]:focus {
 		filter: drop-shadow(0px 0px 10px rgba(128, 28, 78, 0.5));
 		border: 1px solid rgba(128, 28, 78, 0.5);
 		transition: all 0.3s ease;

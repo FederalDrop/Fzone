@@ -17,6 +17,69 @@
 	display: flex;
 	justify-content: space-between;
 }
+.header-search {
+	margin: 2px 20px 0 0;
+}
+.header-search__mobile {
+	display: none;
+}
+.header-search__fake {
+	width: 25px;
+	height: 25px;
+	background: url('../img/svg/icon_search.svg');
+	background-size: cover;
+	cursor: pointer;
+	position: relative;
+	z-index: 10;
+	transition: all 0.5s ease;
+}
+.header-search__fake.cross {
+	background: url('../img/svg/icon-cross.svg');
+	background-size: cover;
+	transition: all 0.5s ease;
+}
+.header-search form {
+	position: relative;
+	& input {
+		position: absolute;
+		top: -7px;
+		right: -7px;
+		border-radius: 10px;
+		background: #D9D9D9;
+		border: 1px solid transparent;
+		padding: 8px 13px 8px 40px;
+		width: 250px;
+		color: #000;
+		font-size: 18px;
+		max-width: 0;
+		opacity: 0;
+		overflow: hidden;
+		transition: all 0.7s ease;
+	}
+	& input[type=submit] {
+		position: absolute;
+		z-index: 10;
+		top: 0;
+		right: 0;
+		padding: 0;
+		width: 25px;
+		height: 25px;
+		background: url('../img/svg/icon_search.svg')no-repeat;
+		background-size: contain;
+		cursor: pointer;
+		border: none;
+		transition: all 0.7s ease;
+	}
+}
+.header-search form input.active {
+	max-width: 250px;
+	opacity: 1;
+	overflow: visible;
+	transition: all 0.7s ease;
+}
+.header-search form input[type=submit].active {
+	right: 210px;
+}
 .header__logo-link {
 	display: block;
 	width: 368px;
@@ -39,7 +102,7 @@
 .header-item {
 	display: flex;
 	align-items: center;
-	&:nth-child(2){
+	&:nth-child(3){
 		margin: 0 40px;
 	}
 }
@@ -341,12 +404,39 @@
 		width: 970px;
 	}
 }
-@media only screen and (max-width: 1020px){
-	.header-item:nth-child(2) {
-		margin: 0 30px;
+@media only screen and (max-width: 1050px){
+	.header-item:nth-child(3) {
+		margin: 0 15px;
 	}
 }
 @media only screen and (max-width: 1000px){
+	.header-search__mobile {
+		margin: 30px 0 0 0;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		& form {
+			position: relative;
+		}
+		& input[type=text]{
+			background: #D9D9D9;
+			border-radius: 10px;
+			width: 250px;
+			padding: 10px 15px;
+			border: 1px solid transparent;
+			font-size: 18px;
+		}
+		& input[type=submit]{
+			width: 25px;
+			height: 25px;
+			border: none;
+			background: url('../img/svg/icon_search.svg');
+			background-size: cover;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+	}
 	.header__list>.menu-item-has-children>a {
 		pointer-events: none;
 	}
