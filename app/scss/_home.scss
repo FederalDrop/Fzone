@@ -462,7 +462,7 @@
 	height: 358px;
 	background: url('../img/med_text.png');
 }
-.med__dots-abs {
+.med__dots-abs-1, .med__dots-abs-2 {
 	display: none;
 }
 .popup__form-item input:focus::placeholder, .review__form-item input:focus::placeholder, .callback__form input:focus::placeholder {
@@ -900,21 +900,18 @@
 		& img {
 			display: block;
 		}
-		&::after {
-			content: '';
-			position: absolute;
-			right: 13%;
-			top: 100px;
-			background: url('../img/art-1.png')no-repeat;
-			width: 254px;
-			height: 150px;
-			animation-name: test;
-			animation-duration: 5s;
-			animation-timing-function: linear;
-			animation-iteration-count: infinite;
-		}
 	}
-	.med__dots-abs {
+	.med__dots-abs-1 {
+		display: block;
+		position: absolute;
+		right: 20%;
+		top: 100px;
+		animation-name: test;
+		animation-duration: 5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+	.med__dots-abs-2 {
 		display: block;
 		position: absolute;
 		right: 15%;
@@ -1136,7 +1133,7 @@
 		top: -105px;
 		left: -85px;
 	}
-	.med__dots-abs {
+	.med__dots-abs-2 {
 		width: 200px;
 		height: 100px;
 		& img {
@@ -1145,11 +1142,14 @@
 			object-fit: contain;
 		}
 	}
-	.med__dots-img::after {
+	.med__dots-abs-1 {
 		width: 200px;
 		height: 100px;
-		background-size: contain;
-		top: 25%;
+		right: 16%;
+		& img {
+			width: 100%;
+			background-size: contain;
+		}
 	}
 	.med-item__img {
 		width: 382px;
@@ -1224,14 +1224,14 @@
 	}
 }
 @media only screen and (max-width: 650px){
-	.med__dots-abs {
+	.med__dots-abs-1 {
+		top: 50px;
 		width: 180px;
 		height: 100px;
 	}
-	.med__dots-img::after {
+	.med__dots-abs-2 {
 		width: 180px;
 		height: 100px;
-		top: 20%;
 	}
 	.clinic__info-title {
 		text-align: left;
@@ -1347,14 +1347,15 @@
 	}
 }
 @media only screen and (max-width: 480px){
-	.med__dots-abs {
-		width: 140px;
-		height: 100px;
-	}
-	.med__dots-img::after {
+	.med__dots-abs-1 {
+		top: 60px;
+		right: 23%;
 		width: 120px;
 		height: 100px;
-		right: 20%;
+	}
+	.med__dots-abs-2 {
+		width: 140px;
+		height: 100px;
 	}
 	.slick-slider .slick-arrow {
 		width: 11px;
