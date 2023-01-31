@@ -5,6 +5,10 @@ $(function () {
 		$('.header__down').toggleClass('active');
 		$('body').toggleClass('lock');
 	});
+	$('.header__lang .wpml-ls-legacy-list-horizontal').on('click', function () {
+		var lisnlang = $('.header__lang .wpml-ls-legacy-list-horizontal ul li').not('.wpml-ls-current-language').slideToggle(300);
+	})
+	$('.wpml-ls-current-language a').removeAttr('href');
 	$('.home__slider').slick({
 		dots: true,
 		arrows: false,
@@ -659,7 +663,7 @@ window.addEventListener('load', function () {
 			event.keyCode && (keyCode = event.keyCode);
 			var pos = this.selectionStart;
 			if (pos < 3) event.preventDefault();
-			var matrix = "+38 (___) ___ __ __",
+			var matrix = `+ _ ________________`,
 				i = 0,
 				def = matrix.replace(/\D/g, ""),
 				val = this.value.replace(/\D/g, ""),
